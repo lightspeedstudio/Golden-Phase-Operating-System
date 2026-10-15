@@ -1,0 +1,30 @@
+﻿Golden Phase Craft Mainframe
+Avenue 10 Layer 11 craft fixture (feature=craft).
+
+craft init: nav=stale prop=idle power=off fdir=normal
+power: off --operand Φ1--> ready (compose OK) pkt=1
+navigation: stale --operand Φ3--> solving (compose OK) pkt=3
+navigation: solving --operand Φ1--> locked (compose OK) pkt=5
+propulsion: idle --operand Φ1--> armed (compose OK) pkt=7
+power: ready --operand Φ3--> load (compose OK) pkt=9
+propulsion: armed --operand Φ3--> firing (compose OK) pkt=11
+fault inject prop-stuck reason=stuck_firing_behavior (state unchanged)
+FDIR: normal --operand Φ1--> detected
+detect: dwell=6 threshold=5 z=0.000 episode=1
+FDIR: detected --operand Φ3--> isolated
+isolate: quarantine object=2 episode=1
+propulsion: firing --operand Φ1--> fault (compose OK) pkt=13
+power: load --operand Φ1--> protected (compose OK) pkt=15
+REJECT prop_fire while quarantined (audited)
+attempt PROP_FIRE rejected and audited
+propulsion: fault --operand Φ3--> idle (compose OK) pkt=18
+FDIR: isolated --operand Φ1--> recovered_pending_proof
+FDIR: recovered_pending_proof --operand Φ3--> normal
+quarantine cleared after proof
+CRAFT FDIR PASS
+CRAFT STATUS
+  navigation id=1 state=3 (locked) ticks=6 quarantined=false episode=None
+  propulsion id=2 state=0 (idle) ticks=0 quarantined=false episode=None
+  power id=3 state=3 (protected) ticks=0 quarantined=false episode=None
+  FDIR state=0 (normal) tick=6 episodes=1 stuck_injected=true
+CRAFT FDIR PASS

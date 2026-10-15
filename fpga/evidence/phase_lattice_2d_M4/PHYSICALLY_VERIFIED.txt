@@ -1,0 +1,6 @@
+PHYSICALLY_VERIFIED=YES
+GATE=phase_lattice_2d_M4
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+BITSTREAM_SHA256=68dd43ed77d72bec6ac191f3dbeae2dc9da2a0ad13d8320537c146c27ac020f9
+RESULT=2-D 04x04 fabric alive on silicon (4 gen lines); not a glider claim

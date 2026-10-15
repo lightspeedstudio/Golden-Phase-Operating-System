@@ -1,0 +1,34 @@
+/target/
+/target_sealed/
+# AES/BBRAM key material — never commit
+*.nky
+*.pem
+id_ed25519
+id_rsa
+/release_snapshot/baremetal/build/
+.kairos/
+/scratchpad/
+debug-*.log
+# Vendor/board-pack binaries (RTL + SHA256SUMS + UART transcripts stay)
+**/zynq_fsbl.elf
+**/BOOT.BIN
+**/BOOT.bin
+**/kairos_zynq.elf
+**/system.bit
+fpga/zynq/evidence/**/*.elf
+fpga/zynq/release/**/*.elf
+scripts/debug_ssh_bm_com12.py
+scripts/debug_ssh_bm_*.log
+# FPGA build spam (bitstreams/evidence are curated separately)
+**/yosys.log
+fpga/__pycache__/
+*.pyc
+# FPGA regenerable intermediates — rebuild from the committed .v sources.
+# Durable proof (evidence/**/{*.bin,*.sha256,PHYSICALLY_VERIFIED.txt,uart_capture.txt,
+# nextpnr_report.json,*.md}) is kept; heavy rebuildables are not.
+fpga/*.asc
+fpga/*.json
+fpga/*.bin
+fpga/evidence/**/*.asc
+fpga/evidence/**/*_raw.txt
+fpga/evidence/**/nextpnr.log

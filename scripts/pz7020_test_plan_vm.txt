@@ -1,0 +1,23 @@
+# PZ7020 VM physical verification plan
+# Confirmed commands only. Send one line at a time over COM12 @ 115200.
+# Paste-assembly (run → lines → .end) is PARTIAL on one-line UART input —
+# use the existing named program instead.
+
+# Static ISA reference (must print instruction table and return to gpos>)
+isa
+
+# Named program that exists in ProgramLoader::register_defaults()
+# (hello: load a,phi2 / print a / exit). hello_asm is identical on bare metal.
+run hello
+
+# Register file after the program ran (expect A = Phi2 / Kairos2)
+regs
+
+# Second named program (same machine code on no_std builds)
+run hello_asm
+regs
+
+# Classification notes (for the human report, not sent to the board):
+# - isa listing: eligible for PHYSICALLY VERIFIED after COM12 capture
+# - run hello + regs + halt return to gpos>: eligible for PHYSICALLY VERIFIED
+# - pasted assembly multi-line: PARTIAL (harness is one-command-per-line)

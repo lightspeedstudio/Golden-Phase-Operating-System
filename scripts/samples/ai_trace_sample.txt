@@ -1,0 +1,6 @@
+# Observable AI artifact sample (not a system prompt dump)
+# Source: user message excerpt from KairOS session, 2026-07-07
+
+Can you somehow use your prompt string, feed it into the OS, see trajectories
+and analyze why you think what you think? Feed conversation text through phase
+states — trace archaeology, not neural weight decoding.

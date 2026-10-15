@@ -1,0 +1,10 @@
+# PZ7020 phi-stability fix confirmation (kernel fe76202b / ELF a6f95a6e).
+# Expect: phase trajectory: OK on both runs; statechain: OK on the 2nd run too.
+version
+phi-stability status
+phi-stability run 50
+phi-stability status
+phi-stability dual-clock 20
+phi-stability compare 20
+phi-stability run 20
+state

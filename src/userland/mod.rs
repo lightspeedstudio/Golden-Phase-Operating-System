@@ -1,0 +1,67 @@
+//! Hosted userland — init, shell, and syscall-backed commands.
+
+#[cfg(feature = "std")]
+pub mod ai_cmd;
+pub mod audit_cmd;
+pub mod captable_cmd;
+pub mod checkpoint_auth_cmd;
+pub mod checkpoint_cmd;
+pub mod commands;
+pub mod context;
+pub mod craft_cmd;
+pub mod curvature_cmd;
+pub mod dashboard;
+pub mod extmap_cmd;
+pub mod fault_cmd;
+pub mod fs_cmd;
+#[cfg(all(target_arch = "arm", feature = "baremetal"))]
+pub mod fs_sd;
+pub mod hosted;
+pub mod init;
+pub mod ipc_cmd;
+pub mod irqreg_cmd;
+pub mod kill;
+pub mod log;
+pub mod mem;
+pub mod mmuiso_cmd;
+pub mod net_cmd;
+pub mod netsess_cmd;
+pub mod parser;
+pub mod phasestack_cmd;
+#[cfg(feature = "std")]
+pub mod phase_benchmark_cmd;
+pub mod phase_cache_cmd;
+pub mod phase_view;
+#[cfg(all(feature = "baremetal", not(feature = "std"), feature = "bm-net"))]
+pub mod phaselink_baremetal_cmd;
+#[cfg(feature = "std")]
+pub mod phaselink_cmd;
+pub mod phasenet_cmd;
+pub mod phaseperf_cmd;
+pub mod phi_stability_cmd;
+pub mod pmm_cmd;
+pub mod ps;
+pub mod root_view;
+pub mod run;
+pub mod sched2_cmd;
+pub mod sentinel_cmd;
+pub mod shell;
+pub mod splash;
+#[cfg(feature = "ssh")]
+pub mod ssh_cmd;
+pub mod state_domain_cmd;
+pub mod syscall;
+pub mod terminal_cmd;
+pub mod terminal_fmt;
+pub mod terminal_metrics;
+pub mod tools;
+pub mod top;
+pub mod topo_view;
+pub mod transport_cmd;
+pub mod txlog_cmd;
+pub mod fsj_cmd;
+pub mod watchdog_view;
+
+pub use hosted::Hosted;
+pub use init::boot;
+pub use shell::Shell;

@@ -1,0 +1,25 @@
+# System 4 linked artifacts
+
+from_sys03_evidence: 659a7744a4c689d72ce4cc3c7f9f54280a675a43
+linker: fpga/zynq/tools/arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+elf_e_entry: 0x00000000
+pt_load_paddr: 0x00000000
+pt_load_filesz: 10992 (0x2AF0)
+com12: SYS04_COM12_PASS
+uart: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS04_20260819/com12_sys04.uart
+uart_sha256: d298dc4bf6cc00031372577df32f9c6069a2b17f73c0f06b4e2a3fcef9f9e78b
+uart_bytes: 195
+boot_bound: e966318fb687464c6a8257d110edd71b970ff4bf6c8ed212fbfa0676543fe279
+classifier: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS04_20260819/CLASSIFIER.txt
+
+| `zynq_stage1/owned/build/sys04_plat.elf` | `1683a3891258e8f2f8fe37cd3f94e9f4ad8a68dd3f4ba6239cc57f718ff08ba0` | 20656 |
+| `zynq_stage1/owned/build/sys04_plat.bin` | `799f0c4cbcc6ff2109ccdf7379500ac0ebab214cdae03c9b0e1f462b9725f83a` | 10992 |
+| `zynq_stage1/owned/build/sys04_plat.map` | `4345d45e393638db0e831583bf43614cafa3f22c914368c948bd3211a56133eb` | 47144 |
+| `zynq_stage1/owned/build/BOOT_SYS04_ADMA.BIN` | `e966318fb687464c6a8257d110edd71b970ff4bf6c8ed212fbfa0676543fe279` | 5997268 |
+| `docs/boot/SYS04_SD_REFERENCE.md` | `9a3001dfc2f4ee122a5947c20b3a5bc97bb30db33a550a7fa53b5727fc93c3c1` | 11427 |
+| `fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS04_20260819/com12_sys04.uart` | `d298dc4bf6cc00031372577df32f9c6069a2b17f73c0f06b4e2a3fcef9f9e78b` | 195 |
+| `docs/boot/SYS04_BOOT_FIRST_16K.bin` | `2b64211bcaf760966053f03c4d7acf969b1c1a9dfa874b4fa3b8239e65814870` | 16384 |
+| `docs/boot/SYS04_BOOT_DIRENT.bin` | `e1a1f02a2ba92a4011223245670a83af1f4a8ee8982c65d05a5c7acd0cb21ae1` | 32 |
+| `zynq_stage1/src/main.rs` | `6637678d0e01b007caf3b5e150ed37e48ed5af6f55cc009a3b16e0d5c4ebd67d` | 9580 |
+| `src/board/zynq7000/sd.rs` | `b30aee86c2c3a35395f611324ff75b62027b00cb59b1141f811f5f40eb706792` | 13441 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/system.bit` | `d19f08d20cac85ea0e33c41a8a552166f5a9176e16977f09aa64d17e68135829` | 4045769 |

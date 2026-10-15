@@ -1,0 +1,13 @@
+# PZ7020 PhaseFS RAM verification plan
+# Confirmed commands (parser already wires ls/cat/write/mkdir/stat).
+# RAM-backed /tmp is mounted at Runtime::boot (mkdir "/tmp").
+# Classification:
+#   RAM read/write  -> eligible for PHYSICALLY VERIFIED after COM12 capture
+#   persistence across reset -> unsupported unless demonstrated
+#   SD import / durable PhaseFS on SD -> unsupported in this wave
+
+ls /tmp
+write /tmp/pz7020_ram.txt golden-phase-ram-bytes
+cat /tmp/pz7020_ram.txt
+stat /tmp/pz7020_ram.txt
+ls /tmp

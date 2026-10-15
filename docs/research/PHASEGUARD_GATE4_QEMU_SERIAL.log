@@ -1,0 +1,130 @@
+Golden Phase Operating System boot splash
+ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+â                               Â· Ï Â·                                â
+â âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ£
+â                                                                    â
+â         âââââââ    âââ   âââ     âââââââ ââââââââââââ   âââ        â
+â        ââââââââ  âââââââ âââ     âââââââââââââââââââââ  âââ        â
+â        âââ  ââââââââââââââââ     âââ  âââââââââ  ââââââ âââ        â
+â        âââ   âââââââââââââââ     âââ  âââââââââ  ââââââââââ        â
+â        âââââââââââââââââââââââââââââââââââââââââââââ ââââââ        â
+â         âââââââ    ââââ  âââââââââââââââ âââââââââââ  âââââ        â
+â                                                                    â
+â              âââââââ âââ  âââ ââââââ ââââââââââââââââ              â
+â              âââââââââââ  âââââââââââââââââââââââââââ              â
+â              ââââââââââââââââââââââââââââââââââââââ                â
+â              âââââââ ââââââââââââââââââââââââââââââ                â
+â              âââ     âââ  ââââââ  âââââââââââââââââââ              â
+â              âââ     âââ  ââââââ  âââââââââââââââââââ              â
+â                                                                    â
+â                  O p e r a t i n g   S y s t e m                   â
+â                                                                    â
+â    ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ    â
+ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+g Ï l d e n   p h a s e   Ï p e r t a t i n g   s y s t e m   *   v0.1.0 [gpos]
+===============================================================================
+Golden Phase Operating System kernel 0.1.0-eternal (baremetal-riscv64) -- awakening
+===============================================================================
+  [ AWAKE ] stateclock: chronos + kairos clocks................ 0.004s
+  [ AWAKE ] gphase_core: compose / reflect algebra............. 0.011s
+  [ AWAKE ] scheduler: Phi0-Phi3 phase graph................... 0.018s
+  [ AWAKE ] memory: 4 tagged pages mapped...................... 0.026s
+  [ AWAKE ] syscall: user/kernel boundary armed................ 0.033s
+  [ AWAKE ] phasefs: /tmp mounted (2 inodes)................... 0.041s
+  [ AWAKE ] vm: RISC-V ISA loader ready........................ 0.049s
+  [ AWAKE ] trace: kernel event ring (4 records)............... 0.056s
+  [ AWAKE ] statechain: merkle ledger online (tick 0).......... 0.068s
+  [ ASCND ] shell: operator console opening....................
+  [ AWAKE ] init: pid 0 scheduled (1 proc)..................... 0.095s
+  [ AWAKE ] timer: preempt + chronos tick...................... 0.103s
+  [ AWAKE ] phasefs.journal: phase records read-only........... 0.118s
+  [ AWAKE ] stateclock.atlas: 10-sector map (sec 5, k=4)....... 0.127s
+  AUTHORITY / ANOM
+  [ MODE  ] authority:           root
+  [ MODE  ] visibility:          transparent
+  [ ANOM  ] security protocol:   standby
+  [ ROOTED] EquationRoot:        ee6fd313
+  [ SEALED] BootSessionRoot:     stub
+  [ VERIFY] boot manifest:       n/a (baremetal)
+  [ VERIFY] statechain:          OK
+  [ ACCESS] true phase states:   visible to root
+  [ LINK   ] PhaseLink codec:          ready
+  [ LINK   ] transport:                loopback/UART
+  [ LINK   ] VirtIO network device:    not present
+  [ LINK   ] driver:                   unavailable
+  [ LINK   ] Ethernet attachment:      none
+  [ PHASEMATH ] scalar reference:     ready
+  [ PHASEMATH ] worker cores:         1
+  [ PHASEMATH ] active backend:       SCALAR
+  [ VERIFY    ] scalar equivalence:   OK
+  [ STRESS   ] PHI-STABILITY engine: ready
+  [ STRESS   ] integer mode: fixed-1024
+  ALIGNING SUBSYSTEMS
+  @@@@@@@---~~~~~~~   7 of 7 aligned
+  TUNING STATECLOCK
+    #=-=--=#=-=--=#=-=--=#=-=--=#=-=--=#   sector 5/9  x=2*cos(phi/5) ok
+  |> consulting phase records ... 10 entries
+===============================================================================
+|> authority mode ... root
+|> ANOM security protocol ... standby
+|> true phase view ... transparent
+===============================================================================
+T H E   M O M E N T   I S   N O W   -- type help at gpos>          | GPOS
+===============================================================================
+gpos> ps
+PID	NAME	STATE	TICKS	STATUS
+0	init	Kairos2	2	running
+gpos> 
+
+phaseguard status
+PhaseGuard status (read-only)
+epoch=0 kairos_tick=11 chronos_tick=4 phase_idx=1 predicted_squeeze=1.188662210
+pass=11 warn=0 fault=0 trace_len=11
+note: observes every Kairos advance; squeeze sample optional via `phaseguard sample`
+gpos> 
+
+phaseguard sample
+[PhaseGuard] epoch=0 tick=18 phase_idx=8 theta_deg=288.0 prev=Phi1 proposed=Phi2 observed=0.454028563 predicted=0.454028563 diff=0.000e0 verdict=Pass fault=None (preview)
+gpos> 
+
+phaseguard sample
+[PhaseGuard] epoch=0 tick=25 phase_idx=5 theta_deg=180.0 prev=Phi1 proposed=Phi2 observed=-1.469267293 predicted=-1.469267293 diff=0.000e0 verdict=Pass fault=None (preview)
+gpos> 
+
+phaseguard trace
+[PhaseGuard] epoch=0 tick=1 phase_idx=1 theta_deg=36.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=2 phase_idx=2 theta_deg=72.0 prev=Phi0 proposed=Phi1 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=3 phase_idx=3 theta_deg=108.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=4 phase_idx=4 theta_deg=144.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=5 phase_idx=5 theta_deg=180.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=-1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=6 phase_idx=6 theta_deg=216.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=7 phase_idx=7 theta_deg=252.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=8 phase_idx=8 theta_deg=288.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=9 phase_idx=9 theta_deg=324.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=10 phase_idx=0 theta_deg=0.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=11 phase_idx=1 theta_deg=36.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=12 phase_idx=2 theta_deg=72.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=13 phase_idx=3 theta_deg=108.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=14 phase_idx=4 theta_deg=144.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=15 phase_idx=5 theta_deg=180.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=-1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=16 phase_idx=6 theta_deg=216.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=17 phase_idx=7 theta_deg=252.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=18 phase_idx=8 theta_deg=288.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=19 phase_idx=9 theta_deg=324.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=20 phase_idx=0 theta_deg=0.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=21 phase_idx=1 theta_deg=36.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=22 phase_idx=2 theta_deg=72.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=23 phase_idx=3 theta_deg=108.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=24 phase_idx=4 theta_deg=144.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=25 phase_idx=5 theta_deg=180.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=-1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=26 phase_idx=6 theta_deg=216.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=27 phase_idx=7 theta_deg=252.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=28 phase_idx=8 theta_deg=288.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=29 phase_idx=9 theta_deg=324.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=30 phase_idx=0 theta_deg=0.0 prev=Phi2 proposed=Phi3 observed=NaN predicted=1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=31 phase_idx=1 theta_deg=36.0 prev=Phi3 proposed=Phi1 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=32 phase_idx=2 theta_deg=72.0 prev=Phi1 proposed=Phi2 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+gpos> 
+
+exit
+KairOS: halt

@@ -1,0 +1,13 @@
+# iCEBreaker V1.0/V1.1a — iCE40UP5K-SG48 (IceStorm pin numbers)
+
+# 12 MHz clock
+set_io -nowarn clk        35
+
+# RS232 via FTDI
+set_io -nowarn uart_rx     6
+set_io -nowarn uart_tx     9
+
+# Button (active low) + LEDs (active low)
+set_io -nowarn btn_n      10
+set_io -nowarn ledr_n     11
+set_io -nowarn ledg_n     37

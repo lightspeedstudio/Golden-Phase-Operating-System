@@ -1,0 +1,11 @@
+# Linker map summary. SYS10A sys03_plat.map (owned/.cargo/config.toml always uses that name).
+map_bytes	131921
+map_sha256	2fd3c194861f9e21b0caf0affb08c527094418b8148a1dc3dda45f2eda875ccb
+archive_member_classes:
+  compiler_builtins	217
+  lightspeed_owned	201
+unknown_count	0
+module_nm_totals:
+  unidentified	19680
+  owned:entry	4348
+  compiler_builtins	840

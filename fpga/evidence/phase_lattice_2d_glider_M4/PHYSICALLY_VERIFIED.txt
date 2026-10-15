@@ -1,0 +1,6 @@
+PHYSICALLY_VERIFIED=YES
+GATE=phase_lattice_2d_glider_M4
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+BITSTREAM_SHA256=8c97780d67102159df9c5e367ccfc0bdff863bdd822fe72bd709d40797ece81f
+RESULT=Avenue2 rule_a 1-cell glider MATCH host golden; F=01 for 8 gens; GLIDER PASS

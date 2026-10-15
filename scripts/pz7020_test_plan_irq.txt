@@ -1,0 +1,36 @@
+PZ7020-StarLite — Interrupt-driven GEM RX (S4) — PROVEN on hardware 2026-08-08
+
+The bare-metal net serve loop no longer busy-polls: it `wfi`-sleeps between events.
+Wakes come from (a) the GEM0 RX-complete interrupt (SPI IRQ 54) on each received
+frame, and (b) an A9 private-timer periodic tick (PPI 29, ~5 ms / 200 Hz) that bounds
+the sleep so smoltcp's own timers and the serve deadline still run with no traffic.
+
+Design:
+  - gic.rs: `configure_int(id, pri)` (generalized from init_g1p_spi); `enable_gem0_rx_irq()`
+    (SPI 54); `enable_tick(load)` / `disable_tick()` (private timer @ 0xF8F00600, PPI 29);
+    kairos_board_irq_dispatch() now routes ID 54 -> gem::on_rx_irq (count) and ID 29 ->
+    clear timer event (count). CPSR IRQs already enabled by the boot path.
+  - gem.rs: IER=0x28; RX-complete = bit 1. enable_rx_irq / on_rx_irq (ONE-SHOT: masks its
+    own interrupt + write-1-to-clear ISR/RXSR + sets RX_READY) / rearm_rx_irq / take_rx_ready.
+    One-shot mask prevents a level-high SPI from storming; the poll loop drains the ring and
+    re-arms before sleeping.
+  - net_ip.rs serve loop: arm_irq_idle() before the loop; idle_wait() (rearm + wfi) each
+    iteration; disarm_irq_idle() after. Reports gem_rx_irq / tick.
+
+--- BOARD SIDE (COM12), with the PC pinging during the window ---
+gpos> net ip 192.168.5.50 25
+net ip: served 192.168.5.50/24 mac 02:00:00:47:01:50 on GEM0 for 25s
+(polls=5011 icmp=auto udp_echoes=0 tcp_conns=0 tcp_bytes=0 gem_rx_irq=12 tick=5000)
+
+--- HOST SIDE ---
+> ping -n 12 192.168.5.50   -> 9/9 replies TTL=64, time<1ms (after ARP)
+
+RESULT: PASS.
+  - polls=5011 over 25s (~200/s) vs the previous busy-poll ~600k/50s (~12,000/s):
+    ~60x collapse. The CPU sleeps (wfi) instead of spinning.
+  - tick=5000 == 200 Hz == the configured ~5 ms private-timer period (bounds wfi).
+  - gem_rx_irq=12 == the ~12 frames the PC sent (pings + ARP): the GEM0 RX interrupt
+    fires per frame. polls ~= tick + gem_rx_irq (every wake -> exactly one poll).
+  - Latency preserved: pings still reply sub-millisecond (RX IRQ wakes immediately).
+
+Efficiency milestone, not a new capability. Completes the S1-S4 Base OS service plan.

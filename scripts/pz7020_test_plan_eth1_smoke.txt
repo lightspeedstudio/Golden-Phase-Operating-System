@@ -1,0 +1,5 @@
+# ETH-1 COM12 harness — non-interactive: probe/phy/link only (no cable prompts).
+# For full DOWN/UP with operator cable steps use capture_eth1_com12.ps1.
+net probe
+net phy
+net link

@@ -1,0 +1,8 @@
+PHYSICALLY_VERIFIED=YES
+GATE=fpga_uart_craft_com24
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+ADAPTER=FpgaGliderTransport host twin + live I/M/A/P
+FEATURE=fpga-uart
+PACKET_BITSTREAM_SHA256=f82f363292e9921e78883eb5fefa1b621496d27d8889803fdcea0f63be7b233c
+RESULT=craft-over-COM24 PROP_ARM PASS; LocalCraftTransport remains fallback

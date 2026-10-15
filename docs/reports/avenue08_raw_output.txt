@@ -1,0 +1,42 @@
+﻿# Avenue 8 curvature watchdog -- raw measurement dump
+ticks_per_workload = 2000
+
+### workload: idle
+ticks: 2000  wall_time_s: 0.02  ticks_per_s: 132176.3
+mean: 0.000000  variance: 0.000000  std: 0.000000  frac_zero: 1.0000
+histogram (defects_per_tick -> count):
+    0 |     2000 (100.00%) ################################################################################
+
+### workload: spawn_storm
+ticks: 2000  wall_time_s: 3.12  ticks_per_s: 642.0
+mean: 2.996000  variance: 0.003984  std: 0.063119  frac_zero: 0.0000
+histogram (defects_per_tick -> count):
+    2 |        8 (  0.40%) 
+    3 |     1992 ( 99.60%) ################################################################################
+
+### workload: vm_program_loops
+ticks: 2000  wall_time_s: 9.15  ticks_per_s: 218.7
+mean: 4.999500  variance: 0.000500  std: 0.022355  frac_zero: 0.0000
+histogram (defects_per_tick -> count):
+    4 |        1 (  0.05%) 
+    5 |     1999 ( 99.95%) ################################################################################
+
+### workload: filesystem_churn
+ticks: 2000  wall_time_s: 0.48  ticks_per_s: 4174.9
+mean: 2.665000  variance: 0.891775  std: 0.944338  frac_zero: 0.0005
+histogram (defects_per_tick -> count):
+    0 |        1 (  0.05%) 
+    2 |     1333 ( 66.65%) ###################################################################
+    4 |      666 ( 33.30%) #################################
+
+### injected anomaly demo (idle baseline + forced burst)
+baseline (80 idle ticks): mean=0.0000 std=0.0000
+injected burst: pid=1 reps=20 reflection_defects_generated=39
+tick after burst: defects=39
+rolling z-score on burst tick: 1000000.000 (threshold |z|>=3.29) -> CAUGHT
+
+### false-positive rate on clean workloads (rolling window=64, |z|>=3.29)
+  idle               flagged=     0 / total=  1937  fpr=0.000000
+  spawn_storm        flagged=     0 / total=  1937  fpr=0.000000
+  vm_program_loops   flagged=     0 / total=  1937  fpr=0.000000
+  filesystem_churn   flagged=     0 / total=  1937  fpr=0.000000

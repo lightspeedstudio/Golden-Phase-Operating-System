@@ -1,0 +1,2320 @@
+{
+  "meta": {
+    "tool": "kairos/scripts/race_phase_trace.py",
+    "generated_at": "2026-07-07T20:29:28.850878+00:00",
+    "source": "kairos\\scripts\\samples\\race_clean.jsonl",
+    "disclaimer": "Phase encoding fingerprints UTF-8 log bytes. Topology/checksum signals are exploratory heuristics \u2014 not guaranteed race detectors."
+  },
+  "input": {
+    "byte_length": 249046,
+    "event_count": 2001,
+    "phase_length": 996184,
+    "utf8_preview": "{\"iter\":0,\"op\":\"read\",\"seq\":1,\"thread\":0,\"ts\":\"2026-07-07T20:29:25.987725+00:00\",\"value_after\":0,\"value_before\":0}\r\n{\"iter\":0,\"op\":\"write\",\"seq\":2,\"thread\":0,\"t"
+  },
+  "encoding": {
+    "codec": "golden_phase_runtime.protocol.encoder.bytes_to_phase",
+    "phase_histogram": {
+      "Phi0": 327385,
+      "Phi1": 227958,
+      "Phi2": 245396,
+      "Phi3": 195445
+    },
+    "gpl_checksum": {
+      "acc": 3,
+      "acc_label": "Phi3",
+      "chi": 13277.402440673897
+    }
+  },
+  "trajectory": {
+    "topology_sliding": {
+      "triple_count": 996182,
+      "summary": {
+        "same": 853275,
+        "reflection": 142907,
+        "error": 0
+      },
+      "reflection_rate": 0.143455,
+      "sample": [
+        {
+          "index": 0,
+          "triple": [
+            1,
+            3,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 1,
+          "triple": [
+            3,
+            2,
+            3
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 2,
+          "triple": [
+            2,
+            3,
+            0
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 3,
+          "triple": [
+            3,
+            0,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 4,
+          "triple": [
+            0,
+            2,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 5,
+          "triple": [
+            2,
+            0,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 6,
+          "triple": [
+            0,
+            2,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 7,
+          "triple": [
+            2,
+            1,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 8,
+          "triple": [
+            1,
+            2,
+            2
+          ],
+          "L": 1,
+          "R": 2,
+          "status": "reflection"
+        },
+        {
+          "index": 9,
+          "triple": [
+            2,
+            2,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 10,
+          "triple": [
+            2,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 11,
+          "triple": [
+            1,
+            1,
+            3
+          ],
+          "L": 0,
+          "R": 3,
+          "status": "reflection"
+        },
+        {
+          "index": 12,
+          "triple": [
+            1,
+            3,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 13,
+          "triple": [
+            3,
+            1,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 14,
+          "triple": [
+            1,
+            0,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 15,
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 16,
+          "triple": [
+            1,
+            2,
+            1
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 17,
+          "triple": [
+            2,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 18,
+          "triple": [
+            1,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 19,
+          "triple": [
+            1,
+            1,
+            3
+          ],
+          "L": 0,
+          "R": 3,
+          "status": "reflection"
+        },
+        {
+          "index": 20,
+          "triple": [
+            1,
+            3,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 21,
+          "triple": [
+            3,
+            0,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 22,
+          "triple": [
+            0,
+            2,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 23,
+          "triple": [
+            2,
+            0,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        }
+      ]
+    }
+  },
+  "ground_truth": {
+    "lost_update_conflicts": [
+      {
+        "value_before": 0,
+        "writes": [
+          {
+            "seq": 2,
+            "thread": 0,
+            "iter": 0,
+            "value_after": 1
+          },
+          {
+            "seq": 352,
+            "thread": 1,
+            "iter": 0,
+            "value_after": 1
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 141,
+        "writes": [
+          {
+            "seq": 354,
+            "thread": 1,
+            "iter": 1,
+            "value_after": 142
+          },
+          {
+            "seq": 380,
+            "thread": 0,
+            "iter": 175,
+            "value_after": 142
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 142,
+        "writes": [
+          {
+            "seq": 356,
+            "thread": 1,
+            "iter": 2,
+            "value_after": 143
+          },
+          {
+            "seq": 382,
+            "thread": 0,
+            "iter": 176,
+            "value_after": 143
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 143,
+        "writes": [
+          {
+            "seq": 358,
+            "thread": 1,
+            "iter": 3,
+            "value_after": 144
+          },
+          {
+            "seq": 384,
+            "thread": 0,
+            "iter": 177,
+            "value_after": 144
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 144,
+        "writes": [
+          {
+            "seq": 360,
+            "thread": 1,
+            "iter": 4,
+            "value_after": 145
+          },
+          {
+            "seq": 386,
+            "thread": 0,
+            "iter": 178,
+            "value_after": 145
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 145,
+        "writes": [
+          {
+            "seq": 362,
+            "thread": 1,
+            "iter": 5,
+            "value_after": 146
+          },
+          {
+            "seq": 388,
+            "thread": 0,
+            "iter": 179,
+            "value_after": 146
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 146,
+        "writes": [
+          {
+            "seq": 364,
+            "thread": 1,
+            "iter": 6,
+            "value_after": 147
+          },
+          {
+            "seq": 390,
+            "thread": 0,
+            "iter": 180,
+            "value_after": 147
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 147,
+        "writes": [
+          {
+            "seq": 366,
+            "thread": 1,
+            "iter": 7,
+            "value_after": 148
+          },
+          {
+            "seq": 393,
+            "thread": 0,
+            "iter": 181,
+            "value_after": 148
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 148,
+        "writes": [
+          {
+            "seq": 368,
+            "thread": 1,
+            "iter": 8,
+            "value_after": 149
+          },
+          {
+            "seq": 395,
+            "thread": 0,
+            "iter": 182,
+            "value_after": 149
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 149,
+        "writes": [
+          {
+            "seq": 370,
+            "thread": 1,
+            "iter": 9,
+            "value_after": 150
+          },
+          {
+            "seq": 397,
+            "thread": 0,
+            "iter": 183,
+            "value_after": 150
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 150,
+        "writes": [
+          {
+            "seq": 372,
+            "thread": 1,
+            "iter": 10,
+            "value_after": 151
+          },
+          {
+            "seq": 399,
+            "thread": 0,
+            "iter": 184,
+            "value_after": 151
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 151,
+        "writes": [
+          {
+            "seq": 374,
+            "thread": 1,
+            "iter": 11,
+            "value_after": 152
+          },
+          {
+            "seq": 401,
+            "thread": 0,
+            "iter": 185,
+            "value_after": 152
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 152,
+        "writes": [
+          {
+            "seq": 376,
+            "thread": 1,
+            "iter": 12,
+            "value_after": 153
+          },
+          {
+            "seq": 403,
+            "thread": 0,
+            "iter": 186,
+            "value_after": 153
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 153,
+        "writes": [
+          {
+            "seq": 378,
+            "thread": 1,
+            "iter": 13,
+            "value_after": 154
+          },
+          {
+            "seq": 405,
+            "thread": 0,
+            "iter": 187,
+            "value_after": 154
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 154,
+        "writes": [
+          {
+            "seq": 407,
+            "thread": 0,
+            "iter": 188,
+            "value_after": 155
+          },
+          {
+            "seq": 964,
+            "thread": 1,
+            "iter": 14,
+            "value_after": 155
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 433,
+        "writes": [
+          {
+            "seq": 966,
+            "thread": 1,
+            "iter": 15,
+            "value_after": 434
+          },
+          {
+            "seq": 1334,
+            "thread": 0,
+            "iter": 467,
+            "value_after": 434
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 617,
+        "writes": [
+          {
+            "seq": 1336,
+            "thread": 0,
+            "iter": 468,
+            "value_after": 618
+          },
+          {
+            "seq": 1374,
+            "thread": 1,
+            "iter": 199,
+            "value_after": 618
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 618,
+        "writes": [
+          {
+            "seq": 1338,
+            "thread": 0,
+            "iter": 469,
+            "value_after": 619
+          },
+          {
+            "seq": 1376,
+            "thread": 1,
+            "iter": 200,
+            "value_after": 619
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 619,
+        "writes": [
+          {
+            "seq": 1340,
+            "thread": 0,
+            "iter": 470,
+            "value_after": 620
+          },
+          {
+            "seq": 1378,
+            "thread": 1,
+            "iter": 201,
+            "value_after": 620
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 620,
+        "writes": [
+          {
+            "seq": 1342,
+            "thread": 0,
+            "iter": 471,
+            "value_after": 621
+          },
+          {
+            "seq": 1380,
+            "thread": 1,
+            "iter": 202,
+            "value_after": 621
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 621,
+        "writes": [
+          {
+            "seq": 1344,
+            "thread": 0,
+            "iter": 472,
+            "value_after": 622
+          },
+          {
+            "seq": 1382,
+            "thread": 1,
+            "iter": 203,
+            "value_after": 622
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 622,
+        "writes": [
+          {
+            "seq": 1346,
+            "thread": 0,
+            "iter": 473,
+            "value_after": 623
+          },
+          {
+            "seq": 1384,
+            "thread": 1,
+            "iter": 204,
+            "value_after": 623
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 623,
+        "writes": [
+          {
+            "seq": 1348,
+            "thread": 0,
+            "iter": 474,
+            "value_after": 624
+          },
+          {
+            "seq": 1386,
+            "thread": 1,
+            "iter": 205,
+            "value_after": 624
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 624,
+        "writes": [
+          {
+            "seq": 1350,
+            "thread": 0,
+            "iter": 475,
+            "value_after": 625
+          },
+          {
+            "seq": 1388,
+            "thread": 1,
+            "iter": 206,
+            "value_after": 625
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 625,
+        "writes": [
+          {
+            "seq": 1352,
+            "thread": 0,
+            "iter": 476,
+            "value_after": 626
+          },
+          {
+            "seq": 1390,
+            "thread": 1,
+            "iter": 207,
+            "value_after": 626
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 626,
+        "writes": [
+          {
+            "seq": 1354,
+            "thread": 0,
+            "iter": 477,
+            "value_after": 627
+          },
+          {
+            "seq": 1392,
+            "thread": 1,
+            "iter": 208,
+            "value_after": 627
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 627,
+        "writes": [
+          {
+            "seq": 1356,
+            "thread": 0,
+            "iter": 478,
+            "value_after": 628
+          },
+          {
+            "seq": 1394,
+            "thread": 1,
+            "iter": 209,
+            "value_after": 628
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 628,
+        "writes": [
+          {
+            "seq": 1358,
+            "thread": 0,
+            "iter": 479,
+            "value_after": 629
+          },
+          {
+            "seq": 1396,
+            "thread": 1,
+            "iter": 210,
+            "value_after": 629
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 629,
+        "writes": [
+          {
+            "seq": 1360,
+            "thread": 0,
+            "iter": 480,
+            "value_after": 630
+          },
+          {
+            "seq": 1398,
+            "thread": 1,
+            "iter": 211,
+            "value_after": 630
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 630,
+        "writes": [
+          {
+            "seq": 1362,
+            "thread": 0,
+            "iter": 481,
+            "value_after": 631
+          },
+          {
+            "seq": 1400,
+            "thread": 1,
+            "iter": 212,
+            "value_after": 631
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 631,
+        "writes": [
+          {
+            "seq": 1364,
+            "thread": 0,
+            "iter": 482,
+            "value_after": 632
+          },
+          {
+            "seq": 1402,
+            "thread": 1,
+            "iter": 213,
+            "value_after": 632
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 632,
+        "writes": [
+          {
+            "seq": 1366,
+            "thread": 0,
+            "iter": 483,
+            "value_after": 633
+          },
+          {
+            "seq": 1404,
+            "thread": 1,
+            "iter": 214,
+            "value_after": 633
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 633,
+        "writes": [
+          {
+            "seq": 1368,
+            "thread": 0,
+            "iter": 484,
+            "value_after": 634
+          },
+          {
+            "seq": 1406,
+            "thread": 1,
+            "iter": 215,
+            "value_after": 634
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 634,
+        "writes": [
+          {
+            "seq": 1370,
+            "thread": 0,
+            "iter": 485,
+            "value_after": 635
+          },
+          {
+            "seq": 1408,
+            "thread": 1,
+            "iter": 216,
+            "value_after": 635
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 635,
+        "writes": [
+          {
+            "seq": 1372,
+            "thread": 0,
+            "iter": 486,
+            "value_after": 636
+          },
+          {
+            "seq": 1410,
+            "thread": 1,
+            "iter": 217,
+            "value_after": 636
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 636,
+        "writes": [
+          {
+            "seq": 1412,
+            "thread": 1,
+            "iter": 218,
+            "value_after": 637
+          },
+          {
+            "seq": 1725,
+            "thread": 0,
+            "iter": 487,
+            "value_after": 637
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 637,
+        "writes": [
+          {
+            "seq": 1414,
+            "thread": 1,
+            "iter": 219,
+            "value_after": 638
+          },
+          {
+            "seq": 1727,
+            "thread": 0,
+            "iter": 488,
+            "value_after": 638
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 638,
+        "writes": [
+          {
+            "seq": 1416,
+            "thread": 1,
+            "iter": 220,
+            "value_after": 639
+          },
+          {
+            "seq": 1729,
+            "thread": 0,
+            "iter": 489,
+            "value_after": 639
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 639,
+        "writes": [
+          {
+            "seq": 1418,
+            "thread": 1,
+            "iter": 221,
+            "value_after": 640
+          },
+          {
+            "seq": 1731,
+            "thread": 0,
+            "iter": 490,
+            "value_after": 640
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 640,
+        "writes": [
+          {
+            "seq": 1420,
+            "thread": 1,
+            "iter": 222,
+            "value_after": 641
+          },
+          {
+            "seq": 1733,
+            "thread": 0,
+            "iter": 491,
+            "value_after": 641
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 641,
+        "writes": [
+          {
+            "seq": 1422,
+            "thread": 1,
+            "iter": 223,
+            "value_after": 642
+          },
+          {
+            "seq": 1735,
+            "thread": 0,
+            "iter": 492,
+            "value_after": 642
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 642,
+        "writes": [
+          {
+            "seq": 1424,
+            "thread": 1,
+            "iter": 224,
+            "value_after": 643
+          },
+          {
+            "seq": 1737,
+            "thread": 0,
+            "iter": 493,
+            "value_after": 643
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 643,
+        "writes": [
+          {
+            "seq": 1426,
+            "thread": 1,
+            "iter": 225,
+            "value_after": 644
+          },
+          {
+            "seq": 1739,
+            "thread": 0,
+            "iter": 494,
+            "value_after": 644
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 644,
+        "writes": [
+          {
+            "seq": 1428,
+            "thread": 1,
+            "iter": 226,
+            "value_after": 645
+          },
+          {
+            "seq": 1741,
+            "thread": 0,
+            "iter": 495,
+            "value_after": 645
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 645,
+        "writes": [
+          {
+            "seq": 1430,
+            "thread": 1,
+            "iter": 227,
+            "value_after": 646
+          },
+          {
+            "seq": 1743,
+            "thread": 0,
+            "iter": 496,
+            "value_after": 646
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 646,
+        "writes": [
+          {
+            "seq": 1432,
+            "thread": 1,
+            "iter": 228,
+            "value_after": 647
+          },
+          {
+            "seq": 1745,
+            "thread": 0,
+            "iter": 497,
+            "value_after": 647
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 647,
+        "writes": [
+          {
+            "seq": 1434,
+            "thread": 1,
+            "iter": 229,
+            "value_after": 648
+          },
+          {
+            "seq": 1747,
+            "thread": 0,
+            "iter": 498,
+            "value_after": 648
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 648,
+        "writes": [
+          {
+            "seq": 1436,
+            "thread": 1,
+            "iter": 230,
+            "value_after": 649
+          },
+          {
+            "seq": 1749,
+            "thread": 0,
+            "iter": 499,
+            "value_after": 649
+          }
+        ],
+        "kind": "duplicate_base_write"
+      }
+    ],
+    "conflict_count": 48,
+    "interleave_windows": [],
+    "interleave_window_count": 0,
+    "run_summary": {
+      "actual_count": 774,
+      "expected_count": 1000,
+      "iterations_per_thread": 500,
+      "lost_updates": 226,
+      "race_manifested": true,
+      "seq": 2001,
+      "spin_ns": 0,
+      "threads": 2,
+      "ts": "2026-07-07T20:29:26.005166+00:00",
+      "type": "run_summary"
+    },
+    "race_manifested": true,
+    "lost_updates": 226
+  },
+  "rolling_windows": {
+    "stride_events": 16,
+    "max_windows": 200,
+    "count": 126,
+    "sample": [
+      {
+        "event_index": 0,
+        "seq": 1,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 116,
+        "chi_drift": 0.0,
+        "phase_end": 464,
+        "phase_length": 464,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 10.804343306799
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.817628
+      },
+      {
+        "event_index": 16,
+        "seq": 17,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 1988,
+        "chi_drift": 175.29803943001,
+        "phase_end": 7952,
+        "phase_length": 7952,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 186.102382736809
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.809496
+      },
+      {
+        "event_index": 32,
+        "seq": 33,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 3908,
+        "chi_drift": 147.868183757024,
+        "phase_end": 15632,
+        "phase_length": 15632,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 333.970566493833
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.826656
+      },
+      {
+        "event_index": 48,
+        "seq": 49,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 5836,
+        "chi_drift": 180.371479887413,
+        "phase_end": 23344,
+        "phase_length": 23344,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 514.342046381246
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.832708
+      },
+      {
+        "event_index": 64,
+        "seq": 65,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 7764,
+        "chi_drift": 184.660478784975,
+        "phase_end": 31056,
+        "phase_length": 31056,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 699.002525166221
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.786327
+      },
+      {
+        "event_index": 80,
+        "seq": 81,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 9669,
+        "chi_drift": 170.232121156744,
+        "phase_end": 38676,
+        "phase_length": 38676,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 869.234646322965
+        },
+        "topology": {
+          "same": 77,
+          "reflection": 19,
+          "error": 0,
+          "reflection_rate": 0.197917
+        },
+        "transition_entropy": 3.745338
+      },
+      {
+        "event_index": 96,
+        "seq": 97,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 11582,
+        "chi_drift": 165.397594666794,
+        "phase_end": 46328,
+        "phase_length": 46328,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 1034.632240989759
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.864423
+      },
+      {
+        "event_index": 112,
+        "seq": 113,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 13524,
+        "chi_drift": 111.897941209853,
+        "phase_end": 54096,
+        "phase_length": 54096,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 1146.530182199612
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.793014
+      },
+      {
+        "event_index": 128,
+        "seq": 129,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 15468,
+        "chi_drift": 200.022823693546,
+        "phase_end": 61872,
+        "phase_length": 61872,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 1346.553005893158
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.825885
+      },
+      {
+        "event_index": 144,
+        "seq": 145,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 17412,
+        "chi_drift": 147.756248957553,
+        "phase_end": 69648,
+        "phase_length": 69648,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 1494.309254850711
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.832126
+      },
+      {
+        "event_index": 160,
+        "seq": 161,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 19356,
+        "chi_drift": 92.261641772141,
+        "phase_end": 77424,
+        "phase_length": 77424,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 1586.570896622852
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.79449
+      },
+      {
+        "event_index": 176,
+        "seq": 177,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 21300,
+        "chi_drift": 124.88439488626,
+        "phase_end": 85200,
+        "phase_length": 85200,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 1711.455291509112
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.809903
+      },
+      {
+        "event_index": 192,
+        "seq": 193,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 23244,
+        "chi_drift": 128.762367543478,
+        "phase_end": 92976,
+        "phase_length": 92976,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 1840.21765905259
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.78547
+      },
+      {
+        "event_index": 208,
+        "seq": 209,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 25196,
+        "chi_drift": 207.225719231407,
+        "phase_end": 100784,
+        "phase_length": 100784,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 2047.443378283997
+        },
+        "topology": {
+          "same": 77,
+          "reflection": 19,
+          "error": 0,
+          "reflection_rate": 0.197917
+        },
+        "transition_entropy": 3.822706
+      },
+      {
+        "event_index": 224,
+        "seq": 225,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 27156,
+        "chi_drift": 145.320180251957,
+        "phase_end": 108624,
+        "phase_length": 108624,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2192.763558535954
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.823899
+      },
+      {
+        "event_index": 240,
+        "seq": 241,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 29116,
+        "chi_drift": 214.436136953252,
+        "phase_end": 116464,
+        "phase_length": 116464,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 2407.199695489206
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.800215
+      },
+      {
+        "event_index": 256,
+        "seq": 257,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 31076,
+        "chi_drift": 218.986616370767,
+        "phase_end": 124304,
+        "phase_length": 124304,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 2626.186311859973
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.843437
+      },
+      {
+        "event_index": 272,
+        "seq": 273,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 33045,
+        "chi_drift": 172.608012388713,
+        "phase_end": 132180,
+        "phase_length": 132180,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2798.794324248686
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.82777
+      },
+      {
+        "event_index": 288,
+        "seq": 289,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 35037,
+        "chi_drift": 144.102145899252,
+        "phase_end": 140148,
+        "phase_length": 140148,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2942.896470147938
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.853077
+      },
+      {
+        "event_index": 304,
+        "seq": 305,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 37029,
+        "chi_drift": 60.004781793152,
+        "phase_end": 148116,
+        "phase_length": 148116,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 3002.90125194109
+        },
+        "topology": {
+          "same": 82,
+          "reflection": 14,
+          "error": 0,
+          "reflection_rate": 0.145833
+        },
+        "transition_entropy": 3.862344
+      },
+      {
+        "event_index": 320,
+        "seq": 321,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 39021,
+        "chi_drift": 94.772034356058,
+        "phase_end": 156084,
+        "phase_length": 156084,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 3097.673286297148
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.774697
+      },
+      {
+        "event_index": 336,
+        "seq": 337,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 41013,
+        "chi_drift": 141.980213002975,
+        "phase_end": 164052,
+        "phase_length": 164052,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 3239.653499300123
+        },
+        "topology": {
+          "same": 82,
+          "reflection": 14,
+          "error": 0,
+          "reflection_rate": 0.145833
+        },
+        "transition_entropy": 3.804542
+      },
+      {
+        "event_index": 352,
+        "seq": 353,
+        "thread": 1,
+        "op": "read",
+        "byte_end": 42997,
+        "chi_drift": 67.775771475927,
+        "phase_end": 171988,
+        "phase_length": 171988,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 3307.42927077605
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.835196
+      },
+      {
+        "event_index": 368,
+        "seq": 369,
+        "thread": 1,
+        "op": "read",
+        "byte_end": 44957,
+        "chi_drift": 52.809408439459,
+        "phase_end": 179828,
+        "phase_length": 179828,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 3360.238679215509
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.836083
+      }
+    ]
+  },
+  "phase_anomalies": [
+    {
+      "event_index": 16,
+      "seq": 17,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.809496,
+      "chi_drift": 175.29803943001
+    },
+    {
+      "event_index": 48,
+      "seq": 49,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.832708,
+      "chi_drift": 180.371479887413
+    },
+    {
+      "event_index": 64,
+      "seq": 65,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.786327,
+      "chi_drift": 184.660478784975
+    },
+    {
+      "event_index": 80,
+      "seq": 81,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.745338,
+      "chi_drift": 170.232121156744
+    },
+    {
+      "event_index": 96,
+      "seq": 97,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.864423,
+      "chi_drift": 165.397594666794
+    },
+    {
+      "event_index": 128,
+      "seq": 129,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.825885,
+      "chi_drift": 200.022823693546
+    },
+    {
+      "event_index": 144,
+      "seq": 145,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.832126,
+      "chi_drift": 147.756248957553
+    },
+    {
+      "event_index": 208,
+      "seq": 209,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.822706,
+      "chi_drift": 207.225719231407
+    },
+    {
+      "event_index": 240,
+      "seq": 241,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.800215,
+      "chi_drift": 214.436136953252
+    },
+    {
+      "event_index": 256,
+      "seq": 257,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.843437,
+      "chi_drift": 218.986616370767
+    },
+    {
+      "event_index": 272,
+      "seq": 273,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.82777,
+      "chi_drift": 172.608012388713
+    },
+    {
+      "event_index": 288,
+      "seq": 289,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.853077,
+      "chi_drift": 144.102145899252
+    },
+    {
+      "event_index": 304,
+      "seq": 305,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.862344,
+      "chi_drift": 60.004781793152
+    },
+    {
+      "event_index": 352,
+      "seq": 353,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.835196,
+      "chi_drift": 67.775771475927
+    },
+    {
+      "event_index": 368,
+      "seq": 369,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.836083,
+      "chi_drift": 52.809408439459
+    },
+    {
+      "event_index": 416,
+      "seq": 417,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.822118,
+      "chi_drift": 55.342367576083
+    },
+    {
+      "event_index": 464,
+      "seq": 465,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.860626,
+      "chi_drift": 148.533168333046
+    },
+    {
+      "event_index": 480,
+      "seq": 481,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.838871,
+      "chi_drift": 213.509671857306
+    },
+    {
+      "event_index": 496,
+      "seq": 497,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.848451,
+      "chi_drift": 217.798670755113
+    },
+    {
+      "event_index": 512,
+      "seq": 513,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.811293,
+      "chi_drift": 230.874492678603
+    },
+    {
+      "event_index": 544,
+      "seq": 545,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.76911,
+      "chi_drift": 168.453514843605
+    },
+    {
+      "event_index": 560,
+      "seq": 561,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.758307,
+      "chi_drift": 194.530834811813
+    },
+    {
+      "event_index": 576,
+      "seq": 577,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.812886,
+      "chi_drift": 192.946907323753
+    },
+    {
+      "event_index": 608,
+      "seq": 609,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.729732,
+      "chi_drift": 160.82454869707
+    },
+    {
+      "event_index": 624,
+      "seq": 625,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.753971,
+      "chi_drift": 191.721350786905
+    },
+    {
+      "event_index": 640,
+      "seq": 641,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.774609,
+      "chi_drift": 190.256880282581
+    },
+    {
+      "event_index": 672,
+      "seq": 673,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.816247,
+      "chi_drift": 183.038940376383
+    },
+    {
+      "event_index": 688,
+      "seq": 689,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.781731,
+      "chi_drift": 205.776293095609
+    },
+    {
+      "event_index": 704,
+      "seq": 705,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.793652,
+      "chi_drift": 173.945503725525
+    },
+    {
+      "event_index": 816,
+      "seq": 817,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.799975,
+      "chi_drift": 78.894250592252
+    },
+    {
+      "event_index": 864,
+      "seq": 865,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.8366,
+      "chi_drift": 93.195629052591
+    },
+    {
+      "event_index": 896,
+      "seq": 897,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.824154,
+      "chi_drift": 173.272996965232
+    },
+    {
+      "event_index": 1008,
+      "seq": 1009,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.737025,
+      "chi_drift": 23.788103094776
+    },
+    {
+      "event_index": 1088,
+      "seq": 1089,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.794614,
+      "chi_drift": 143.579184859918
+    },
+    {
+      "event_index": 1136,
+      "seq": 1137,
+      "reasons": [
+        "reflection_spike",
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.831021,
+      "chi_drift": 49.185394118549
+    },
+    {
+      "event_index": 1216,
+      "seq": 1217,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.21875,
+      "transition_entropy": 3.76774,
+      "chi_drift": 50.819842488481
+    },
+    {
+      "event_index": 1264,
+      "seq": 1265,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.833915,
+      "chi_drift": 18.58016128529
+    },
+    {
+      "event_index": 1280,
+      "seq": 1281,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.831021,
+      "chi_drift": 22.734658830786
+    },
+    {
+      "event_index": 1296,
+      "seq": 1297,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.21875,
+      "transition_entropy": 3.788813,
+      "chi_drift": 5.22781447351
+    },
+    {
+      "event_index": 1360,
+      "seq": 1361,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.793697,
+      "chi_drift": 170.425902019697
+    },
+    {
+      "event_index": 1376,
+      "seq": 1377,
+      "reasons": [
+        "reflection_spike",
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.831021,
+      "chi_drift": 134.082244152878
+    },
+    {
+      "event_index": 1392,
+      "seq": 1393,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.745353,
+      "chi_drift": 208.675145367815
+    },
+    {
+      "event_index": 1456,
+      "seq": 1457,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.21875,
+      "transition_entropy": 3.770361,
+      "chi_drift": 45.28485490885
+    },
+    {
+      "event_index": 1520,
+      "seq": 1521,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.831021,
+      "chi_drift": 136.084720065437
+    },
+    {
+      "event_index": 1536,
+      "seq": 1537,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.21875,
+      "transition_entropy": 3.788813,
+      "chi_drift": 122.866874605716
+    },
+    {
+      "event_index": 1648,
+      "seq": 1649,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.739541,
+      "chi_drift": 67.648792308555
+    },
+    {
+      "event_index": 1728,
+      "seq": 1729,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.818837,
+      "chi_drift": 177.292993158844
+    },
+    {
+      "event_index": 1872,
+      "seq": 1873,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.84154,
+      "chi_drift": 74.83664347812
+    }
+  ],
+  "correlation": {
+    "conflict_seq_count": 96,
+    "anomaly_count": 52,
+    "anomalies_near_conflict": 9,
+    "overlap_ratio": 0.1731,
+    "sample_hits": [
+      {
+        "event_index": 16,
+        "seq": 17,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.166667,
+        "transition_entropy": 3.809496,
+        "chi_drift": 175.29803943001
+      },
+      {
+        "event_index": 352,
+        "seq": 353,
+        "reasons": [
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.835196,
+        "chi_drift": 67.775771475927
+      },
+      {
+        "event_index": 368,
+        "seq": 369,
+        "reasons": [
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.1875,
+        "transition_entropy": 3.836083,
+        "chi_drift": 52.809408439459
+      },
+      {
+        "event_index": 416,
+        "seq": 417,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.197917,
+        "transition_entropy": 3.822118,
+        "chi_drift": 55.342367576083
+      },
+      {
+        "event_index": 1360,
+        "seq": 1361,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.793697,
+        "chi_drift": 170.425902019697
+      },
+      {
+        "event_index": 1376,
+        "seq": 1377,
+        "reasons": [
+          "reflection_spike",
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.197917,
+        "transition_entropy": 3.831021,
+        "chi_drift": 134.082244152878
+      },
+      {
+        "event_index": 1392,
+        "seq": 1393,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.745353,
+        "chi_drift": 208.675145367815
+      },
+      {
+        "event_index": 1456,
+        "seq": 1457,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.21875,
+        "transition_entropy": 3.770361,
+        "chi_drift": 45.28485490885
+      },
+      {
+        "event_index": 1728,
+        "seq": 1729,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.166667,
+        "transition_entropy": 3.818837,
+        "chi_drift": 177.292993158844
+      }
+    ]
+  },
+  "verdict": {
+    "label": "partial_correlation",
+    "race_manifested": true,
+    "notes": "Ground truth uses duplicate value_before writes across threads. Phase anomalies use reflection/entropy/chi-drift spikes vs run baseline."
+  }
+}

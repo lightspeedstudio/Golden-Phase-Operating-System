@@ -1,0 +1,24 @@
+# System 5 linked artifacts
+
+from_sys04_evidence: d9bf3047a5c53f921617e812d0849ba2b4877fef
+linker: fpga/zynq/tools/arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+elf_e_entry: 0x00000000
+pt_load_paddr: 0x00000000
+pt_load_filesz: 13380 (0x3444)
+com12: SYS05_COM12_PASS
+uart: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS05_20260819/com12_sys05.uart
+uart_sha256: b8f7145da7d3cf24c572a06b3e7a61f1b7b6a9a8bc281e366a1502da0665d3d8
+uart_bytes: 258
+boot_bound: ccfbbbc5a9c7ab573ccad9251dc933ab44d294ee26b7c7eccfaded0cf0955c5f
+classifier: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS05_20260819/CLASSIFIER.txt
+
+| `zynq_stage1/owned/build/sys05_plat.elf` | `f40f7e13a8f141afd404c407803f3de394c4e1ae082ca0ca112a932a53b248a2` | 24000 |
+| `zynq_stage1/owned/build/sys05_plat.bin` | `98ffb0ca80d1fdebe208b2cb711d6f9253fb83e0e0785ba30e331d3f7b218e45` | 13380 |
+| `zynq_stage1/owned/build/sys05_plat.map` | `d554abbb5c9766808caeb6cbcc266e7752774e471fce078fe3b3e6916663d35b` | 61252 |
+| `zynq_stage1/owned/build/BOOT_SYS05_PARSER.BIN` | `ccfbbbc5a9c7ab573ccad9251dc933ab44d294ee26b7c7eccfaded0cf0955c5f` | 5999828 |
+| `docs/boot/SYS05_PARSER_REFERENCE.md` | `c27d7fd287625e72e5a67fad4c921702bbfd4483a37e26b54cf95cd15ed77e3d` | 6737 |
+| `fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS05_20260819/com12_sys05.uart` | `b8f7145da7d3cf24c572a06b3e7a61f1b7b6a9a8bc281e366a1502da0665d3d8` | 258 |
+| `zynq_stage1/owned/build/BOOT_SYS04_ADMA.BIN` | `e966318fb687464c6a8257d110edd71b970ff4bf6c8ed212fbfa0676543fe279` | 5997268 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/BOOT.BIN` | `7da748547d5016191643ddc4df555a8cf02c1d8adee3235f1dde766166ea0b85` | 6114836 |
+| `zynq_stage1/src/main.rs` | `6637678d0e01b007caf3b5e150ed37e48ed5af6f55cc009a3b16e0d5c4ebd67d` | 9580 |
+| `src/board/zynq_bootimg.rs` | `c96b4b13ac7b884b266c6f90b55bfd0facd2a28105446af2d1dd207e4e6ce999` | 11329 |

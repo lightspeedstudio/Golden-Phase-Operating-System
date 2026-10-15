@@ -1,0 +1,17 @@
+# Linker map summary. BOARD_PASSED_ARTIFACT map file is sys03_plat.map.at_sys09_lock
+# (owned/.cargo/config.toml always writes build/sys03_plat.map). Product ELF matched rebuild;
+# CURRENT_REBUILD map first differs at CARGO_TARGET_DIR path (owned/target vs sandbox cache).
+map_board_passed_bytes	93692
+map_board_passed_sha256	77764ab765a56b35786b6aa4a4fe4464fc65ca86bb2f5bbaf846ada69ec1c39f
+archive_member_classes:
+  compiler_builtins	187
+  lightspeed_owned	149
+unknown_count	0
+module_nm_totals:
+  owned:sd	5224
+  owned:entry	3752
+  owned:bootimg	2276
+  compiler_builtins	2024
+  core	624
+  owned:platform	476
+  owned:devcfg	376

@@ -1,0 +1,356 @@
+[workspace]
+members = [".", "products/craft-mainframe"]
+resolver = "2"
+
+[package]
+name = "kairos"
+version = "0.1.0"
+edition = "2021"
+description = "Golden Phase Operating System (GPOS) — Kairos States research OS"
+build = "build.rs"
+autobins = false
+
+[features]
+default = ["std", "phase-math-parallel", "ssh"]
+# dep:ed25519-dalek added for `identity` (Gate 2): `kernel::crypto::sign`
+# was previously baremetal-only even though its code has no baremetal-
+# specific dependency; the identity subsystem's certificate verification
+# needs real Ed25519 on hosted `std` builds too (for host testing and any
+# future hosted deployment), so `sign` is now available under `std` as well
+# (see `kernel::crypto::mod`'s cfg on `pub mod sign`).
+std = ["dep:sha2", "dep:hmac", "dep:aes-gcm", "dep:num-bigint", "dep:ed25519-dalek"]
+baremetal = ["hashbrown", "linked_list_allocator", "spin", "libm", "dep:sha2", "dep:hmac", "dep:aes-gcm", "dep:ed25519-dalek"]
+bm-net = ["dep:smoltcp"]
+bm-engineering-tools = []
+bm-minimum = ["baremetal"]
+bm-embedded = ["baremetal", "bm-net"]
+bm-full = ["baremetal", "bm-net", "bm-engineering-tools"]
+# PZ7020-SL-C (Zynq-7000 Cortex-A9) hardware-support layer: arch/armv7 +
+# board/zynq7000. Build `kairos_zynq` for armv7a-none-eabi with this feature.
+zynq-a9 = ["baremetal"]
+# G64S AXI-Lite driver and `g64` shell commands. Utility OS gold PL
+# (`PZ7020_G1P_PATH1_G64`) places G64S at 0x40001000 beside Path-1 TNSR.
+# Builds without this feature must not expose `g64` shell commands.
+g64-research = []
+# Opt-in PHASEGUARD phase-disk oscillator / squeeze-release research (docket
+# CAREGAGA-GPOS-2026-001). Falsification research, honesty-gated; NOT a proven
+# feature. Default sealed boot must be unchanged when this feature is off.
+phaseguard-research = []
+# Opt-in physical memory manager (subsystem 1 of the eight kernel-subsystems
+# build program; see fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md).
+# Default sealed boot must be unchanged when this feature is off.
+pmm = []
+# Opt-in generational object/capability table (subsystem 2 of the eight
+# kernel-subsystems build program; see
+# fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md). Default sealed boot
+# must be unchanged when this feature is off.
+captable = []
+# Opt-in IRQ and device registry (subsystem 3 of the eight kernel-subsystems
+# build program; see fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md).
+# Default sealed boot must be unchanged when this feature is off.
+irqreg = []
+# Opt-in scheduler / timer queues (subsystem 4 of the eight kernel-subsystems
+# build program; see fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md).
+# Default sealed boot must be unchanged when this feature is off.
+sched2 = []
+# Opt-in IPC and message queues (subsystem 5 of the eight kernel-subsystems
+# build program; see fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md).
+# Unlike pmm/captable/irqreg/sched2 (deliberately independent), ipc's own
+# contract text ("bounded message queues... over captable+sched2") is a
+# real, declared dependency, not speculative coupling. Default sealed boot
+# must be unchanged when this feature is off.
+ipc = ["captable", "sched2"]
+# Opt-in storage allocation and extent map over `PhaseFs` inode content
+# (subsystem 6 of the eight kernel-subsystems build program; see
+# fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md). Independent, like
+# pmm/captable/irqreg/sched2 — extmap's own contract text names no
+# subsystem dependency. Default sealed boot must be unchanged when this
+# feature is off.
+extmap = []
+# Opt-in transaction and recovery log over `PhaseFs` write_file/mkdir/rm,
+# tied to the real `StatechainLedger` (subsystem 7 of the eight
+# kernel-subsystems build program; see
+# fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md). Independent, like
+# pmm/captable/irqreg/sched2/extmap — txlog's own contract text names no
+# subsystem dependency. Default sealed boot must be unchanged when this
+# feature is off.
+txlog = []
+# Opt-in network session table and software descriptor ring (subsystem 8,
+# final subsystem of the eight kernel-subsystems build program; see
+# fpga/zynq/evidence/KERNEL_MATH_CONTRACT_2026-08-12.md). Live GEM RX BD
+# takes record KernelReady on this ring after hardware released the BD;
+# the ring does not own GEM DMA descriptors or store HwOwned. Like ipc,
+# netsess's own contract text ("Session handles come from captable";
+# "Wait/block behavior uses sched2") is a real, declared dependency, not
+# speculative coupling. Default sealed boot must be unchanged when this
+# feature is off.
+netsess = ["captable", "sched2"]
+# Opt-in user identity, password, certificate, and authority subsystem (see
+# the identity build plan). Independent, like pmm/captable/irqreg/sched2/
+# extmap/txlog — this subsystem's own AuthorityRoot depends only on the
+# already-real EquationRoot (see `kernel::identity::authority_root` module
+# docs for why there is no circular hash dependency with BootSessionRoot).
+# Default sealed boot must be unchanged when this feature is off.
+# dep:argon2 for real Argon2id password verifiers (Gate 3). Hosted `std`
+# salts use the OS CSPRNG directly (see `kernel::identity::credential`);
+# baremetal salts reuse `board::zynq7000::rng`'s already-disclosed
+# timer-jitter DRBG. This feature must not pull `getrandom` (ssh-bm's
+# custom backend) or `libc` (unix-only, target-gated below) — those would
+# break the `armv7a-none-eabi` identity cross-build.
+identity = ["dep:argon2"]
+# Opt-in PhaseSentinel launch/observe/quarantine (dedicated signer table,
+# Ed25519 via kernel::crypto::sign, identity Root/MOD for admin). Default
+# sealed boot must be unchanged when this feature is off. Do not add
+# `phasesentinel` to `default`. Utility OS includes it (not craft/mission).
+phasesentinel = ["identity"]
+# Opt-in verified application runtime (signed GPA1 packages, PhaseVM-only
+# execute, PhaseHook bus). Requires captable. Default sealed boot must be
+# unchanged when this feature is off. Do not add `phasestack` to `default`.
+# Board/Utility: public pin + retired-pin refuse list only. No signing keys.
+phasestack = ["captable"]
+# Hosted/offline pack+sign only. Never add to `zynq-a9` or `utility`.
+# Must be combined with `std`. Does not compile SignKeypair seeds into ARM.
+phasestack-sign-dev = ["phasestack"]
+# Research-only Sentinel fault hooks (generation bump / permit replay).
+# Require an unlock token at the call site. Never add to `utility` or `zynq-a9`.
+phasesentinel-research = ["phasesentinel", "phasestack"]
+# Persistent PhaseFS write-ahead journal v1. Gold Utility includes this.
+# Hosted `default` does not. Board: --features "zynq-a9,utility"
+# See fpga/zynq/research/phasefs-persistent-journal-v1/.
+phasefs-journal = []
+# Opt-in Cartesian tensor-state encoding A = S × M × V (|A|=256).
+# Research fork `research/parallel-tensor`; see
+# `docs/research/PARALLEL_TENSOR_RESEARCH.md`. Independent: does not pull
+# captable/sched2/identity/CPU1/FPGA. Default sealed boot must be unchanged
+# when this feature is off. Matching V never grants.
+# T14: do not add `tensor` to `default`. Identity-only seal `bb758133…`
+# is G1P at 0x40000000 only. Utility OS gold PL is PATH1_G64 (TNSR at
+# 0x40000100 and G64S at 0x40001000) — see `fpga/zynq/release/UTILITY_GOLD.txt`.
+# Do not MMIO 0x40000100 unless `tensor` is on and that gold (or Path-1) bit
+# is loaded. No `phase-boundary-research` feature — that name is not in this tree.
+tensor = []
+# Opt-in Cortex-A9 CPU1 bring-up (T5), SPSC mailbox (T6), and PhaseHash
+# worker (T7, also needs `tensor`). Default sealed boot stays CPU0-only.
+# CPU1 never MMIO 0x40000000+. No speedup claim.
+cpu1 = []
+# Cortex-A9 application isolation (USR + Client DACR + L2).
+# Gold Utility includes this. Hosted `default` does not (not ARM).
+# Board: --features "zynq-a9,utility"
+mmu-app-isolation = []
+ssh = ["std", "dep:tokio", "dep:russh", "dep:russh-keys", "dep:async-trait", "dep:rand"]
+# Bare-metal SSH server: no_std sunset over the smoltcp TCP socket (distinct
+# from the hosted `ssh` above, which needs tokio/russh).
+ssh-bm = ["bm-net", "baremetal", "dep:sunset", "dep:getrandom"]
+# Bare-metal USB 2.0 HOST (USB0 ChipIdea/EHCI + USB3320 ULPI). HID keyboard/mouse.
+usb = ["baremetal"]
+# ── Product profiles (see docs/TWO_OS_ARCHITECTURE.md) ────────────────
+# Golden Phase Base OS  = the default build: std + ssh + AI + the full utility
+#   stack (core, kernel, statechain, PhaseFS, VM/ISA, phase_transport, console).
+#   NO craft layer. This is the OS carried on the boards.
+# Golden Phase Utility OS (PZ7020 board image) = everything except craft/mission.
+#   Do not add `utility` to `default`. Do not add `craft` or `mission` here.
+#   Board: --no-default-features --features "zynq-a9,utility"
+#   Gold BOOT/PL: fpga/zynq/release/PZ7020_G1P_PATH1_G64/ (G1P+TNSR+G64S).
+# Golden Phase Mission OS (Craft Mainframe) = Base + the craft/mission layer ONLY
+#   (nav/prop/power, FDIR, mission controls, glider-carried transport).
+# `craft` gates that mission layer; `mission` is the convenience product profile.
+utility = [
+    "bm-full",
+    "usb",
+    "ssh-bm",
+    "identity",
+    "phasesentinel",
+    "pmm",
+    "captable",
+    "irqreg",
+    "sched2",
+    "ipc",
+    "extmap",
+    "txlog",
+    "netsess",
+    "phasestack",
+    "tensor",
+    "cpu1",
+    "g64-research",
+    "phaseguard-research",
+    "mmu-app-isolation",
+    "phasefs-journal",
+]
+craft = ["std"]
+mission = ["craft", "ssh"]
+phase-math-parallel = []
+phase-math-avx2 = []
+phase-math-avx512 = []
+phase-math-neon = []
+phase-math-gpu = []
+phase-math-fpga = []
+# Live iCEBreaker UART (COM24) for Avenue 10B PROP_ARM / craft adapter.
+fpga-uart = ["std", "dep:serialport"]
+
+[dependencies]
+hashbrown = { version = "0.15", optional = true, default-features = false, features = ["alloc", "default-hasher"] }
+linked_list_allocator = { version = "0.10", optional = true }
+spin = { version = "0.9", optional = true }
+libm = { version = "0.2", optional = true }
+smoltcp = { version = "0.12", optional = true, default-features = false, features = ["alloc", "medium-ethernet", "proto-ipv4", "proto-dhcpv4", "socket-icmp", "socket-udp", "socket-tcp", "socket-dhcpv4", "socket-dns"] }
+sha2 = { version = "0.10", default-features = false, optional = true }
+hmac = { version = "0.12", default-features = false, optional = true }
+aes-gcm = { version = "0.10", optional = true, default-features = false, features = ["aes", "alloc"] }
+ed25519-dalek = { version = "2", optional = true, default-features = false, features = ["alloc"] }
+sunset = { path = "third_party/sunset", optional = true, default-features = false }
+getrandom = { version = "0.2", optional = true, default-features = false, features = ["custom"] }
+argon2 = { version = "0.5", optional = true, default-features = false, features = ["alloc"] }
+num-bigint = { version = "0.4", optional = true, default-features = false, features = ["std"] }
+tokio = { version = "1", optional = true, features = ["rt-multi-thread", "macros", "net", "io-util", "sync", "time"] }
+russh = { version = "0.45", optional = true }
+russh-keys = { version = "0.45", optional = true }
+async-trait = { version = "0.1", optional = true }
+rand = { version = "0.8", optional = true }
+serialport = { version = "4", optional = true }
+
+# Gate 4 no-echo `passwd` on hosted unix (`kernel::syscall::secret_input`).
+# `target_os = "none"` (armv7a-none-eabi) is not unix, so this does not
+# enter the identity bare-metal cross-build.
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[build-dependencies]
+
+[lib]
+name = "kairos"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kairos_host"
+path = "src/bin/kairos_host.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "kairos_ssh"
+path = "src/bin/kairos_ssh.rs"
+required-features = ["ssh"]
+
+[[bin]]
+name = "kairos_boot"
+path = "src/bin/kairos_boot.rs"
+required-features = ["baremetal"]
+
+[[bin]]
+name = "kairos_zynq"
+path = "src/bin/kairos_zynq.rs"
+required-features = ["zynq-a9"]
+
+[[bin]]
+name = "kairos_zynq_g64_research"
+path = "src/bin/kairos_zynq.rs"
+required-features = ["zynq-a9", "g64-research"]
+
+[[bin]]
+name = "gpl_oracle"
+path = "src/bin/gpl_oracle.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "avenue08_curvature"
+path = "src/bin/avenue08_curvature.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "phasestack_sign"
+path = "src/bin/phasestack_sign.rs"
+required-features = ["std", "phasestack-sign-dev", "phasesentinel"]
+
+[[bin]]
+name = "stage1_sign"
+path = "src/bin/stage1_sign.rs"
+required-features = ["std"]
+
+[[test]]
+name = "engineering_tools_tests"
+path = "tests/engineering_tools_tests.rs"
+required-features = ["bm-engineering-tools"]
+
+[[test]]
+name = "craft_tests"
+path = "tests/craft_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_fdir_tests"
+path = "tests/craft_fdir_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_fdir_partial_recovery_tests"
+path = "tests/craft_fdir_partial_recovery_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_replay_tests"
+path = "tests/craft_replay_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_enum_compat_tests"
+path = "tests/craft_enum_compat_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_shell_tests"
+path = "tests/craft_shell_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_transport_phase_tests"
+path = "tests/craft_transport_phase_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "craft_glider_scenario_tests"
+path = "tests/craft_glider_scenario_tests.rs"
+required-features = ["craft"]
+
+[[test]]
+name = "sentinel_types_tests"
+path = "tests/sentinel_types_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_signer_tests"
+path = "tests/sentinel_signer_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_launch_tests"
+path = "tests/sentinel_launch_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_observe_tests"
+path = "tests/sentinel_observe_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_response_tests"
+path = "tests/sentinel_response_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_evidence_tests"
+path = "tests/sentinel_evidence_tests.rs"
+required-features = ["identity", "phasesentinel"]
+
+[[test]]
+name = "sentinel_signed_run_gates"
+path = "tests/sentinel_signed_run_gates.rs"
+required-features = ["identity", "phasesentinel", "phasestack", "captable"]
+
+[[test]]
+name = "mmu_native_gpa_pack"
+path = "tests/mmu_native_gpa_pack.rs"
+required-features = ["mmu-app-isolation", "phasestack-sign-dev", "phasesentinel"]
+
+[[test]]
+name = "mmu_isolation_host"
+path = "tests/mmu_isolation_host.rs"
+required-features = ["mmu-app-isolation"]

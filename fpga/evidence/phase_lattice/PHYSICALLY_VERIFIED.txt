@@ -1,0 +1,6 @@
+PHYSICALLY_VERIFIED=YES
+GATE=phase_lattice_causal_curvature_n16
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+BITSTREAM_SHA256=9f6206a50754d0cc9f5b81e17ca664070c877c504bd4c478c85e4052fe89c0cd
+RESULT=40 generations mixed-field defect readout + Phi1 clock alternation CLOCK PASS; capture matches verify_lattice.py reference exactly

@@ -1,0 +1,11 @@
+# G64 sidecar silicon test (BOOT_G64_RESEARCH.BIN / bitstream ec3d4fa6).
+# g64 compose/reflect are HW sweeps compared to the gphase_core oracle (hard-fail).
+version
+g1p info
+g64 info
+g64 oracle
+g64 compose
+g64 reflect
+g64 atlas
+g64 benchmark
+state

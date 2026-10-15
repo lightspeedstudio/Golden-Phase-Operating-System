@@ -1,0 +1,24 @@
+ICE MAX RUN 2026-07-24T19:57:49.9879697-06:00
+PASS algebra64
+PASS glider_V1D2
+PASS glider_V2D1
+PASS N128
+PASS M8_smoke
+PASS soak_62500
+RESUME 2026-07-24T20:09:32.3433823-06:00
+PASS collision_S0
+PASS serial_M8
+PASS fault_delete
+ICE MAX COMPLETE
+PASS collision_S1
+PASS collision_S2
+PASS collision_S3
+PASS fault_M2
+PASS fault_M3
+PASS fault_M4
+PASS live_packet_IMA
+FOLLOWON COMPLETE
+PASS packet_prop_arm rounds=1
+PASS packet_prop_arm rounds=5
+PASS craft_com24
+PASS uart_soak rounds=5

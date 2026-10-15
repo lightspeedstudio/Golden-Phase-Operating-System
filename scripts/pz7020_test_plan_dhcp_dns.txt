@@ -1,0 +1,37 @@
+PZ7020-StarLite — DHCP client + DNS resolver (S3) — PROVEN on hardware 2026-08-09.
+
+smoltcp DHCP (socket-dhcpv4/proto-dhcpv4) + DNS (socket-dns) in net_ip.rs:
+  net ip dhcp [secs]    -> kernel::net_ip::dhcp()  (DISCOVER/OFFER/REQUEST/ACK; applies lease+route)
+  net dns <host> [secs] -> kernel::net_ip::dns()   (DHCP, then A-record query via the DHCP DNS server)
+
+Test rig: scratchpad/dhcp_dns_server.py on the PC (192.168.5.2) — a minimal DHCP+DNS
+server (offers 192.168.5.50; answers any A query with 192.168.5.111). Direct PC<->board
+cable, no router. Three PC-side prerequisites were required and are the whole story of
+why this took a second pass:
+  1. Unbind the Hyper-V vSwitch from the Ethernet (Disable-NetAdapterBinding -Name Ethernet
+     -ComponentID vms_pp) — the vSwitch does not forward the host's outbound BROADCAST
+     (the DHCP OFFER) back out the uplink to the board. Unicast (ping/SSH) was unaffected.
+  2. Windows Firewall inbound allow rules: UDP 67 (DHCP) and UDP 53 (DNS) — the board's
+     broadcast DISCOVER / unicast DNS query are inbound from the wire and were blocked.
+  3. The DHCP reply socket must carry UDP SOURCE PORT 67 (smoltcp's DHCP client only
+     accepts replies from :67) AND egress the Ethernet interface (bind to 192.168.5.2:67
+     with SO_REUSEADDR). Binding to an ephemeral port made the board silently reject OFFERs.
+
+--- DHCP (net ip dhcp) ---
+BOARD:  gpos> net ip dhcp 15
+        net ip dhcp: lease 192.168.5.50/24 gw 192.168.5.2 dns 192.168.5.2
+SERVER: [DHCP] DISCOVER from 02:00:00:47:01:50 -> OFFER 192.168.5.50
+        [DHCP] REQUEST  from 02:00:00:47:01:50 -> ACK   192.168.5.50
+CORROBORATION: full 4-way DORA handshake; board applied lease + default route.
+
+--- DNS (net dns) ---
+BOARD:  gpos> net dns test.local 22
+        net dns: test.local -> 192.168.5.111
+SERVER: [DNS ] query test.local -> 192.168.5.111
+CORROBORATION: board did DHCP, then resolved the A record via the leased DNS server.
+
+RESULT: PASS. Bare-metal DHCP client (DORA) and DNS resolver work over GEM0 via smoltcp.
+Completes S3 -> the whole M1-M3 + S1-S4 Base OS networking/service plan is proven.
+
+Note: the vSwitch unbind + firewall rules are PC-side test-rig setup, not board changes.
+To restore WSL networking afterward: Enable-NetAdapterBinding -Name Ethernet -ComponentID vms_pp.

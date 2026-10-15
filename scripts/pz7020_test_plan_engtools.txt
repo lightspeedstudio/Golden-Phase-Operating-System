@@ -1,0 +1,47 @@
+# PZ7020 engineering-tools (bm-engineering-tools) physical test plan.
+# Safe, read-only, prompt-returning commands only. One per line. '#'=comment.
+# Excludes anything interactive/blocking (edit, listen, connect, receive, send)
+# and destructive (rm, kill, mkdir, format, patch, cp, mv).
+
+# --- identity / shell basics ---
+help
+pwd
+echo golden-phase-engtools
+history
+
+# --- system / hardware introspection (read-only) ---
+cpu
+mem
+dev
+clock
+ps
+irq
+trace
+log
+
+# --- MMIO register reads (safe reads of known regs) ---
+mmio 0xE000B000
+mmio 0xF8000140
+
+# --- phase / algebra research tools ---
+phase
+topo
+g1p exec 0 1
+g1p reflect 0
+g64 compose
+g64 reflect
+status
+
+# --- PhaseFS via engtools (RAM /tmp) ---
+ls /tmp
+touch /tmp/engtools.txt
+cat /tmp/engtools.txt
+stat /tmp/engtools.txt
+hexdump /tmp/engtools.txt
+
+# --- self-diagnostics ---
+test-system
+size
+
+# --- final identity ---
+version

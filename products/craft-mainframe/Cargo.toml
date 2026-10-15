@@ -1,0 +1,12 @@
+[package]
+name = "craft-mainframe"
+version = "0.1.0"
+edition = "2021"
+description = "Golden Phase Craft Mainframe — mission FDIR product build-out on GPOS"
+
+[[bin]]
+name = "craft_mainframe"
+path = "src/main.rs"
+
+[dependencies]
+kairos = { path = "../..", default-features = false, features = ["std", "craft"] }

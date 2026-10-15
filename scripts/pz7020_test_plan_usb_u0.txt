@@ -1,0 +1,35 @@
+PZ7020-StarLite — USB HID host U0 (controller + PHY bring-up, port detect) — PROVEN 2026-08-09.
+
+Board USB0 @ 0xE0002000 (ChipIdea/EHCI), ULPI PHY USB3320, HOST mode, USB Type-A J10.
+All register values TRANSCRIBED from the vendor packs (not guessed):
+  - device tree (03.Boot Test/image.ub): usb@e0002000 phy_type=ulpi dr_mode=host.
+  - vendor ps7_init.tcl (2_SDK/1_hello_world, USB0 enabled): MIO 28-39 = 0x1204/0x1205
+    (L1_SEL=1 = USB0), APER_CLK_CTRL USB0_CPU_1XCLKACT.
+  - xusbps_hw.h (usbps_v2_11): CMD 0x140, PORTSC 0x184, MODE 0x1A8, OTGSC 0x1A4 + masks.
+
+Muscle: src/board/zynq7000/usb.rs -- usb_mio_init (SLCR unlock/lock like gem.rs),
+host_init (CMD.RST -> MODE=host -> VBUS/port power -> CMD.RS run), poll_port (PORTSC
+connect/reset/speed), A9 global-timer delay_ms for real reset timing.
+Brain: DomainId::Usb phase state domain (state_domain, un-gated to baremetal) -- the
+`usb probe` command drives powered->connected->reset via Kernel::change_domain_state,
+recording proof-backed transitions in the statechain.
+
+--- BOARD (COM12), image BOOT.BIN sha 8BA2C7F1..., features zynq-a9,bm-full,ssh-bm,usb ---
+gpos> usb probe
+usb0: host up @ 0xE0002000 (ULPI) -- device CONNECTED, full-speed, reset done
+usb: phase lifecycle -> powered -> connected -> reset (recorded in statechain, domain=usb)
+
+gpos> state domains
+...
+usb states=10 word_len=2 capacity=16      <- DomainId::Usb live on bare metal (phase words / Kairos0-3)
+
+RESULT: PASS (first hardware attempt).
+  - USB0 host controller + USB3320 ULPI PHY brought up from grounded vendor values.
+  - Root port detected a connected FULL-SPEED device and completed a bus reset.
+  - The DomainId::Usb phase lifecycle walked powered->connected->reset, recorded in the
+    statechain -- muscle below the border, phase brain above (the gem.rs->PhaseNet shape).
+
+This is the scary bring-up spike done. Next: U1 enumeration (EHCI async schedule +
+GET_DESCRIPTOR/SET_ADDRESS/SET_CONFIGURATION -> VID:PID class=HID), then U2 HID boot
+input -> shell. Note: statechain root-view command is still std-only (cosmetic); the
+transition recording itself works on baremetal.

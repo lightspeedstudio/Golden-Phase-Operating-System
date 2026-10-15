@@ -1,0 +1,9 @@
+[target.armv7a-none-eabi]
+# Vitis gcc on D: is BitLocker-locked on this machine. Approved available
+# linker is the in-tree Arm GNU Toolchain 13.3.Rel1 (same as last owned Stage 1 ELF).
+linker = "C:\\k-mmu-stage1\\fpga\\zynq\\tools\\arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe"
+# Do not add -Tlinker.ld here: zynq_stage1/.cargo/config.toml already supplies it.
+# GNU ld 13.3 rejects a linker script passed more than once.
+rustflags = [
+  "-C", "link-arg=-Wl,-Map=build/sys03_plat.map",
+]

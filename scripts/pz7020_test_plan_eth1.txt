@@ -1,0 +1,7 @@
+# ETH-1 — PHY/MDIO cable-link evidence (COM12).
+# Do NOT include net loopback / tx-test / rx-test here (external TX/RX is later).
+# Operator: unplug cable before first net link; plug cable before second net link.
+
+net probe
+net phy
+net link

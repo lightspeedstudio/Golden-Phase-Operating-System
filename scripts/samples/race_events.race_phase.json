@@ -1,0 +1,5524 @@
+{
+  "meta": {
+    "tool": "kairos/scripts/race_phase_trace.py",
+    "generated_at": "2026-07-07T20:40:35.856099+00:00",
+    "source": "C:\\Users\\richa\\OneDrive\\Desktop\\FullOS\\kairos\\scripts\\samples\\race_events.jsonl",
+    "disclaimer": "Phase encoding fingerprints UTF-8 log bytes. Topology/checksum signals are exploratory heuristics \u2014 not guaranteed race detectors."
+  },
+  "input": {
+    "byte_length": 1533685,
+    "event_count": 12001,
+    "phase_length": 6134740,
+    "utf8_preview": "{\"iter\":0,\"op\":\"read\",\"seq\":1,\"thread\":0,\"ts\":\"2026-07-07T20:39:53.379752+00:00\",\"value_after\":0,\"value_before\":0}\r\n{\"iter\":0,\"op\":\"read\",\"seq\":2,\"thread\":1,\"ts"
+  },
+  "encoding": {
+    "codec": "golden_phase_runtime.protocol.encoder.bytes_to_phase",
+    "phase_histogram": {
+      "Phi0": 2038958,
+      "Phi1": 1398802,
+      "Phi2": 1450667,
+      "Phi3": 1246313
+    },
+    "gpl_checksum": {
+      "acc": 1,
+      "acc_label": "Phi1",
+      "chi": 12575.119750177293
+    }
+  },
+  "trajectory": {
+    "topology_sliding": {
+      "triple_count": 6134738,
+      "summary": {
+        "same": 5279884,
+        "reflection": 854854,
+        "error": 0
+      },
+      "reflection_rate": 0.139346,
+      "sample": [
+        {
+          "index": 0,
+          "triple": [
+            1,
+            3,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 1,
+          "triple": [
+            3,
+            2,
+            3
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 2,
+          "triple": [
+            2,
+            3,
+            0
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 3,
+          "triple": [
+            3,
+            0,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 4,
+          "triple": [
+            0,
+            2,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 5,
+          "triple": [
+            2,
+            0,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 6,
+          "triple": [
+            0,
+            2,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 7,
+          "triple": [
+            2,
+            1,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 8,
+          "triple": [
+            1,
+            2,
+            2
+          ],
+          "L": 1,
+          "R": 2,
+          "status": "reflection"
+        },
+        {
+          "index": 9,
+          "triple": [
+            2,
+            2,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 10,
+          "triple": [
+            2,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 11,
+          "triple": [
+            1,
+            1,
+            3
+          ],
+          "L": 0,
+          "R": 3,
+          "status": "reflection"
+        },
+        {
+          "index": 12,
+          "triple": [
+            1,
+            3,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 13,
+          "triple": [
+            3,
+            1,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 14,
+          "triple": [
+            1,
+            0,
+            1
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 15,
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        },
+        {
+          "index": 16,
+          "triple": [
+            1,
+            2,
+            1
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 17,
+          "triple": [
+            2,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 1,
+          "status": "reflection"
+        },
+        {
+          "index": 18,
+          "triple": [
+            1,
+            1,
+            1
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 19,
+          "triple": [
+            1,
+            1,
+            3
+          ],
+          "L": 0,
+          "R": 3,
+          "status": "reflection"
+        },
+        {
+          "index": 20,
+          "triple": [
+            1,
+            3,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 21,
+          "triple": [
+            3,
+            0,
+            2
+          ],
+          "L": 1,
+          "R": 1,
+          "status": "same"
+        },
+        {
+          "index": 22,
+          "triple": [
+            0,
+            2,
+            0
+          ],
+          "L": 2,
+          "R": 2,
+          "status": "same"
+        },
+        {
+          "index": 23,
+          "triple": [
+            2,
+            0,
+            2
+          ],
+          "L": 3,
+          "R": 3,
+          "status": "same"
+        }
+      ]
+    }
+  },
+  "ground_truth": {
+    "lost_update_conflicts": [
+      {
+        "value_before": 0,
+        "writes": [
+          {
+            "seq": 3,
+            "thread": 1,
+            "iter": 0,
+            "value_after": 1
+          },
+          {
+            "seq": 7,
+            "thread": 0,
+            "iter": 0,
+            "value_after": 1
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 128,
+        "writes": [
+          {
+            "seq": 260,
+            "thread": 0,
+            "iter": 115,
+            "value_after": 129
+          },
+          {
+            "seq": 361,
+            "thread": 1,
+            "iter": 14,
+            "value_after": 129
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 193,
+        "writes": [
+          {
+            "seq": 402,
+            "thread": 1,
+            "iter": 26,
+            "value_after": 194
+          },
+          {
+            "seq": 431,
+            "thread": 0,
+            "iter": 174,
+            "value_after": 194
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 194,
+        "writes": [
+          {
+            "seq": 404,
+            "thread": 1,
+            "iter": 27,
+            "value_after": 195
+          },
+          {
+            "seq": 433,
+            "thread": 0,
+            "iter": 175,
+            "value_after": 195
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 195,
+        "writes": [
+          {
+            "seq": 406,
+            "thread": 1,
+            "iter": 28,
+            "value_after": 196
+          },
+          {
+            "seq": 435,
+            "thread": 0,
+            "iter": 176,
+            "value_after": 196
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 196,
+        "writes": [
+          {
+            "seq": 408,
+            "thread": 1,
+            "iter": 29,
+            "value_after": 197
+          },
+          {
+            "seq": 437,
+            "thread": 0,
+            "iter": 177,
+            "value_after": 197
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 197,
+        "writes": [
+          {
+            "seq": 410,
+            "thread": 1,
+            "iter": 30,
+            "value_after": 198
+          },
+          {
+            "seq": 439,
+            "thread": 0,
+            "iter": 178,
+            "value_after": 198
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 198,
+        "writes": [
+          {
+            "seq": 412,
+            "thread": 1,
+            "iter": 31,
+            "value_after": 199
+          },
+          {
+            "seq": 441,
+            "thread": 0,
+            "iter": 179,
+            "value_after": 199
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 199,
+        "writes": [
+          {
+            "seq": 414,
+            "thread": 1,
+            "iter": 32,
+            "value_after": 200
+          },
+          {
+            "seq": 443,
+            "thread": 0,
+            "iter": 180,
+            "value_after": 200
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 200,
+        "writes": [
+          {
+            "seq": 416,
+            "thread": 1,
+            "iter": 33,
+            "value_after": 201
+          },
+          {
+            "seq": 445,
+            "thread": 0,
+            "iter": 181,
+            "value_after": 201
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 201,
+        "writes": [
+          {
+            "seq": 418,
+            "thread": 1,
+            "iter": 34,
+            "value_after": 202
+          },
+          {
+            "seq": 447,
+            "thread": 0,
+            "iter": 182,
+            "value_after": 202
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 202,
+        "writes": [
+          {
+            "seq": 420,
+            "thread": 1,
+            "iter": 35,
+            "value_after": 203
+          },
+          {
+            "seq": 449,
+            "thread": 0,
+            "iter": 183,
+            "value_after": 203
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 203,
+        "writes": [
+          {
+            "seq": 422,
+            "thread": 1,
+            "iter": 36,
+            "value_after": 204
+          },
+          {
+            "seq": 451,
+            "thread": 0,
+            "iter": 184,
+            "value_after": 204
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 204,
+        "writes": [
+          {
+            "seq": 424,
+            "thread": 1,
+            "iter": 37,
+            "value_after": 205
+          },
+          {
+            "seq": 453,
+            "thread": 0,
+            "iter": 185,
+            "value_after": 205
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 205,
+        "writes": [
+          {
+            "seq": 426,
+            "thread": 1,
+            "iter": 38,
+            "value_after": 206
+          },
+          {
+            "seq": 455,
+            "thread": 0,
+            "iter": 186,
+            "value_after": 206
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 206,
+        "writes": [
+          {
+            "seq": 428,
+            "thread": 1,
+            "iter": 39,
+            "value_after": 207
+          },
+          {
+            "seq": 457,
+            "thread": 0,
+            "iter": 187,
+            "value_after": 207
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 207,
+        "writes": [
+          {
+            "seq": 459,
+            "thread": 0,
+            "iter": 188,
+            "value_after": 208
+          },
+          {
+            "seq": 529,
+            "thread": 1,
+            "iter": 40,
+            "value_after": 208
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 355,
+        "writes": [
+          {
+            "seq": 756,
+            "thread": 1,
+            "iter": 151,
+            "value_after": 356
+          },
+          {
+            "seq": 821,
+            "thread": 0,
+            "iter": 226,
+            "value_after": 356
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 357,
+        "writes": [
+          {
+            "seq": 760,
+            "thread": 1,
+            "iter": 153,
+            "value_after": 358
+          },
+          {
+            "seq": 823,
+            "thread": 0,
+            "iter": 227,
+            "value_after": 358
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 358,
+        "writes": [
+          {
+            "seq": 762,
+            "thread": 1,
+            "iter": 154,
+            "value_after": 359
+          },
+          {
+            "seq": 831,
+            "thread": 0,
+            "iter": 228,
+            "value_after": 359
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 362,
+        "writes": [
+          {
+            "seq": 770,
+            "thread": 1,
+            "iter": 158,
+            "value_after": 363
+          },
+          {
+            "seq": 835,
+            "thread": 0,
+            "iter": 229,
+            "value_after": 363
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 364,
+        "writes": [
+          {
+            "seq": 774,
+            "thread": 1,
+            "iter": 160,
+            "value_after": 365
+          },
+          {
+            "seq": 857,
+            "thread": 0,
+            "iter": 230,
+            "value_after": 365
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 375,
+        "writes": [
+          {
+            "seq": 796,
+            "thread": 1,
+            "iter": 171,
+            "value_after": 376
+          },
+          {
+            "seq": 859,
+            "thread": 0,
+            "iter": 231,
+            "value_after": 376
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 376,
+        "writes": [
+          {
+            "seq": 798,
+            "thread": 1,
+            "iter": 172,
+            "value_after": 377
+          },
+          {
+            "seq": 861,
+            "thread": 0,
+            "iter": 232,
+            "value_after": 377
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 377,
+        "writes": [
+          {
+            "seq": 800,
+            "thread": 1,
+            "iter": 173,
+            "value_after": 378
+          },
+          {
+            "seq": 863,
+            "thread": 0,
+            "iter": 233,
+            "value_after": 378
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 378,
+        "writes": [
+          {
+            "seq": 802,
+            "thread": 1,
+            "iter": 174,
+            "value_after": 379
+          },
+          {
+            "seq": 865,
+            "thread": 0,
+            "iter": 234,
+            "value_after": 379
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 379,
+        "writes": [
+          {
+            "seq": 804,
+            "thread": 1,
+            "iter": 175,
+            "value_after": 380
+          },
+          {
+            "seq": 867,
+            "thread": 0,
+            "iter": 235,
+            "value_after": 380
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 380,
+        "writes": [
+          {
+            "seq": 806,
+            "thread": 1,
+            "iter": 176,
+            "value_after": 381
+          },
+          {
+            "seq": 869,
+            "thread": 0,
+            "iter": 236,
+            "value_after": 381
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 381,
+        "writes": [
+          {
+            "seq": 808,
+            "thread": 1,
+            "iter": 177,
+            "value_after": 382
+          },
+          {
+            "seq": 871,
+            "thread": 0,
+            "iter": 237,
+            "value_after": 382
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 382,
+        "writes": [
+          {
+            "seq": 810,
+            "thread": 1,
+            "iter": 178,
+            "value_after": 383
+          },
+          {
+            "seq": 873,
+            "thread": 0,
+            "iter": 238,
+            "value_after": 383
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 383,
+        "writes": [
+          {
+            "seq": 812,
+            "thread": 1,
+            "iter": 179,
+            "value_after": 384
+          },
+          {
+            "seq": 875,
+            "thread": 0,
+            "iter": 239,
+            "value_after": 384
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 384,
+        "writes": [
+          {
+            "seq": 814,
+            "thread": 1,
+            "iter": 180,
+            "value_after": 385
+          },
+          {
+            "seq": 877,
+            "thread": 0,
+            "iter": 240,
+            "value_after": 385
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 385,
+        "writes": [
+          {
+            "seq": 816,
+            "thread": 1,
+            "iter": 181,
+            "value_after": 386
+          },
+          {
+            "seq": 879,
+            "thread": 0,
+            "iter": 241,
+            "value_after": 386
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 386,
+        "writes": [
+          {
+            "seq": 819,
+            "thread": 1,
+            "iter": 182,
+            "value_after": 387
+          },
+          {
+            "seq": 881,
+            "thread": 0,
+            "iter": 242,
+            "value_after": 387
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 556,
+        "writes": [
+          {
+            "seq": 1222,
+            "thread": 1,
+            "iter": 297,
+            "value_after": 557
+          },
+          {
+            "seq": 1228,
+            "thread": 0,
+            "iter": 313,
+            "value_after": 557
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 557,
+        "writes": [
+          {
+            "seq": 1224,
+            "thread": 1,
+            "iter": 298,
+            "value_after": 558
+          },
+          {
+            "seq": 1230,
+            "thread": 0,
+            "iter": 314,
+            "value_after": 558
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 558,
+        "writes": [
+          {
+            "seq": 1226,
+            "thread": 1,
+            "iter": 299,
+            "value_after": 559
+          },
+          {
+            "seq": 1232,
+            "thread": 0,
+            "iter": 315,
+            "value_after": 559
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 559,
+        "writes": [
+          {
+            "seq": 1234,
+            "thread": 0,
+            "iter": 316,
+            "value_after": 560
+          },
+          {
+            "seq": 1243,
+            "thread": 1,
+            "iter": 300,
+            "value_after": 560
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 567,
+        "writes": [
+          {
+            "seq": 1255,
+            "thread": 0,
+            "iter": 321,
+            "value_after": 568
+          },
+          {
+            "seq": 1257,
+            "thread": 1,
+            "iter": 305,
+            "value_after": 568
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 572,
+        "writes": [
+          {
+            "seq": 1266,
+            "thread": 0,
+            "iter": 323,
+            "value_after": 573
+          },
+          {
+            "seq": 1367,
+            "thread": 1,
+            "iter": 309,
+            "value_after": 573
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 573,
+        "writes": [
+          {
+            "seq": 1268,
+            "thread": 0,
+            "iter": 324,
+            "value_after": 574
+          },
+          {
+            "seq": 1369,
+            "thread": 1,
+            "iter": 310,
+            "value_after": 574
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 574,
+        "writes": [
+          {
+            "seq": 1270,
+            "thread": 0,
+            "iter": 325,
+            "value_after": 575
+          },
+          {
+            "seq": 1371,
+            "thread": 1,
+            "iter": 311,
+            "value_after": 575
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 575,
+        "writes": [
+          {
+            "seq": 1272,
+            "thread": 0,
+            "iter": 326,
+            "value_after": 576
+          },
+          {
+            "seq": 1373,
+            "thread": 1,
+            "iter": 312,
+            "value_after": 576
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 576,
+        "writes": [
+          {
+            "seq": 1274,
+            "thread": 0,
+            "iter": 327,
+            "value_after": 577
+          },
+          {
+            "seq": 1375,
+            "thread": 1,
+            "iter": 313,
+            "value_after": 577
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 577,
+        "writes": [
+          {
+            "seq": 1276,
+            "thread": 0,
+            "iter": 328,
+            "value_after": 578
+          },
+          {
+            "seq": 1377,
+            "thread": 1,
+            "iter": 314,
+            "value_after": 578
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 578,
+        "writes": [
+          {
+            "seq": 1278,
+            "thread": 0,
+            "iter": 329,
+            "value_after": 579
+          },
+          {
+            "seq": 1379,
+            "thread": 1,
+            "iter": 315,
+            "value_after": 579
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 579,
+        "writes": [
+          {
+            "seq": 1280,
+            "thread": 0,
+            "iter": 330,
+            "value_after": 580
+          },
+          {
+            "seq": 1381,
+            "thread": 1,
+            "iter": 316,
+            "value_after": 580
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 580,
+        "writes": [
+          {
+            "seq": 1282,
+            "thread": 0,
+            "iter": 331,
+            "value_after": 581
+          },
+          {
+            "seq": 1383,
+            "thread": 1,
+            "iter": 317,
+            "value_after": 581
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 581,
+        "writes": [
+          {
+            "seq": 1284,
+            "thread": 0,
+            "iter": 332,
+            "value_after": 582
+          },
+          {
+            "seq": 1385,
+            "thread": 1,
+            "iter": 318,
+            "value_after": 582
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 582,
+        "writes": [
+          {
+            "seq": 1286,
+            "thread": 0,
+            "iter": 333,
+            "value_after": 583
+          },
+          {
+            "seq": 1387,
+            "thread": 1,
+            "iter": 319,
+            "value_after": 583
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 583,
+        "writes": [
+          {
+            "seq": 1288,
+            "thread": 0,
+            "iter": 334,
+            "value_after": 584
+          },
+          {
+            "seq": 1389,
+            "thread": 1,
+            "iter": 320,
+            "value_after": 584
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 584,
+        "writes": [
+          {
+            "seq": 1290,
+            "thread": 0,
+            "iter": 335,
+            "value_after": 585
+          },
+          {
+            "seq": 1391,
+            "thread": 1,
+            "iter": 321,
+            "value_after": 585
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 585,
+        "writes": [
+          {
+            "seq": 1292,
+            "thread": 0,
+            "iter": 336,
+            "value_after": 586
+          },
+          {
+            "seq": 1393,
+            "thread": 1,
+            "iter": 322,
+            "value_after": 586
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 586,
+        "writes": [
+          {
+            "seq": 1294,
+            "thread": 0,
+            "iter": 337,
+            "value_after": 587
+          },
+          {
+            "seq": 1395,
+            "thread": 1,
+            "iter": 323,
+            "value_after": 587
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 587,
+        "writes": [
+          {
+            "seq": 1296,
+            "thread": 0,
+            "iter": 338,
+            "value_after": 588
+          },
+          {
+            "seq": 1397,
+            "thread": 1,
+            "iter": 324,
+            "value_after": 588
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 588,
+        "writes": [
+          {
+            "seq": 1298,
+            "thread": 0,
+            "iter": 339,
+            "value_after": 589
+          },
+          {
+            "seq": 1399,
+            "thread": 1,
+            "iter": 325,
+            "value_after": 589
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 589,
+        "writes": [
+          {
+            "seq": 1300,
+            "thread": 0,
+            "iter": 340,
+            "value_after": 590
+          },
+          {
+            "seq": 1401,
+            "thread": 1,
+            "iter": 326,
+            "value_after": 590
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 590,
+        "writes": [
+          {
+            "seq": 1302,
+            "thread": 0,
+            "iter": 341,
+            "value_after": 591
+          },
+          {
+            "seq": 1403,
+            "thread": 1,
+            "iter": 327,
+            "value_after": 591
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 591,
+        "writes": [
+          {
+            "seq": 1304,
+            "thread": 0,
+            "iter": 342,
+            "value_after": 592
+          },
+          {
+            "seq": 1405,
+            "thread": 1,
+            "iter": 328,
+            "value_after": 592
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 592,
+        "writes": [
+          {
+            "seq": 1306,
+            "thread": 0,
+            "iter": 343,
+            "value_after": 593
+          },
+          {
+            "seq": 1407,
+            "thread": 1,
+            "iter": 329,
+            "value_after": 593
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 593,
+        "writes": [
+          {
+            "seq": 1308,
+            "thread": 0,
+            "iter": 344,
+            "value_after": 594
+          },
+          {
+            "seq": 1409,
+            "thread": 1,
+            "iter": 330,
+            "value_after": 594
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 594,
+        "writes": [
+          {
+            "seq": 1310,
+            "thread": 0,
+            "iter": 345,
+            "value_after": 595
+          },
+          {
+            "seq": 1411,
+            "thread": 1,
+            "iter": 331,
+            "value_after": 595
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 595,
+        "writes": [
+          {
+            "seq": 1312,
+            "thread": 0,
+            "iter": 346,
+            "value_after": 596
+          },
+          {
+            "seq": 1413,
+            "thread": 1,
+            "iter": 332,
+            "value_after": 596
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 596,
+        "writes": [
+          {
+            "seq": 1314,
+            "thread": 0,
+            "iter": 347,
+            "value_after": 597
+          },
+          {
+            "seq": 1415,
+            "thread": 1,
+            "iter": 333,
+            "value_after": 597
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 597,
+        "writes": [
+          {
+            "seq": 1316,
+            "thread": 0,
+            "iter": 348,
+            "value_after": 598
+          },
+          {
+            "seq": 1417,
+            "thread": 1,
+            "iter": 334,
+            "value_after": 598
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 598,
+        "writes": [
+          {
+            "seq": 1318,
+            "thread": 0,
+            "iter": 349,
+            "value_after": 599
+          },
+          {
+            "seq": 1419,
+            "thread": 1,
+            "iter": 335,
+            "value_after": 599
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 599,
+        "writes": [
+          {
+            "seq": 1320,
+            "thread": 0,
+            "iter": 350,
+            "value_after": 600
+          },
+          {
+            "seq": 1421,
+            "thread": 1,
+            "iter": 336,
+            "value_after": 600
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 600,
+        "writes": [
+          {
+            "seq": 1322,
+            "thread": 0,
+            "iter": 351,
+            "value_after": 601
+          },
+          {
+            "seq": 1423,
+            "thread": 1,
+            "iter": 337,
+            "value_after": 601
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 601,
+        "writes": [
+          {
+            "seq": 1324,
+            "thread": 0,
+            "iter": 352,
+            "value_after": 602
+          },
+          {
+            "seq": 1425,
+            "thread": 1,
+            "iter": 338,
+            "value_after": 602
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 602,
+        "writes": [
+          {
+            "seq": 1326,
+            "thread": 0,
+            "iter": 353,
+            "value_after": 603
+          },
+          {
+            "seq": 1427,
+            "thread": 1,
+            "iter": 339,
+            "value_after": 603
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 603,
+        "writes": [
+          {
+            "seq": 1328,
+            "thread": 0,
+            "iter": 354,
+            "value_after": 604
+          },
+          {
+            "seq": 1429,
+            "thread": 1,
+            "iter": 340,
+            "value_after": 604
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 604,
+        "writes": [
+          {
+            "seq": 1330,
+            "thread": 0,
+            "iter": 355,
+            "value_after": 605
+          },
+          {
+            "seq": 1431,
+            "thread": 1,
+            "iter": 341,
+            "value_after": 605
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 605,
+        "writes": [
+          {
+            "seq": 1332,
+            "thread": 0,
+            "iter": 356,
+            "value_after": 606
+          },
+          {
+            "seq": 1433,
+            "thread": 1,
+            "iter": 342,
+            "value_after": 606
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 606,
+        "writes": [
+          {
+            "seq": 1334,
+            "thread": 0,
+            "iter": 357,
+            "value_after": 607
+          },
+          {
+            "seq": 1435,
+            "thread": 1,
+            "iter": 343,
+            "value_after": 607
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 607,
+        "writes": [
+          {
+            "seq": 1336,
+            "thread": 0,
+            "iter": 358,
+            "value_after": 608
+          },
+          {
+            "seq": 1437,
+            "thread": 1,
+            "iter": 344,
+            "value_after": 608
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 608,
+        "writes": [
+          {
+            "seq": 1338,
+            "thread": 0,
+            "iter": 359,
+            "value_after": 609
+          },
+          {
+            "seq": 1439,
+            "thread": 1,
+            "iter": 345,
+            "value_after": 609
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 609,
+        "writes": [
+          {
+            "seq": 1340,
+            "thread": 0,
+            "iter": 360,
+            "value_after": 610
+          },
+          {
+            "seq": 1441,
+            "thread": 1,
+            "iter": 346,
+            "value_after": 610
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 610,
+        "writes": [
+          {
+            "seq": 1342,
+            "thread": 0,
+            "iter": 361,
+            "value_after": 611
+          },
+          {
+            "seq": 1443,
+            "thread": 1,
+            "iter": 347,
+            "value_after": 611
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 611,
+        "writes": [
+          {
+            "seq": 1344,
+            "thread": 0,
+            "iter": 362,
+            "value_after": 612
+          },
+          {
+            "seq": 1445,
+            "thread": 1,
+            "iter": 348,
+            "value_after": 612
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 612,
+        "writes": [
+          {
+            "seq": 1346,
+            "thread": 0,
+            "iter": 363,
+            "value_after": 613
+          },
+          {
+            "seq": 1447,
+            "thread": 1,
+            "iter": 349,
+            "value_after": 613
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 613,
+        "writes": [
+          {
+            "seq": 1348,
+            "thread": 0,
+            "iter": 364,
+            "value_after": 614
+          },
+          {
+            "seq": 1449,
+            "thread": 1,
+            "iter": 350,
+            "value_after": 614
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 614,
+        "writes": [
+          {
+            "seq": 1350,
+            "thread": 0,
+            "iter": 365,
+            "value_after": 615
+          },
+          {
+            "seq": 1451,
+            "thread": 1,
+            "iter": 351,
+            "value_after": 615
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 615,
+        "writes": [
+          {
+            "seq": 1352,
+            "thread": 0,
+            "iter": 366,
+            "value_after": 616
+          },
+          {
+            "seq": 1453,
+            "thread": 1,
+            "iter": 352,
+            "value_after": 616
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 616,
+        "writes": [
+          {
+            "seq": 1354,
+            "thread": 0,
+            "iter": 367,
+            "value_after": 617
+          },
+          {
+            "seq": 1455,
+            "thread": 1,
+            "iter": 353,
+            "value_after": 617
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 617,
+        "writes": [
+          {
+            "seq": 1356,
+            "thread": 0,
+            "iter": 368,
+            "value_after": 618
+          },
+          {
+            "seq": 1457,
+            "thread": 1,
+            "iter": 354,
+            "value_after": 618
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 618,
+        "writes": [
+          {
+            "seq": 1358,
+            "thread": 0,
+            "iter": 369,
+            "value_after": 619
+          },
+          {
+            "seq": 1459,
+            "thread": 1,
+            "iter": 355,
+            "value_after": 619
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 619,
+        "writes": [
+          {
+            "seq": 1360,
+            "thread": 0,
+            "iter": 370,
+            "value_after": 620
+          },
+          {
+            "seq": 1461,
+            "thread": 1,
+            "iter": 356,
+            "value_after": 620
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 620,
+        "writes": [
+          {
+            "seq": 1362,
+            "thread": 0,
+            "iter": 371,
+            "value_after": 621
+          },
+          {
+            "seq": 1463,
+            "thread": 1,
+            "iter": 357,
+            "value_after": 621
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 621,
+        "writes": [
+          {
+            "seq": 1364,
+            "thread": 0,
+            "iter": 372,
+            "value_after": 622
+          },
+          {
+            "seq": 1465,
+            "thread": 1,
+            "iter": 358,
+            "value_after": 622
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 622,
+        "writes": [
+          {
+            "seq": 1467,
+            "thread": 1,
+            "iter": 359,
+            "value_after": 623
+          },
+          {
+            "seq": 1625,
+            "thread": 0,
+            "iter": 373,
+            "value_after": 623
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 722,
+        "writes": [
+          {
+            "seq": 1669,
+            "thread": 1,
+            "iter": 445,
+            "value_after": 723
+          },
+          {
+            "seq": 1673,
+            "thread": 0,
+            "iter": 388,
+            "value_after": 723
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 732,
+        "writes": [
+          {
+            "seq": 1690,
+            "thread": 1,
+            "iter": 452,
+            "value_after": 733
+          },
+          {
+            "seq": 1720,
+            "thread": 0,
+            "iter": 392,
+            "value_after": 733
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 733,
+        "writes": [
+          {
+            "seq": 1692,
+            "thread": 1,
+            "iter": 453,
+            "value_after": 734
+          },
+          {
+            "seq": 1722,
+            "thread": 0,
+            "iter": 393,
+            "value_after": 734
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 734,
+        "writes": [
+          {
+            "seq": 1694,
+            "thread": 1,
+            "iter": 454,
+            "value_after": 735
+          },
+          {
+            "seq": 1724,
+            "thread": 0,
+            "iter": 394,
+            "value_after": 735
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 735,
+        "writes": [
+          {
+            "seq": 1696,
+            "thread": 1,
+            "iter": 455,
+            "value_after": 736
+          },
+          {
+            "seq": 1797,
+            "thread": 0,
+            "iter": 395,
+            "value_after": 736
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 934,
+        "writes": [
+          {
+            "seq": 2102,
+            "thread": 1,
+            "iter": 588,
+            "value_after": 935
+          },
+          {
+            "seq": 2123,
+            "thread": 0,
+            "iter": 462,
+            "value_after": 935
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 937,
+        "writes": [
+          {
+            "seq": 2108,
+            "thread": 1,
+            "iter": 591,
+            "value_after": 938
+          },
+          {
+            "seq": 2125,
+            "thread": 0,
+            "iter": 463,
+            "value_after": 938
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 938,
+        "writes": [
+          {
+            "seq": 2110,
+            "thread": 1,
+            "iter": 592,
+            "value_after": 939
+          },
+          {
+            "seq": 2127,
+            "thread": 0,
+            "iter": 464,
+            "value_after": 939
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 939,
+        "writes": [
+          {
+            "seq": 2112,
+            "thread": 1,
+            "iter": 593,
+            "value_after": 940
+          },
+          {
+            "seq": 2129,
+            "thread": 0,
+            "iter": 465,
+            "value_after": 940
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 940,
+        "writes": [
+          {
+            "seq": 2114,
+            "thread": 1,
+            "iter": 594,
+            "value_after": 941
+          },
+          {
+            "seq": 2131,
+            "thread": 0,
+            "iter": 466,
+            "value_after": 941
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 941,
+        "writes": [
+          {
+            "seq": 2116,
+            "thread": 1,
+            "iter": 595,
+            "value_after": 942
+          },
+          {
+            "seq": 2133,
+            "thread": 0,
+            "iter": 467,
+            "value_after": 942
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 942,
+        "writes": [
+          {
+            "seq": 2119,
+            "thread": 1,
+            "iter": 596,
+            "value_after": 943
+          },
+          {
+            "seq": 2135,
+            "thread": 0,
+            "iter": 468,
+            "value_after": 943
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 966,
+        "writes": [
+          {
+            "seq": 2184,
+            "thread": 0,
+            "iter": 482,
+            "value_after": 967
+          },
+          {
+            "seq": 2197,
+            "thread": 1,
+            "iter": 609,
+            "value_after": 967
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 968,
+        "writes": [
+          {
+            "seq": 2188,
+            "thread": 0,
+            "iter": 484,
+            "value_after": 969
+          },
+          {
+            "seq": 2201,
+            "thread": 1,
+            "iter": 610,
+            "value_after": 969
+          },
+          {
+            "seq": 2209,
+            "thread": 0,
+            "iter": 489,
+            "value_after": 969
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 969,
+        "writes": [
+          {
+            "seq": 2190,
+            "thread": 0,
+            "iter": 485,
+            "value_after": 970
+          },
+          {
+            "seq": 2203,
+            "thread": 1,
+            "iter": 611,
+            "value_after": 970
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 970,
+        "writes": [
+          {
+            "seq": 2192,
+            "thread": 0,
+            "iter": 486,
+            "value_after": 971
+          },
+          {
+            "seq": 2205,
+            "thread": 1,
+            "iter": 612,
+            "value_after": 971
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 971,
+        "writes": [
+          {
+            "seq": 2195,
+            "thread": 0,
+            "iter": 487,
+            "value_after": 972
+          },
+          {
+            "seq": 2207,
+            "thread": 1,
+            "iter": 613,
+            "value_after": 972
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 974,
+        "writes": [
+          {
+            "seq": 2215,
+            "thread": 1,
+            "iter": 615,
+            "value_after": 975
+          },
+          {
+            "seq": 2219,
+            "thread": 0,
+            "iter": 491,
+            "value_after": 975
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 978,
+        "writes": [
+          {
+            "seq": 2224,
+            "thread": 1,
+            "iter": 618,
+            "value_after": 979
+          },
+          {
+            "seq": 2227,
+            "thread": 0,
+            "iter": 493,
+            "value_after": 979
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 979,
+        "writes": [
+          {
+            "seq": 2229,
+            "thread": 1,
+            "iter": 619,
+            "value_after": 980
+          },
+          {
+            "seq": 2233,
+            "thread": 0,
+            "iter": 494,
+            "value_after": 980
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1115,
+        "writes": [
+          {
+            "seq": 2503,
+            "thread": 1,
+            "iter": 738,
+            "value_after": 1116
+          },
+          {
+            "seq": 2513,
+            "thread": 0,
+            "iter": 512,
+            "value_after": 1116
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1386,
+        "writes": [
+          {
+            "seq": 3046,
+            "thread": 1,
+            "iter": 893,
+            "value_after": 1387
+          },
+          {
+            "seq": 3229,
+            "thread": 0,
+            "iter": 629,
+            "value_after": 1387
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1477,
+        "writes": [
+          {
+            "seq": 3232,
+            "thread": 1,
+            "iter": 985,
+            "value_after": 1478
+          },
+          {
+            "seq": 3301,
+            "thread": 0,
+            "iter": 630,
+            "value_after": 1478
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1478,
+        "writes": [
+          {
+            "seq": 3234,
+            "thread": 1,
+            "iter": 986,
+            "value_after": 1479
+          },
+          {
+            "seq": 3303,
+            "thread": 0,
+            "iter": 631,
+            "value_after": 1479
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1479,
+        "writes": [
+          {
+            "seq": 3236,
+            "thread": 1,
+            "iter": 987,
+            "value_after": 1480
+          },
+          {
+            "seq": 3305,
+            "thread": 0,
+            "iter": 632,
+            "value_after": 1480
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1480,
+        "writes": [
+          {
+            "seq": 3238,
+            "thread": 1,
+            "iter": 988,
+            "value_after": 1481
+          },
+          {
+            "seq": 3307,
+            "thread": 0,
+            "iter": 633,
+            "value_after": 1481
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1481,
+        "writes": [
+          {
+            "seq": 3240,
+            "thread": 1,
+            "iter": 989,
+            "value_after": 1482
+          },
+          {
+            "seq": 3309,
+            "thread": 0,
+            "iter": 634,
+            "value_after": 1482
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1482,
+        "writes": [
+          {
+            "seq": 3242,
+            "thread": 1,
+            "iter": 990,
+            "value_after": 1483
+          },
+          {
+            "seq": 3311,
+            "thread": 0,
+            "iter": 635,
+            "value_after": 1483
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1483,
+        "writes": [
+          {
+            "seq": 3244,
+            "thread": 1,
+            "iter": 991,
+            "value_after": 1484
+          },
+          {
+            "seq": 3313,
+            "thread": 0,
+            "iter": 636,
+            "value_after": 1484
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1484,
+        "writes": [
+          {
+            "seq": 3246,
+            "thread": 1,
+            "iter": 992,
+            "value_after": 1485
+          },
+          {
+            "seq": 3315,
+            "thread": 0,
+            "iter": 637,
+            "value_after": 1485
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1485,
+        "writes": [
+          {
+            "seq": 3248,
+            "thread": 1,
+            "iter": 993,
+            "value_after": 1486
+          },
+          {
+            "seq": 3317,
+            "thread": 0,
+            "iter": 638,
+            "value_after": 1486
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1486,
+        "writes": [
+          {
+            "seq": 3250,
+            "thread": 1,
+            "iter": 994,
+            "value_after": 1487
+          },
+          {
+            "seq": 3319,
+            "thread": 0,
+            "iter": 639,
+            "value_after": 1487
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1487,
+        "writes": [
+          {
+            "seq": 3252,
+            "thread": 1,
+            "iter": 995,
+            "value_after": 1488
+          },
+          {
+            "seq": 3321,
+            "thread": 0,
+            "iter": 640,
+            "value_after": 1488
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1488,
+        "writes": [
+          {
+            "seq": 3254,
+            "thread": 1,
+            "iter": 996,
+            "value_after": 1489
+          },
+          {
+            "seq": 3323,
+            "thread": 0,
+            "iter": 641,
+            "value_after": 1489
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1489,
+        "writes": [
+          {
+            "seq": 3256,
+            "thread": 1,
+            "iter": 997,
+            "value_after": 1490
+          },
+          {
+            "seq": 3325,
+            "thread": 0,
+            "iter": 642,
+            "value_after": 1490
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1490,
+        "writes": [
+          {
+            "seq": 3258,
+            "thread": 1,
+            "iter": 998,
+            "value_after": 1491
+          },
+          {
+            "seq": 3327,
+            "thread": 0,
+            "iter": 643,
+            "value_after": 1491
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1491,
+        "writes": [
+          {
+            "seq": 3260,
+            "thread": 1,
+            "iter": 999,
+            "value_after": 1492
+          },
+          {
+            "seq": 3329,
+            "thread": 0,
+            "iter": 644,
+            "value_after": 1492
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1492,
+        "writes": [
+          {
+            "seq": 3262,
+            "thread": 1,
+            "iter": 1000,
+            "value_after": 1493
+          },
+          {
+            "seq": 3331,
+            "thread": 0,
+            "iter": 645,
+            "value_after": 1493
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1493,
+        "writes": [
+          {
+            "seq": 3264,
+            "thread": 1,
+            "iter": 1001,
+            "value_after": 1494
+          },
+          {
+            "seq": 3333,
+            "thread": 0,
+            "iter": 646,
+            "value_after": 1494
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1494,
+        "writes": [
+          {
+            "seq": 3266,
+            "thread": 1,
+            "iter": 1002,
+            "value_after": 1495
+          },
+          {
+            "seq": 3335,
+            "thread": 0,
+            "iter": 647,
+            "value_after": 1495
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1495,
+        "writes": [
+          {
+            "seq": 3268,
+            "thread": 1,
+            "iter": 1003,
+            "value_after": 1496
+          },
+          {
+            "seq": 3337,
+            "thread": 0,
+            "iter": 648,
+            "value_after": 1496
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1496,
+        "writes": [
+          {
+            "seq": 3270,
+            "thread": 1,
+            "iter": 1004,
+            "value_after": 1497
+          },
+          {
+            "seq": 3339,
+            "thread": 0,
+            "iter": 649,
+            "value_after": 1497
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1497,
+        "writes": [
+          {
+            "seq": 3272,
+            "thread": 1,
+            "iter": 1005,
+            "value_after": 1498
+          },
+          {
+            "seq": 3341,
+            "thread": 0,
+            "iter": 650,
+            "value_after": 1498
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1498,
+        "writes": [
+          {
+            "seq": 3274,
+            "thread": 1,
+            "iter": 1006,
+            "value_after": 1499
+          },
+          {
+            "seq": 3343,
+            "thread": 0,
+            "iter": 651,
+            "value_after": 1499
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1499,
+        "writes": [
+          {
+            "seq": 3276,
+            "thread": 1,
+            "iter": 1007,
+            "value_after": 1500
+          },
+          {
+            "seq": 3345,
+            "thread": 0,
+            "iter": 652,
+            "value_after": 1500
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1500,
+        "writes": [
+          {
+            "seq": 3278,
+            "thread": 1,
+            "iter": 1008,
+            "value_after": 1501
+          },
+          {
+            "seq": 3349,
+            "thread": 0,
+            "iter": 653,
+            "value_after": 1501
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1502,
+        "writes": [
+          {
+            "seq": 3282,
+            "thread": 1,
+            "iter": 1010,
+            "value_after": 1503
+          },
+          {
+            "seq": 3351,
+            "thread": 0,
+            "iter": 654,
+            "value_after": 1503
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1503,
+        "writes": [
+          {
+            "seq": 3284,
+            "thread": 1,
+            "iter": 1011,
+            "value_after": 1504
+          },
+          {
+            "seq": 3353,
+            "thread": 0,
+            "iter": 655,
+            "value_after": 1504
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1504,
+        "writes": [
+          {
+            "seq": 3286,
+            "thread": 1,
+            "iter": 1012,
+            "value_after": 1505
+          },
+          {
+            "seq": 3355,
+            "thread": 0,
+            "iter": 656,
+            "value_after": 1505
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1505,
+        "writes": [
+          {
+            "seq": 3288,
+            "thread": 1,
+            "iter": 1013,
+            "value_after": 1506
+          },
+          {
+            "seq": 3357,
+            "thread": 0,
+            "iter": 657,
+            "value_after": 1506
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1506,
+        "writes": [
+          {
+            "seq": 3290,
+            "thread": 1,
+            "iter": 1014,
+            "value_after": 1507
+          },
+          {
+            "seq": 3359,
+            "thread": 0,
+            "iter": 658,
+            "value_after": 1507
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1507,
+        "writes": [
+          {
+            "seq": 3292,
+            "thread": 1,
+            "iter": 1015,
+            "value_after": 1508
+          },
+          {
+            "seq": 3367,
+            "thread": 0,
+            "iter": 659,
+            "value_after": 1508
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1511,
+        "writes": [
+          {
+            "seq": 3347,
+            "thread": 1,
+            "iter": 1019,
+            "value_after": 1512
+          },
+          {
+            "seq": 3369,
+            "thread": 0,
+            "iter": 660,
+            "value_after": 1512
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1580,
+        "writes": [
+          {
+            "seq": 3509,
+            "thread": 0,
+            "iter": 679,
+            "value_after": 1581
+          },
+          {
+            "seq": 3744,
+            "thread": 1,
+            "iter": 1074,
+            "value_after": 1581
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1698,
+        "writes": [
+          {
+            "seq": 3746,
+            "thread": 0,
+            "iter": 797,
+            "value_after": 1699
+          },
+          {
+            "seq": 3751,
+            "thread": 1,
+            "iter": 1075,
+            "value_after": 1699
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1700,
+        "writes": [
+          {
+            "seq": 3754,
+            "thread": 0,
+            "iter": 800,
+            "value_after": 1701
+          },
+          {
+            "seq": 3777,
+            "thread": 1,
+            "iter": 1076,
+            "value_after": 1701
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1905,
+        "writes": [
+          {
+            "seq": 4172,
+            "thread": 1,
+            "iter": 1261,
+            "value_after": 1906
+          },
+          {
+            "seq": 4181,
+            "thread": 0,
+            "iter": 824,
+            "value_after": 1906
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1906,
+        "writes": [
+          {
+            "seq": 4174,
+            "thread": 1,
+            "iter": 1262,
+            "value_after": 1907
+          },
+          {
+            "seq": 4183,
+            "thread": 0,
+            "iter": 825,
+            "value_after": 1907
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1907,
+        "writes": [
+          {
+            "seq": 4176,
+            "thread": 1,
+            "iter": 1263,
+            "value_after": 1908
+          },
+          {
+            "seq": 4185,
+            "thread": 0,
+            "iter": 826,
+            "value_after": 1908
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1908,
+        "writes": [
+          {
+            "seq": 4178,
+            "thread": 1,
+            "iter": 1264,
+            "value_after": 1909
+          },
+          {
+            "seq": 4187,
+            "thread": 0,
+            "iter": 827,
+            "value_after": 1909
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 1909,
+        "writes": [
+          {
+            "seq": 4189,
+            "thread": 0,
+            "iter": 828,
+            "value_after": 1910
+          },
+          {
+            "seq": 4201,
+            "thread": 1,
+            "iter": 1265,
+            "value_after": 1910
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2329,
+        "writes": [
+          {
+            "seq": 5030,
+            "thread": 0,
+            "iter": 1089,
+            "value_after": 2330
+          },
+          {
+            "seq": 5037,
+            "thread": 1,
+            "iter": 1425,
+            "value_after": 2330
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2330,
+        "writes": [
+          {
+            "seq": 5032,
+            "thread": 0,
+            "iter": 1090,
+            "value_after": 2331
+          },
+          {
+            "seq": 5039,
+            "thread": 1,
+            "iter": 1426,
+            "value_after": 2331
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2331,
+        "writes": [
+          {
+            "seq": 5034,
+            "thread": 0,
+            "iter": 1091,
+            "value_after": 2332
+          },
+          {
+            "seq": 5065,
+            "thread": 1,
+            "iter": 1427,
+            "value_after": 2332
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2561,
+        "writes": [
+          {
+            "seq": 5503,
+            "thread": 1,
+            "iter": 1481,
+            "value_after": 2562
+          },
+          {
+            "seq": 5548,
+            "thread": 0,
+            "iter": 1269,
+            "value_after": 2562
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2584,
+        "writes": [
+          {
+            "seq": 5551,
+            "thread": 1,
+            "iter": 1504,
+            "value_after": 2585
+          },
+          {
+            "seq": 5747,
+            "thread": 0,
+            "iter": 1270,
+            "value_after": 2585
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2758,
+        "writes": [
+          {
+            "seq": 5900,
+            "thread": 1,
+            "iter": 1613,
+            "value_after": 2759
+          },
+          {
+            "seq": 5919,
+            "thread": 0,
+            "iter": 1336,
+            "value_after": 2759
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2799,
+        "writes": [
+          {
+            "seq": 5993,
+            "thread": 1,
+            "iter": 1657,
+            "value_after": 2800
+          },
+          {
+            "seq": 6041,
+            "thread": 0,
+            "iter": 1338,
+            "value_after": 2800
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 2967,
+        "writes": [
+          {
+            "seq": 6331,
+            "thread": 1,
+            "iter": 1698,
+            "value_after": 2968
+          },
+          {
+            "seq": 6333,
+            "thread": 0,
+            "iter": 1466,
+            "value_after": 2968
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3152,
+        "writes": [
+          {
+            "seq": 6702,
+            "thread": 0,
+            "iter": 1555,
+            "value_after": 3153
+          },
+          {
+            "seq": 6711,
+            "thread": 1,
+            "iter": 1795,
+            "value_after": 3153
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3153,
+        "writes": [
+          {
+            "seq": 6704,
+            "thread": 0,
+            "iter": 1556,
+            "value_after": 3154
+          },
+          {
+            "seq": 6713,
+            "thread": 1,
+            "iter": 1796,
+            "value_after": 3154
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3154,
+        "writes": [
+          {
+            "seq": 6706,
+            "thread": 0,
+            "iter": 1557,
+            "value_after": 3155
+          },
+          {
+            "seq": 6715,
+            "thread": 1,
+            "iter": 1797,
+            "value_after": 3155
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3155,
+        "writes": [
+          {
+            "seq": 6708,
+            "thread": 0,
+            "iter": 1558,
+            "value_after": 3156
+          },
+          {
+            "seq": 6717,
+            "thread": 1,
+            "iter": 1798,
+            "value_after": 3156
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3156,
+        "writes": [
+          {
+            "seq": 6719,
+            "thread": 0,
+            "iter": 1559,
+            "value_after": 3157
+          },
+          {
+            "seq": 6725,
+            "thread": 1,
+            "iter": 1799,
+            "value_after": 3157
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3235,
+        "writes": [
+          {
+            "seq": 6878,
+            "thread": 0,
+            "iter": 1564,
+            "value_after": 3236
+          },
+          {
+            "seq": 6883,
+            "thread": 1,
+            "iter": 1874,
+            "value_after": 3236
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3236,
+        "writes": [
+          {
+            "seq": 6880,
+            "thread": 0,
+            "iter": 1565,
+            "value_after": 3237
+          },
+          {
+            "seq": 6885,
+            "thread": 1,
+            "iter": 1875,
+            "value_after": 3237
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3237,
+        "writes": [
+          {
+            "seq": 6887,
+            "thread": 1,
+            "iter": 1876,
+            "value_after": 3238
+          },
+          {
+            "seq": 7109,
+            "thread": 0,
+            "iter": 1566,
+            "value_after": 3238
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3357,
+        "writes": [
+          {
+            "seq": 7128,
+            "thread": 1,
+            "iter": 1991,
+            "value_after": 3358
+          },
+          {
+            "seq": 7139,
+            "thread": 0,
+            "iter": 1572,
+            "value_after": 3358
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3358,
+        "writes": [
+          {
+            "seq": 7130,
+            "thread": 1,
+            "iter": 1992,
+            "value_after": 3359
+          },
+          {
+            "seq": 7141,
+            "thread": 0,
+            "iter": 1573,
+            "value_after": 3359
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3359,
+        "writes": [
+          {
+            "seq": 7132,
+            "thread": 1,
+            "iter": 1993,
+            "value_after": 3360
+          },
+          {
+            "seq": 7143,
+            "thread": 0,
+            "iter": 1574,
+            "value_after": 3360
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3360,
+        "writes": [
+          {
+            "seq": 7134,
+            "thread": 1,
+            "iter": 1994,
+            "value_after": 3361
+          },
+          {
+            "seq": 7145,
+            "thread": 0,
+            "iter": 1575,
+            "value_after": 3361
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3361,
+        "writes": [
+          {
+            "seq": 7136,
+            "thread": 1,
+            "iter": 1995,
+            "value_after": 3362
+          },
+          {
+            "seq": 7147,
+            "thread": 0,
+            "iter": 1576,
+            "value_after": 3362
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3362,
+        "writes": [
+          {
+            "seq": 7149,
+            "thread": 0,
+            "iter": 1577,
+            "value_after": 3363
+          },
+          {
+            "seq": 7153,
+            "thread": 1,
+            "iter": 1996,
+            "value_after": 3363
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3519,
+        "writes": [
+          {
+            "seq": 7464,
+            "thread": 0,
+            "iter": 1625,
+            "value_after": 3520
+          },
+          {
+            "seq": 7547,
+            "thread": 1,
+            "iter": 2106,
+            "value_after": 3520
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3520,
+        "writes": [
+          {
+            "seq": 7466,
+            "thread": 0,
+            "iter": 1626,
+            "value_after": 3521
+          },
+          {
+            "seq": 7549,
+            "thread": 1,
+            "iter": 2107,
+            "value_after": 3521
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3521,
+        "writes": [
+          {
+            "seq": 7468,
+            "thread": 0,
+            "iter": 1627,
+            "value_after": 3522
+          },
+          {
+            "seq": 7559,
+            "thread": 1,
+            "iter": 2108,
+            "value_after": 3522
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3526,
+        "writes": [
+          {
+            "seq": 7478,
+            "thread": 0,
+            "iter": 1632,
+            "value_after": 3527
+          },
+          {
+            "seq": 7561,
+            "thread": 1,
+            "iter": 2109,
+            "value_after": 3527
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3527,
+        "writes": [
+          {
+            "seq": 7480,
+            "thread": 0,
+            "iter": 1633,
+            "value_after": 3528
+          },
+          {
+            "seq": 7563,
+            "thread": 1,
+            "iter": 2110,
+            "value_after": 3528
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3528,
+        "writes": [
+          {
+            "seq": 7482,
+            "thread": 0,
+            "iter": 1634,
+            "value_after": 3529
+          },
+          {
+            "seq": 7565,
+            "thread": 1,
+            "iter": 2111,
+            "value_after": 3529
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3529,
+        "writes": [
+          {
+            "seq": 7484,
+            "thread": 0,
+            "iter": 1635,
+            "value_after": 3530
+          },
+          {
+            "seq": 7567,
+            "thread": 1,
+            "iter": 2112,
+            "value_after": 3530
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3530,
+        "writes": [
+          {
+            "seq": 7486,
+            "thread": 0,
+            "iter": 1636,
+            "value_after": 3531
+          },
+          {
+            "seq": 7569,
+            "thread": 1,
+            "iter": 2113,
+            "value_after": 3531
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3531,
+        "writes": [
+          {
+            "seq": 7488,
+            "thread": 0,
+            "iter": 1637,
+            "value_after": 3532
+          },
+          {
+            "seq": 7571,
+            "thread": 1,
+            "iter": 2114,
+            "value_after": 3532
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3532,
+        "writes": [
+          {
+            "seq": 7490,
+            "thread": 0,
+            "iter": 1638,
+            "value_after": 3533
+          },
+          {
+            "seq": 7573,
+            "thread": 1,
+            "iter": 2115,
+            "value_after": 3533
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3533,
+        "writes": [
+          {
+            "seq": 7492,
+            "thread": 0,
+            "iter": 1639,
+            "value_after": 3534
+          },
+          {
+            "seq": 7575,
+            "thread": 1,
+            "iter": 2116,
+            "value_after": 3534
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3534,
+        "writes": [
+          {
+            "seq": 7494,
+            "thread": 0,
+            "iter": 1640,
+            "value_after": 3535
+          },
+          {
+            "seq": 7577,
+            "thread": 1,
+            "iter": 2117,
+            "value_after": 3535
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3535,
+        "writes": [
+          {
+            "seq": 7496,
+            "thread": 0,
+            "iter": 1641,
+            "value_after": 3536
+          },
+          {
+            "seq": 7599,
+            "thread": 1,
+            "iter": 2118,
+            "value_after": 3536
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3546,
+        "writes": [
+          {
+            "seq": 7518,
+            "thread": 0,
+            "iter": 1652,
+            "value_after": 3547
+          },
+          {
+            "seq": 7603,
+            "thread": 1,
+            "iter": 2119,
+            "value_after": 3547
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3548,
+        "writes": [
+          {
+            "seq": 7522,
+            "thread": 0,
+            "iter": 1654,
+            "value_after": 3549
+          },
+          {
+            "seq": 7605,
+            "thread": 1,
+            "iter": 2120,
+            "value_after": 3549
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3549,
+        "writes": [
+          {
+            "seq": 7524,
+            "thread": 0,
+            "iter": 1655,
+            "value_after": 3550
+          },
+          {
+            "seq": 7607,
+            "thread": 1,
+            "iter": 2121,
+            "value_after": 3550
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3550,
+        "writes": [
+          {
+            "seq": 7526,
+            "thread": 0,
+            "iter": 1656,
+            "value_after": 3551
+          },
+          {
+            "seq": 7609,
+            "thread": 1,
+            "iter": 2122,
+            "value_after": 3551
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3551,
+        "writes": [
+          {
+            "seq": 7528,
+            "thread": 0,
+            "iter": 1657,
+            "value_after": 3552
+          },
+          {
+            "seq": 7611,
+            "thread": 1,
+            "iter": 2123,
+            "value_after": 3552
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3552,
+        "writes": [
+          {
+            "seq": 7530,
+            "thread": 0,
+            "iter": 1658,
+            "value_after": 3553
+          },
+          {
+            "seq": 7613,
+            "thread": 1,
+            "iter": 2124,
+            "value_after": 3553
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3553,
+        "writes": [
+          {
+            "seq": 7532,
+            "thread": 0,
+            "iter": 1659,
+            "value_after": 3554
+          },
+          {
+            "seq": 7615,
+            "thread": 1,
+            "iter": 2125,
+            "value_after": 3554
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3554,
+        "writes": [
+          {
+            "seq": 7534,
+            "thread": 0,
+            "iter": 1660,
+            "value_after": 3555
+          },
+          {
+            "seq": 7617,
+            "thread": 1,
+            "iter": 2126,
+            "value_after": 3555
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3555,
+        "writes": [
+          {
+            "seq": 7536,
+            "thread": 0,
+            "iter": 1661,
+            "value_after": 3556
+          },
+          {
+            "seq": 7619,
+            "thread": 1,
+            "iter": 2127,
+            "value_after": 3556
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3556,
+        "writes": [
+          {
+            "seq": 7538,
+            "thread": 0,
+            "iter": 1662,
+            "value_after": 3557
+          },
+          {
+            "seq": 7621,
+            "thread": 1,
+            "iter": 2128,
+            "value_after": 3557
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3557,
+        "writes": [
+          {
+            "seq": 7540,
+            "thread": 0,
+            "iter": 1663,
+            "value_after": 3558
+          },
+          {
+            "seq": 7623,
+            "thread": 1,
+            "iter": 2129,
+            "value_after": 3558
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3558,
+        "writes": [
+          {
+            "seq": 7542,
+            "thread": 0,
+            "iter": 1664,
+            "value_after": 3559
+          },
+          {
+            "seq": 7625,
+            "thread": 1,
+            "iter": 2130,
+            "value_after": 3559
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3559,
+        "writes": [
+          {
+            "seq": 7544,
+            "thread": 0,
+            "iter": 1665,
+            "value_after": 3560
+          },
+          {
+            "seq": 7627,
+            "thread": 1,
+            "iter": 2131,
+            "value_after": 3560
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3560,
+        "writes": [
+          {
+            "seq": 7551,
+            "thread": 0,
+            "iter": 1666,
+            "value_after": 3561
+          },
+          {
+            "seq": 7629,
+            "thread": 1,
+            "iter": 2132,
+            "value_after": 3561
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3708,
+        "writes": [
+          {
+            "seq": 7926,
+            "thread": 0,
+            "iter": 1703,
+            "value_after": 3709
+          },
+          {
+            "seq": 7928,
+            "thread": 1,
+            "iter": 2259,
+            "value_after": 3709
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3709,
+        "writes": [
+          {
+            "seq": 7930,
+            "thread": 1,
+            "iter": 2260,
+            "value_after": 3710
+          },
+          {
+            "seq": 7943,
+            "thread": 0,
+            "iter": 1704,
+            "value_after": 3710
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3710,
+        "writes": [
+          {
+            "seq": 7932,
+            "thread": 1,
+            "iter": 2261,
+            "value_after": 3711
+          },
+          {
+            "seq": 7946,
+            "thread": 1,
+            "iter": 2267,
+            "value_after": 3711
+          },
+          {
+            "seq": 7949,
+            "thread": 0,
+            "iter": 1705,
+            "value_after": 3711
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3711,
+        "writes": [
+          {
+            "seq": 7934,
+            "thread": 1,
+            "iter": 2262,
+            "value_after": 3712
+          },
+          {
+            "seq": 7951,
+            "thread": 0,
+            "iter": 1706,
+            "value_after": 3712
+          },
+          {
+            "seq": 7961,
+            "thread": 1,
+            "iter": 2268,
+            "value_after": 3712
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3712,
+        "writes": [
+          {
+            "seq": 7936,
+            "thread": 1,
+            "iter": 2263,
+            "value_after": 3713
+          },
+          {
+            "seq": 7953,
+            "thread": 0,
+            "iter": 1707,
+            "value_after": 3713
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3713,
+        "writes": [
+          {
+            "seq": 7938,
+            "thread": 1,
+            "iter": 2264,
+            "value_after": 3714
+          },
+          {
+            "seq": 7955,
+            "thread": 0,
+            "iter": 1708,
+            "value_after": 3714
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3714,
+        "writes": [
+          {
+            "seq": 7940,
+            "thread": 1,
+            "iter": 2265,
+            "value_after": 3715
+          },
+          {
+            "seq": 7957,
+            "thread": 0,
+            "iter": 1709,
+            "value_after": 3715
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3715,
+        "writes": [
+          {
+            "seq": 7944,
+            "thread": 1,
+            "iter": 2266,
+            "value_after": 3716
+          },
+          {
+            "seq": 7959,
+            "thread": 0,
+            "iter": 1710,
+            "value_after": 3716
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3916,
+        "writes": [
+          {
+            "seq": 8362,
+            "thread": 0,
+            "iter": 1790,
+            "value_after": 3917
+          },
+          {
+            "seq": 8383,
+            "thread": 1,
+            "iter": 2390,
+            "value_after": 3917
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3919,
+        "writes": [
+          {
+            "seq": 8368,
+            "thread": 0,
+            "iter": 1793,
+            "value_after": 3920
+          },
+          {
+            "seq": 8385,
+            "thread": 1,
+            "iter": 2391,
+            "value_after": 3920
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3920,
+        "writes": [
+          {
+            "seq": 8370,
+            "thread": 0,
+            "iter": 1794,
+            "value_after": 3921
+          },
+          {
+            "seq": 8389,
+            "thread": 1,
+            "iter": 2392,
+            "value_after": 3921
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3922,
+        "writes": [
+          {
+            "seq": 8374,
+            "thread": 0,
+            "iter": 1796,
+            "value_after": 3923
+          },
+          {
+            "seq": 8391,
+            "thread": 1,
+            "iter": 2393,
+            "value_after": 3923
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3923,
+        "writes": [
+          {
+            "seq": 8376,
+            "thread": 0,
+            "iter": 1797,
+            "value_after": 3924
+          },
+          {
+            "seq": 8393,
+            "thread": 1,
+            "iter": 2394,
+            "value_after": 3924
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3924,
+        "writes": [
+          {
+            "seq": 8379,
+            "thread": 0,
+            "iter": 1798,
+            "value_after": 3925
+          },
+          {
+            "seq": 8395,
+            "thread": 1,
+            "iter": 2395,
+            "value_after": 3925
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3987,
+        "writes": [
+          {
+            "seq": 8522,
+            "thread": 0,
+            "iter": 1844,
+            "value_after": 3988
+          },
+          {
+            "seq": 8525,
+            "thread": 1,
+            "iter": 2416,
+            "value_after": 3988
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 3988,
+        "writes": [
+          {
+            "seq": 8527,
+            "thread": 1,
+            "iter": 2417,
+            "value_after": 3989
+          },
+          {
+            "seq": 8681,
+            "thread": 0,
+            "iter": 1845,
+            "value_after": 3989
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4323,
+        "writes": [
+          {
+            "seq": 9198,
+            "thread": 1,
+            "iter": 2568,
+            "value_after": 4324
+          },
+          {
+            "seq": 9200,
+            "thread": 0,
+            "iter": 2030,
+            "value_after": 4324
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4324,
+        "writes": [
+          {
+            "seq": 9202,
+            "thread": 0,
+            "iter": 2031,
+            "value_after": 4325
+          },
+          {
+            "seq": 9209,
+            "thread": 1,
+            "iter": 2569,
+            "value_after": 4325
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4325,
+        "writes": [
+          {
+            "seq": 9204,
+            "thread": 0,
+            "iter": 2032,
+            "value_after": 4326
+          },
+          {
+            "seq": 9211,
+            "thread": 1,
+            "iter": 2570,
+            "value_after": 4326
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4326,
+        "writes": [
+          {
+            "seq": 9206,
+            "thread": 0,
+            "iter": 2033,
+            "value_after": 4327
+          },
+          {
+            "seq": 9213,
+            "thread": 1,
+            "iter": 2571,
+            "value_after": 4327
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4327,
+        "writes": [
+          {
+            "seq": 9215,
+            "thread": 1,
+            "iter": 2572,
+            "value_after": 4328
+          },
+          {
+            "seq": 9221,
+            "thread": 0,
+            "iter": 2034,
+            "value_after": 4328
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4531,
+        "writes": [
+          {
+            "seq": 9624,
+            "thread": 1,
+            "iter": 2726,
+            "value_after": 4532
+          },
+          {
+            "seq": 9635,
+            "thread": 0,
+            "iter": 2085,
+            "value_after": 4532
+          }
+        ],
+        "kind": "duplicate_base_write"
+      },
+      {
+        "value_before": 4942,
+        "writes": [
+          {
+            "seq": 10453,
+            "thread": 1,
+            "iter": 2986,
+            "value_after": 4943
+          },
+          {
+            "seq": 10469,
+            "thread": 0,
+            "iter": 2239,
+            "value_after": 4943
+          }
+        ],
+        "kind": "duplicate_base_write"
+      }
+    ],
+    "conflict_count": 223,
+    "interleave_windows": [
+      {
+        "event_start": 2209,
+        "event_end": 2215,
+        "alternations": 5
+      }
+    ],
+    "interleave_window_count": 1,
+    "run_summary": {
+      "actual_count": 5716,
+      "expected_count": 6000,
+      "iterations_per_thread": 3000,
+      "lost_updates": 284,
+      "race_manifested": true,
+      "seq": 12001,
+      "spin_ns": 1200,
+      "threads": 2,
+      "ts": "2026-07-07T20:39:53.498443+00:00",
+      "type": "run_summary"
+    },
+    "race_manifested": true,
+    "lost_updates": 284
+  },
+  "rolling_windows": {
+    "stride_events": 16,
+    "max_windows": 200,
+    "count": 200,
+    "sample": [
+      {
+        "event_index": 0,
+        "seq": 1,
+        "thread": 0,
+        "op": "read",
+        "byte_end": 116,
+        "chi_drift": 0.0,
+        "phase_end": 464,
+        "phase_length": 464,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 7.195373353699
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.817628
+      },
+      {
+        "event_index": 48,
+        "seq": 49,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 5812,
+        "chi_drift": 338.048046271798,
+        "phase_end": 23248,
+        "phase_length": 23248,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 345.243419625497
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.813082
+      },
+      {
+        "event_index": 96,
+        "seq": 97,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 11596,
+        "chi_drift": 354.224921476757,
+        "phase_end": 46384,
+        "phase_length": 46384,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 699.468341102254
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.834112
+      },
+      {
+        "event_index": 144,
+        "seq": 145,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 17426,
+        "chi_drift": 256.968991421356,
+        "phase_end": 69704,
+        "phase_length": 69704,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 956.43733252361
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.81923
+      },
+      {
+        "event_index": 192,
+        "seq": 193,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 23258,
+        "chi_drift": 364.782828632133,
+        "phase_end": 93032,
+        "phase_length": 93032,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 1321.220161155743
+        },
+        "topology": {
+          "same": 76,
+          "reflection": 20,
+          "error": 0,
+          "reflection_rate": 0.208333
+        },
+        "transition_entropy": 3.800215
+      },
+      {
+        "event_index": 240,
+        "seq": 241,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 29187,
+        "chi_drift": 468.575771686434,
+        "phase_end": 116748,
+        "phase_length": 116748,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 1789.795932842177
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.846523
+      },
+      {
+        "event_index": 288,
+        "seq": 289,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 35157,
+        "chi_drift": 523.65935263122,
+        "phase_end": 140628,
+        "phase_length": 140628,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2313.455285473397
+        },
+        "topology": {
+          "same": 82,
+          "reflection": 14,
+          "error": 0,
+          "reflection_rate": 0.145833
+        },
+        "transition_entropy": 3.8366
+      },
+      {
+        "event_index": 336,
+        "seq": 337,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 41133,
+        "chi_drift": 214.042289487525,
+        "phase_end": 164532,
+        "phase_length": 164532,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 2527.497574960922
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.788379
+      },
+      {
+        "event_index": 384,
+        "seq": 385,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 47094,
+        "chi_drift": 248.189690579315,
+        "phase_end": 188376,
+        "phase_length": 188376,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2775.687265540237
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.828024
+      },
+      {
+        "event_index": 432,
+        "seq": 433,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 53033,
+        "chi_drift": 197.073450538504,
+        "phase_end": 212132,
+        "phase_length": 212132,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 2972.760716078741
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.826503
+      },
+      {
+        "event_index": 480,
+        "seq": 481,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 59009,
+        "chi_drift": 206.39827897264,
+        "phase_end": 236036,
+        "phase_length": 236036,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 3179.158995051381
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.851148
+      },
+      {
+        "event_index": 528,
+        "seq": 529,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 64984,
+        "chi_drift": 585.183954106493,
+        "phase_end": 259936,
+        "phase_length": 259936,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 3764.342949157874
+        },
+        "topology": {
+          "same": 82,
+          "reflection": 14,
+          "error": 0,
+          "reflection_rate": 0.145833
+        },
+        "transition_entropy": 3.811293
+      },
+      {
+        "event_index": 576,
+        "seq": 577,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 70916,
+        "chi_drift": 49.412296086392,
+        "phase_end": 283664,
+        "phase_length": 283664,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 3813.755245244266
+        },
+        "topology": {
+          "same": 78,
+          "reflection": 18,
+          "error": 0,
+          "reflection_rate": 0.1875
+        },
+        "transition_entropy": 3.724414
+      },
+      {
+        "event_index": 624,
+        "seq": 625,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 76844,
+        "chi_drift": 466.693650720298,
+        "phase_end": 307376,
+        "phase_length": 307376,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 4280.448895964564
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.851767
+      },
+      {
+        "event_index": 672,
+        "seq": 673,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 82794,
+        "chi_drift": 294.926665513778,
+        "phase_end": 331176,
+        "phase_length": 331176,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 4575.375561478342
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.818159
+      },
+      {
+        "event_index": 720,
+        "seq": 721,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 88770,
+        "chi_drift": 270.665562779778,
+        "phase_end": 355080,
+        "phase_length": 355080,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 4846.04112425812
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.814631
+      },
+      {
+        "event_index": 768,
+        "seq": 769,
+        "thread": 1,
+        "op": "read",
+        "byte_end": 94746,
+        "chi_drift": 86.690162234509,
+        "phase_end": 378984,
+        "phase_length": 378984,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 4759.350962023611
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.739692
+      },
+      {
+        "event_index": 816,
+        "seq": 817,
+        "thread": 1,
+        "op": "read",
+        "byte_end": 100722,
+        "chi_drift": 157.622115170134,
+        "phase_end": 402888,
+        "phase_length": 402888,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 4916.973077193745
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.803232
+      },
+      {
+        "event_index": 864,
+        "seq": 865,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 106698,
+        "chi_drift": 366.837959834484,
+        "phase_end": 426792,
+        "phase_length": 426792,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 5283.811037028228
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.834491
+      },
+      {
+        "event_index": 912,
+        "seq": 913,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 112674,
+        "chi_drift": 571.45819197636,
+        "phase_end": 450696,
+        "phase_length": 450696,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 5855.269229004588
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.790096
+      },
+      {
+        "event_index": 960,
+        "seq": 961,
+        "thread": 0,
+        "op": "write",
+        "byte_end": 118650,
+        "chi_drift": 309.10858699038,
+        "phase_end": 474600,
+        "phase_length": 474600,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 6164.377815994968
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.779323
+      },
+      {
+        "event_index": 1008,
+        "seq": 1009,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 124636,
+        "chi_drift": 302.211407114589,
+        "phase_end": 498544,
+        "phase_length": 498544,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 6466.589223109557
+        },
+        "topology": {
+          "same": 80,
+          "reflection": 16,
+          "error": 0,
+          "reflection_rate": 0.166667
+        },
+        "transition_entropy": 3.820554
+      },
+      {
+        "event_index": 1056,
+        "seq": 1057,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 130660,
+        "chi_drift": 23.595558676516,
+        "phase_end": 522640,
+        "phase_length": 522640,
+        "gpl_checksum": {
+          "acc": 3,
+          "acc_label": "Phi3",
+          "chi": 6490.184781786073
+        },
+        "topology": {
+          "same": 81,
+          "reflection": 15,
+          "error": 0,
+          "reflection_rate": 0.15625
+        },
+        "transition_entropy": 3.805503
+      },
+      {
+        "event_index": 1104,
+        "seq": 1105,
+        "thread": 1,
+        "op": "write",
+        "byte_end": 136684,
+        "chi_drift": 153.563610093061,
+        "phase_end": 546736,
+        "phase_length": 546736,
+        "gpl_checksum": {
+          "acc": 1,
+          "acc_label": "Phi1",
+          "chi": 6643.748391879133
+        },
+        "topology": {
+          "same": 79,
+          "reflection": 17,
+          "error": 0,
+          "reflection_rate": 0.177083
+        },
+        "transition_entropy": 3.843061
+      }
+    ]
+  },
+  "phase_anomalies": [
+    {
+      "event_index": 48,
+      "seq": 49,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.813082,
+      "chi_drift": 338.048046271798
+    },
+    {
+      "event_index": 96,
+      "seq": 97,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.834112,
+      "chi_drift": 354.224921476757
+    },
+    {
+      "event_index": 192,
+      "seq": 193,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.208333,
+      "transition_entropy": 3.800215,
+      "chi_drift": 364.782828632133
+    },
+    {
+      "event_index": 240,
+      "seq": 241,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.846523,
+      "chi_drift": 468.575771686434
+    },
+    {
+      "event_index": 288,
+      "seq": 289,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.8366,
+      "chi_drift": 523.65935263122
+    },
+    {
+      "event_index": 480,
+      "seq": 481,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.851148,
+      "chi_drift": 206.39827897264
+    },
+    {
+      "event_index": 528,
+      "seq": 529,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.811293,
+      "chi_drift": 585.183954106493
+    },
+    {
+      "event_index": 576,
+      "seq": 577,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.724414,
+      "chi_drift": 49.412296086392
+    },
+    {
+      "event_index": 624,
+      "seq": 625,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.851767,
+      "chi_drift": 466.693650720298
+    },
+    {
+      "event_index": 864,
+      "seq": 865,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.834491,
+      "chi_drift": 366.837959834484
+    },
+    {
+      "event_index": 912,
+      "seq": 913,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.790096,
+      "chi_drift": 571.45819197636
+    },
+    {
+      "event_index": 1104,
+      "seq": 1105,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.843061,
+      "chi_drift": 153.563610093061
+    },
+    {
+      "event_index": 1248,
+      "seq": 1249,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.208333,
+      "transition_entropy": 3.708629,
+      "chi_drift": 68.22766200735
+    },
+    {
+      "event_index": 1296,
+      "seq": 1297,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.846959,
+      "chi_drift": 71.708533829849
+    },
+    {
+      "event_index": 1392,
+      "seq": 1393,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.791616,
+      "chi_drift": 25.441864647368
+    },
+    {
+      "event_index": 1440,
+      "seq": 1441,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.826308,
+      "chi_drift": 0.641858542299
+    },
+    {
+      "event_index": 1728,
+      "seq": 1729,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.855186,
+      "chi_drift": 91.360098635756
+    },
+    {
+      "event_index": 1824,
+      "seq": 1825,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.802841,
+      "chi_drift": 6.24668018663
+    },
+    {
+      "event_index": 1920,
+      "seq": 1921,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.820147,
+      "chi_drift": 349.793001081013
+    },
+    {
+      "event_index": 2016,
+      "seq": 2017,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.846565,
+      "chi_drift": 402.919239218482
+    },
+    {
+      "event_index": 2112,
+      "seq": 2113,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.842623,
+      "chi_drift": 349.561609297948
+    },
+    {
+      "event_index": 2160,
+      "seq": 2161,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.208333,
+      "transition_entropy": 3.749737,
+      "chi_drift": 129.645833942195
+    },
+    {
+      "event_index": 2208,
+      "seq": 2209,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.807074,
+      "chi_drift": 257.902978702868
+    },
+    {
+      "event_index": 2304,
+      "seq": 2305,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.864861,
+      "chi_drift": 235.89741225438
+    },
+    {
+      "event_index": 2400,
+      "seq": 2401,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.778646,
+      "chi_drift": 19.854104296755
+    },
+    {
+      "event_index": 2448,
+      "seq": 2449,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.853513,
+      "chi_drift": 139.090119360117
+    },
+    {
+      "event_index": 2592,
+      "seq": 2593,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.850996,
+      "chi_drift": 284.094250395901
+    },
+    {
+      "event_index": 2640,
+      "seq": 2641,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.857143,
+      "chi_drift": 2.098806862614
+    },
+    {
+      "event_index": 2688,
+      "seq": 2689,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.864525,
+      "chi_drift": 47.306526522207
+    },
+    {
+      "event_index": 2832,
+      "seq": 2833,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.861333,
+      "chi_drift": 230.674426076575
+    },
+    {
+      "event_index": 2880,
+      "seq": 2881,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.83217,
+      "chi_drift": 340.923434029719
+    },
+    {
+      "event_index": 3072,
+      "seq": 3073,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.855804,
+      "chi_drift": 3.677229091745
+    },
+    {
+      "event_index": 3168,
+      "seq": 3169,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.80802,
+      "chi_drift": 388.08939445973
+    },
+    {
+      "event_index": 3216,
+      "seq": 3217,
+      "reasons": [
+        "entropy_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.843423,
+      "chi_drift": 474.286124909686
+    },
+    {
+      "event_index": 3312,
+      "seq": 3313,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.844296,
+      "chi_drift": 93.304193000604
+    },
+    {
+      "event_index": 3456,
+      "seq": 3457,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.756924,
+      "chi_drift": 455.240486169137
+    },
+    {
+      "event_index": 3504,
+      "seq": 3505,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.834367,
+      "chi_drift": 391.541296508165
+    },
+    {
+      "event_index": 3744,
+      "seq": 3745,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.166667,
+      "transition_entropy": 3.853048,
+      "chi_drift": 182.667659464003
+    },
+    {
+      "event_index": 3840,
+      "seq": 3841,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.145833,
+      "transition_entropy": 3.848094,
+      "chi_drift": 209.06573946262
+    },
+    {
+      "event_index": 3936,
+      "seq": 3937,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.875386,
+      "chi_drift": 119.940068004084
+    },
+    {
+      "event_index": 4080,
+      "seq": 4081,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.8516,
+      "chi_drift": 65.531010744852
+    },
+    {
+      "event_index": 4128,
+      "seq": 4129,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.860866,
+      "chi_drift": 213.929456726375
+    },
+    {
+      "event_index": 4176,
+      "seq": 4177,
+      "reasons": [
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.875386,
+      "chi_drift": 36.472094478873
+    },
+    {
+      "event_index": 4320,
+      "seq": 4321,
+      "reasons": [
+        "reflection_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.805714,
+      "chi_drift": 96.873535107679
+    },
+    {
+      "event_index": 4368,
+      "seq": 4369,
+      "reasons": [
+        "reflection_spike",
+        "entropy_spike"
+      ],
+      "reflection_rate": 0.197917,
+      "transition_entropy": 3.849206,
+      "chi_drift": 29.12515847941
+    },
+    {
+      "event_index": 4560,
+      "seq": 4561,
+      "reasons": [
+        "reflection_spike",
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.1875,
+      "transition_entropy": 3.798963,
+      "chi_drift": 468.530638582579
+    },
+    {
+      "event_index": 4848,
+      "seq": 4849,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.177083,
+      "transition_entropy": 3.795681,
+      "chi_drift": 606.434269770671
+    },
+    {
+      "event_index": 4896,
+      "seq": 4897,
+      "reasons": [
+        "chi_drift_spike"
+      ],
+      "reflection_rate": 0.15625,
+      "transition_entropy": 3.765072,
+      "chi_drift": 399.8925098162
+    }
+  ],
+  "correlation": {
+    "conflict_seq_count": 449,
+    "anomaly_count": 74,
+    "anomalies_near_conflict": 33,
+    "overlap_ratio": 0.4459,
+    "sample_hits": [
+      {
+        "event_index": 240,
+        "seq": 241,
+        "reasons": [
+          "entropy_spike",
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.177083,
+        "transition_entropy": 3.846523,
+        "chi_drift": 468.575771686434
+      },
+      {
+        "event_index": 288,
+        "seq": 289,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.145833,
+        "transition_entropy": 3.8366,
+        "chi_drift": 523.65935263122
+      },
+      {
+        "event_index": 480,
+        "seq": 481,
+        "reasons": [
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.851148,
+        "chi_drift": 206.39827897264
+      },
+      {
+        "event_index": 528,
+        "seq": 529,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.145833,
+        "transition_entropy": 3.811293,
+        "chi_drift": 585.183954106493
+      },
+      {
+        "event_index": 864,
+        "seq": 865,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.834491,
+        "chi_drift": 366.837959834484
+      },
+      {
+        "event_index": 912,
+        "seq": 913,
+        "reasons": [
+          "chi_drift_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.790096,
+        "chi_drift": 571.45819197636
+      },
+      {
+        "event_index": 1248,
+        "seq": 1249,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.208333,
+        "transition_entropy": 3.708629,
+        "chi_drift": 68.22766200735
+      },
+      {
+        "event_index": 1296,
+        "seq": 1297,
+        "reasons": [
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.846959,
+        "chi_drift": 71.708533829849
+      },
+      {
+        "event_index": 1392,
+        "seq": 1393,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.1875,
+        "transition_entropy": 3.791616,
+        "chi_drift": 25.441864647368
+      },
+      {
+        "event_index": 1440,
+        "seq": 1441,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.1875,
+        "transition_entropy": 3.826308,
+        "chi_drift": 0.641858542299
+      },
+      {
+        "event_index": 1728,
+        "seq": 1729,
+        "reasons": [
+          "entropy_spike"
+        ],
+        "reflection_rate": 0.15625,
+        "transition_entropy": 3.855186,
+        "chi_drift": 91.360098635756
+      },
+      {
+        "event_index": 1824,
+        "seq": 1825,
+        "reasons": [
+          "reflection_spike"
+        ],
+        "reflection_rate": 0.1875,
+        "transition_entropy": 3.802841,
+        "chi_drift": 6.24668018663
+      }
+    ]
+  },
+  "verdict": {
+    "label": "moderate_correlation",
+    "race_manifested": true,
+    "notes": "Ground truth uses duplicate value_before writes across threads. Phase anomalies use reflection/entropy/chi-drift spikes vs run baseline."
+  }
+}

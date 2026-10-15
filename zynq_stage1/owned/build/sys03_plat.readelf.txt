@@ -1,0 +1,80 @@
+=== readelf -h ===
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          11936 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         14
+  Section header string table index: 13
+
+=== readelf -l ===
+
+Elf file type is EXEC (Executable file)
+Entry point 0x0
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x001000 0x00000000 0x00000000 0x01680 0x01680 R E 0x1000
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text .rodata .ARM.exidx.text._ZN17zynq_stage1_owned8platform7run_ops17hdeb9c8375de7de07E 
+   01     
+
+=== readelf -S ===
+There are 14 section headers, starting at offset 0x2ea0:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00000000 001000 0008fc 00  AX  0   0 32
+  [ 2] .rodata           PROGBITS        000008fc 0018fc 000d7c 00  Ao  0   0  4
+  [ 3] .ARM.exidx.t[...] ARM_EXIDX       00001678 002678 000008 00  AL  1   0  4
+  [ 4] .ARM.exidx.t[...] ARM_EXIDX       00001680 002680 000000 00  AL  1   0  4
+  [ 5] .ARM.exidx.t[...] ARM_EXIDX       00001680 002680 000000 00  AL  1   0  4
+  [ 6] .ARM.exidx.t[...] ARM_EXIDX       00001680 002680 000000 00  AL  1   0  4
+  [ 7] .ARM.exidx.t[...] ARM_EXIDX       00001680 002680 000000 00  AL  1   0  4
+  [ 8] .bss              NOBITS          00001680 000000 000000 00  WA  0   0  1
+  [ 9] .comment          PROGBITS        00000000 002680 00005f 01  MS  0   0  1
+  [10] .ARM.attributes   ARM_ATTRIBUTES  00000000 0026df 000039 00      0   0  1
+  [11] .symtab           SYMTAB          00000000 002718 0003c0 10     12  49  4
+  [12] .strtab           STRTAB          00000000 002ad8 00024a 00      0   0  1
+  [13] .shstrtab         STRTAB          00000000 002d22 00017e 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+=== nm -n ===
+00000000 T _start
+0000003c t hang
+00000050 t _ZN17zynq_stage1_owned8platform7run_ops17hdeb9c8375de7de07E
+0000019c t _ZN17zynq_stage1_owned8platform4uart9write_str17hc2f52e0d5f1ff74eE
+00000220 T rust_main
+000003e0 W __aeabi_uldivmod
+00000404 W __udivmoddi4
+00000450 T _ZN17compiler_builtins3int19specialized_div_rem11u64_div_rem17haa437197bc6e5095E
+00000728 T __aeabi_uidiv
+00000728 T __udivsi3
+000008f8 W __aeabi_idiv0
+000008fc r _ZN10sys03_plat14KEEP_RUST_MAIN17hfa2bc408888e5fd2E
+00001680 B __bss_end
+00001680 B __bss_start
+00003680 R _stack_top
+

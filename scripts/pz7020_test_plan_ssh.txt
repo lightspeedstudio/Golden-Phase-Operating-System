@@ -1,0 +1,47 @@
+PZ7020-StarLite — Bare-metal SSH (feature ssh-bm) — PROVEN on hardware 2026-08-08
+Engine: sunset 0.4 (no_std, sans-io) over the smoltcp TCP socket on GEM0.
+No OS underneath. CSPRNG: SHA-256 DRBG seeded from the A9 global timer (proof-grade;
+Zynq-7000 PS has no TRNG — see src/board/zynq7000/rng.rs).
+
+Board: 192.168.5.50/24 : 2222   Host: 192.168.5.2/24   Direct cable PC <-> PS/U15.
+Auth: ed25519 public key only. Authorized key = scratchpad/kairos_test_ed25519(.pub),
+raw pubkey compiled in as net_ssh::AUTHORIZED_PUBKEY.
+
+--- BOARD SIDE (COM12) ---
+gpos> net ssh serve 2222 45
+net ssh: starting SSH server on 192.168.5.50:2222 for 45s ...
+net ssh: served 192.168.5.50/24 :2222 for 45s (conns=1 authed=1 execs=1)
+
+--- HOST SIDE (Windows OpenSSH) ---
+> ssh -i kairos_test_ed25519 -p 2222 -o StrictHostKeyChecking=no \
+      -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes \
+      -o PreferredAuthentications=publickey kairos@192.168.5.50 "system status"
+Warning: Permanently added '[192.168.5.50]:2222' (ED25519) to the list of known hosts.
+KairOS system status
+target: Baremetal
+authority: Root
+anom: transparent
+processes: 1
+chronos: 12
+kairos: 26
+math backend: scalar reference: ready
+...
+scalar equivalence: OK
+
+CORROBORATION: host received the board shell's real "system status" output over the
+encrypted channel; board reports conns=1 authed=1 execs=1. `target: Baremetal` confirms
+the command ran on the actual bare-metal shell (not hosted).
+
+WHAT THIS PROVES (end to end, on bare metal, no OS):
+  TCP (smoltcp) -> SSH transport + key exchange (x25519) -> ed25519 host key
+  -> ed25519 public-key userauth -> session channel -> exec bridged into the board
+  shell (via ShellAction::RunSshServer from the boot loop) -> encrypted stdout back.
+
+NOTES / follow-ups:
+  - KEX negotiated x25519 (client warned "not post-quantum"); sunset also offers ML-KEM
+    hybrid — client picked classical. Functionally complete for the milestone.
+  - Host key regenerates per boot (SignKey::generate); clients use StrictHostKeyChecking=no.
+    A stable seed-derived host key is a straightforward follow-up.
+  - Entropy is proof-grade only (no PS TRNG); production needs a PL ring-oscillator TRNG
+    fed into rng::reseed().
+  - Interactive shell (pty) not offered yet — exec channel only (`ssh host "<cmd>"`).

@@ -1,0 +1,13 @@
+# PZ7020 PN-WIRE-1 COM12 test plan (raw 0x88B5, multi-BD)
+# Prerequisite: host peer running (scripts/pn_wire1_host_peer.py)
+# Do NOT treat MAC loopback as PASS.
+
+net link
+net wire init
+net wire status
+net wire ping
+net wire wrap
+net wire status
+# optional: unplug/replug cable, then:
+net wire recover
+net wire ping

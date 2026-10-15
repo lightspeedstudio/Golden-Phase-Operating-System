@@ -1,0 +1,17 @@
+[package]
+name = "kairos_zynq_mm"
+version = "0.1.0"
+edition = "2021"
+description = "Golden Phase OS memory-system acceptance on PZ7020-SL-C (bare metal AArch32)"
+
+[workspace]
+
+[dependencies]
+spin = "0.9"
+libm = "0.2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"

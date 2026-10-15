@@ -1,0 +1,7 @@
+[target.armv7a-none-eabi]
+linker = "D:\\Xilinx\\2026.1\\Vitis\\gnu\\aarch32\\nt\\gcc-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe"
+rustflags = [
+  "-C", "link-arg=-Tlinker.ld",
+  "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-Wl,--gc-sections",
+]

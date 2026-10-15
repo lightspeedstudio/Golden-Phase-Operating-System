@@ -1,0 +1,25 @@
+# Golden Phase Stage 1 — owned FSBL replacement (OCM).
+# LightSpeed Studio LLC / Golden Phase. Not Xilinx FSBL.
+# PS7 + PCAP + BOOT.BIN partition walk + PhaseHash + Ed25519, then kernel jump.
+
+# Standalone workspace so AArch32 linker flags in .cargo/config.toml apply
+# (parent kairos/.cargo must not inject its per-target flags here).
+[package]
+name = "zynq_stage1"
+version = "0.1.0"
+edition = "2021"
+description = "Golden Phase stage-0 SD boot loader for PZ7020-SL-C (OCM, bare metal)"
+
+[workspace]
+
+[dependencies]
+kairos = { path = "..", default-features = false, features = ["zynq-a9"] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

@@ -1,0 +1,16 @@
+# System 6 oracle artifacts (no keys, no oracle BOOT in git)
+
+from_sys05_evidence: feba27bc9d92f708be700324d12dc219ae68a247
+bootgen: D:\Xilinx\2026.1\Vitis\bin\bootgen.bat v2026.1 Jun 5 2026-13:21:08
+status: ORACLE_HOST_PARSED
+bbram: BLOCKED_PENDING_OWNER_BBRAM_DECISION
+h_boot_left: ccfbbbc5a9c7ab573ccad9251dc933ab44d294ee26b7c7eccfaded0cf0955c5f
+oracle_boot_gitignored: zynq_stage1/owned/build/oracle/BOOT_SYS06_ORACLE.BIN
+oracle_boot_sha256: 684d97f4a07826f6ec9a94b2d0fc2dfd710514a1ad96a0a1dac4fcce855e21de
+oracle_boot_bytes: 6000404
+
+| `docs/boot/SYS06_AES_REFERENCE.md` | `0eb689be9e9c1a43610764faf9fb84400e78be070112e51f872d7c9296730972` | 6879 |
+| `docs/boot/sys06_oracle.bif` | `babc88bd40a80998b1699a202e03aa8517345dde967046dff52bcde82e847df9` | 380 |
+| `zynq_stage1/owned/build/sys05_plat.elf` | `f40f7e13a8f141afd404c407803f3de394c4e1ae082ca0ca112a932a53b248a2` | 24000 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/system.bit` | `d19f08d20cac85ea0e33c41a8a552166f5a9176e16977f09aa64d17e68135829` | 4045769 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/kairos_zynq.elf` | `447f9fbdec6bbdb03227c8620baa854f3a141d52ec71452251e2f63e1852eaf8` | 2475164 |

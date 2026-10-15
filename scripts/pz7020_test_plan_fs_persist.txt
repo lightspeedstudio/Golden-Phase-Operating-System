@@ -1,0 +1,40 @@
+PZ7020-StarLite — Persistent filesystem (SD read/write, FAT32) — PROVEN 2026-08-09.
+Basic Utility OS milestone, Phase 1. Files survive a power-cycle.
+
+Muscle: sd.rs write_block (SD CMD24 polled PIO) + fat.rs FAT32 write layer
+(set_fat_entry mirroring all FAT copies, alloc_cluster, free_chain,
+find_or_free_root_slot, write_root_file, delete_root_file, list_root,
+read_root_file). Shell: fs_sd.rs -> `fs ls | fs save | fs cat | fs rm`, mounting
+the SD per op (SdCard::init + Fat32::mount). Root dir + 8.3 names only.
+
+Image BOOT.BIN sha C00453E4..., features zynq-a9,bm-full,ssh-bm,usb.
+
+--- STAGE 1: write + in-session read-back (same boot) ---
+gpos> fs ls
+fs: 1 file(s) on SD:
+  BOOT.BIN     5370876 bytes
+gpos> fs save hello.txt golden phase persists on the SD
+fs: saved hello.txt (31 bytes) to SD
+gpos> fs cat hello.txt
+golden phase persists on the SD
+gpos> fs ls
+fs: 2 file(s) on SD:
+  HELLO.TXT    31 bytes
+  BOOT.BIN     5370876 bytes
+
+--- STAGE 2: PERSISTENCE across a full power-cycle (cold boot) ---
+[board powered OFF ~3s, then ON -- board boots normally (BOOT.BIN intact)]
+gpos> fs ls
+fs: 2 file(s) on SD:
+  HELLO.TXT    31 bytes
+  BOOT.BIN     5370876 bytes
+gpos> fs cat hello.txt
+golden phase persists on the SD
+
+RESULT: PASS.
+  - Write path (cluster alloc, data write, dir entry, FAT mirror) correct.
+  - The file survived a COLD BOOT and reads back byte-exact -- true persistence.
+  - The board re-booted after the FAT write -> BOOT.BIN uncorrupted (write is clean).
+
+Basic Utility OS: filesystem persistence complete. Remaining for the milestone:
+USB keyboard input (U1/U2) and the system self-test sweep.

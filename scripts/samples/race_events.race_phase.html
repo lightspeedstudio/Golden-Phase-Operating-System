@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Race Phase Trace — C:\Users\richa\OneDrive\Desktop\FullOS\kairos\scripts\samples\race_events.jsonl</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121933; --text:#e8ecff; --muted:#b5c0eb;
+             --accent:#7bc4ff; --accent2:#8ef0d1; --warn:#ff9f9f; --line:#31406f; }
+    body { margin:0; font-family:Arial,sans-serif; background:var(--bg);
+            color:var(--text); line-height:1.5; }
+    .page { max-width:1100px; margin:0 auto; padding:24px 20px 48px; }
+    h1 { color:var(--accent); margin:0 0 8px; }
+    .sub { color:var(--muted); margin:0 0 24px; }
+    section { background:var(--panel); border:1px solid var(--line);
+               border-radius:14px; padding:20px; margin-bottom:20px; }
+    h2 { color:var(--accent2); margin:0 0 12px; font-size:1.15rem; }
+    svg { width:100%; height:auto; display:block; }
+    table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+    th,td { border:1px solid var(--line); padding:8px; text-align:left; }
+    th { background:rgba(123,196,255,0.1); }
+    .note { color:var(--muted); font-size:0.88rem; margin-top:10px; }
+    .verdict { color:var(--warn); font-weight:bold; }
+    code { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Race Phase Trace Report</h1>
+    <p class="sub">JSONL race log → GPL phase trajectory · ground truth vs heuristics</p>
+
+    <section>
+      <h2>Run summary</h2>
+      <table>
+        <tr><th>Source</th><td>C:\Users\richa\OneDrive\Desktop\FullOS\kairos\scripts\samples\race_events.jsonl</td></tr>
+        <tr><th>Events</th><td>12001</td></tr>
+        <tr><th>Bytes / phases</th><td>1533685 / 6134740</td></tr>
+        <tr><th>Race manifested</th><td>True (lost=284)</td></tr>
+        <tr><th>GPL checksum</th><td>acc=Phi1 chi=12575.119750177293</td></tr>
+        <tr><th>Verdict</th><td class="verdict">moderate_correlation</td></tr>
+      </table>
+      <p class="note">Phase encoding fingerprints UTF-8 log bytes. Topology/checksum signals are exploratory heuristics — not guaranteed race detectors.</p>
+    </section>
+
+    <section>
+      <h2>Phase histogram</h2>
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="80" y="220" fill="#b5c0eb" text-anchor="middle">Phi0 2038958</text>
+        <text x="220" y="220" fill="#b5c0eb" text-anchor="middle">Phi1 1398802</text>
+        <text x="380" y="220" fill="#b5c0eb" text-anchor="middle">Phi2 1450667</text>
+        <text x="540" y="220" fill="#b5c0eb" text-anchor="middle">Phi3 1246313</text>
+        <rect x="40" y="40" width="80" height="180" fill="#7bc4ff"/>
+        <rect x="180" y="40" width="80" height="180" fill="#8ef0d1"/>
+        <rect x="340" y="40" width="80" height="180" fill="#ffd27d"/>
+        <rect x="500" y="40" width="80" height="180" fill="#ff9f9f"/>
+        <line x1="20" y1="230" x2="620" y2="230" stroke="#31406f"/>
+      </svg>
+    </section>
+
+    <section>
+      <h2>Topology (sliding triples)</h2>
+      <p>same=5279884 · reflection=854854 · error=0</p>
+    </section>
+
+    <section>
+      <h2>Ground truth conflicts (duplicate value_before)</h2>
+      <table>
+        <tr><th>value_before</th><th>writes</th></tr>
+        <tr><td>0</td><td>t1@3, t0@7</td></tr><tr><td>128</td><td>t0@260, t1@361</td></tr><tr><td>193</td><td>t1@402, t0@431</td></tr><tr><td>194</td><td>t1@404, t0@433</td></tr><tr><td>195</td><td>t1@406, t0@435</td></tr><tr><td>196</td><td>t1@408, t0@437</td></tr><tr><td>197</td><td>t1@410, t0@439</td></tr><tr><td>198</td><td>t1@412, t0@441</td></tr>
+      </table>
+      <p>conflicts=223 · interleave_windows=1</p>
+    </section>
+
+    <section>
+      <h2>Rolling reflection rate (sample windows)</h2>
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="220" x2="640" y2="220" stroke="#31406f"/>
+        <rect x="40.0" y="76.0" width="25.7" height="144.0" fill="#ff9f9f"/>
+<rect x="66.7" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="93.3" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="120.0" y="76.0" width="25.7" height="144.0" fill="#ff9f9f"/>
+<rect x="146.7" y="40.0" width="25.7" height="180.0" fill="#ff9f9f"/>
+<rect x="173.3" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="200.0" y="94.0" width="25.7" height="126.0" fill="#ff9f9f"/>
+<rect x="226.7" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="253.3" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="280.0" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="306.7" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="333.3" y="94.0" width="25.7" height="126.0" fill="#ff9f9f"/>
+<rect x="360.0" y="58.0" width="25.7" height="162.0" fill="#ff9f9f"/>
+<rect x="386.7" y="76.0" width="25.7" height="144.0" fill="#ff9f9f"/>
+<rect x="413.3" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="440.0" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="466.7" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="493.3" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+<rect x="520.0" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="546.7" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="573.3" y="76.0" width="25.7" height="144.0" fill="#ff9f9f"/>
+<rect x="600.0" y="76.0" width="25.7" height="144.0" fill="#ff9f9f"/>
+<rect x="626.7" y="85.0" width="25.7" height="135.0" fill="#ff9f9f"/>
+<rect x="653.3" y="67.0" width="25.7" height="153.0" fill="#ff9f9f"/>
+      </svg>
+    </section>
+
+    <section>
+      <h2>Rolling transition entropy (sample)</h2>
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="220" x2="640" y2="220" stroke="#31406f"/>
+        <rect x="40.0" y="41.6" width="25.7" height="178.4" fill="#8ef0d1"/>
+<rect x="66.7" y="41.8" width="25.7" height="178.2" fill="#8ef0d1"/>
+<rect x="93.3" y="40.8" width="25.7" height="179.2" fill="#8ef0d1"/>
+<rect x="120.0" y="41.5" width="25.7" height="178.5" fill="#8ef0d1"/>
+<rect x="146.7" y="42.4" width="25.7" height="177.6" fill="#8ef0d1"/>
+<rect x="173.3" y="40.2" width="25.7" height="179.8" fill="#8ef0d1"/>
+<rect x="200.0" y="40.7" width="25.7" height="179.3" fill="#8ef0d1"/>
+<rect x="226.7" y="43.0" width="25.7" height="177.0" fill="#8ef0d1"/>
+<rect x="253.3" y="41.1" width="25.7" height="178.9" fill="#8ef0d1"/>
+<rect x="280.0" y="41.2" width="25.7" height="178.8" fill="#8ef0d1"/>
+<rect x="306.7" y="40.0" width="25.7" height="180.0" fill="#8ef0d1"/>
+<rect x="333.3" y="41.9" width="25.7" height="178.1" fill="#8ef0d1"/>
+<rect x="360.0" y="46.0" width="25.7" height="174.0" fill="#8ef0d1"/>
+<rect x="386.7" y="40.0" width="25.7" height="180.0" fill="#8ef0d1"/>
+<rect x="413.3" y="41.6" width="25.7" height="178.4" fill="#8ef0d1"/>
+<rect x="440.0" y="41.7" width="25.7" height="178.3" fill="#8ef0d1"/>
+<rect x="466.7" y="45.2" width="25.7" height="174.8" fill="#8ef0d1"/>
+<rect x="493.3" y="42.3" width="25.7" height="177.7" fill="#8ef0d1"/>
+<rect x="520.0" y="40.8" width="25.7" height="179.2" fill="#8ef0d1"/>
+<rect x="546.7" y="42.9" width="25.7" height="177.1" fill="#8ef0d1"/>
+<rect x="573.3" y="43.4" width="25.7" height="176.6" fill="#8ef0d1"/>
+<rect x="600.0" y="41.5" width="25.7" height="178.5" fill="#8ef0d1"/>
+<rect x="626.7" y="42.2" width="25.7" height="177.8" fill="#8ef0d1"/>
+<rect x="653.3" y="40.4" width="25.7" height="179.6" fill="#8ef0d1"/>
+      </svg>
+    </section>
+
+    <section>
+      <h2>Chi drift between windows (sample)</h2>
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="220" x2="640" y2="220" stroke="#31406f"/>
+        <rect x="40.0" y="220.0" width="25.7" height="0.0" fill="#7bc4ff"/>
+<rect x="66.7" y="116.0" width="25.7" height="104.0" fill="#7bc4ff"/>
+<rect x="93.3" y="111.0" width="25.7" height="109.0" fill="#7bc4ff"/>
+<rect x="120.0" y="141.0" width="25.7" height="79.0" fill="#7bc4ff"/>
+<rect x="146.7" y="107.8" width="25.7" height="112.2" fill="#7bc4ff"/>
+<rect x="173.3" y="75.9" width="25.7" height="144.1" fill="#7bc4ff"/>
+<rect x="200.0" y="58.9" width="25.7" height="161.1" fill="#7bc4ff"/>
+<rect x="226.7" y="154.2" width="25.7" height="65.8" fill="#7bc4ff"/>
+<rect x="253.3" y="143.7" width="25.7" height="76.3" fill="#7bc4ff"/>
+<rect x="280.0" y="159.4" width="25.7" height="60.6" fill="#7bc4ff"/>
+<rect x="306.7" y="156.5" width="25.7" height="63.5" fill="#7bc4ff"/>
+<rect x="333.3" y="40.0" width="25.7" height="180.0" fill="#7bc4ff"/>
+<rect x="360.0" y="204.8" width="25.7" height="15.2" fill="#7bc4ff"/>
+<rect x="386.7" y="76.4" width="25.7" height="143.6" fill="#7bc4ff"/>
+<rect x="413.3" y="129.3" width="25.7" height="90.7" fill="#7bc4ff"/>
+<rect x="440.0" y="136.7" width="25.7" height="83.3" fill="#7bc4ff"/>
+<rect x="466.7" y="193.3" width="25.7" height="26.7" fill="#7bc4ff"/>
+<rect x="493.3" y="171.5" width="25.7" height="48.5" fill="#7bc4ff"/>
+<rect x="520.0" y="107.2" width="25.7" height="112.8" fill="#7bc4ff"/>
+<rect x="546.7" y="44.2" width="25.7" height="175.8" fill="#7bc4ff"/>
+<rect x="573.3" y="124.9" width="25.7" height="95.1" fill="#7bc4ff"/>
+<rect x="600.0" y="127.0" width="25.7" height="93.0" fill="#7bc4ff"/>
+<rect x="626.7" y="212.7" width="25.7" height="7.3" fill="#7bc4ff"/>
+<rect x="653.3" y="172.8" width="25.7" height="47.2" fill="#7bc4ff"/>
+      </svg>
+    </section>
+
+    <section>
+      <h2>Correlation</h2>
+      <p>anomalies=74 · near conflict seqs=33 · overlap=0.4459</p>
+      <p class="note">Ground truth uses duplicate value_before writes across threads. Phase anomalies use reflection/entropy/chi-drift spikes vs run baseline.</p>
+    </section>
+  </div>
+</body>
+</html>

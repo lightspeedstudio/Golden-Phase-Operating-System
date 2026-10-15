@@ -1,0 +1,60 @@
+# PZ7020 default physical test plan — SAFE, read-only, prompt-returning commands.
+# One command per line. '#' = comment. The harness sends each over real UART RX
+# and waits for gpos> to return. Destructive commands are intentionally absent.
+#
+# NOTE: 'run' (VM paste mode), 'kill', 'rm', 'exit', 'clear', and 'write' are NOT
+# here on purpose — they either need multi-line interaction or change state.
+# VM execution (Phase 4C) needs a dedicated paste sequence; see the audit doc.
+
+# --- A. Console and identity ---
+help
+about
+version
+whoami
+host
+
+# --- B. Kernel runtime (read-only views) ---
+state
+clock
+ps
+trace
+phase
+topo
+curvature
+watchdog
+dashboard
+mem
+log
+dump
+
+# Re-run time-varying views to observe advancement (Phase 4B/D):
+state
+clock
+state
+
+# --- C. VM/ISA (static parts only; 'run' handled separately) ---
+isa
+regs
+
+# --- D. StateClock / phase math (safe status forms) ---
+phi-stability
+phaseperf
+phase-benchmark
+
+# --- J. Security/root views (report stub/hosted honestly) ---
+root
+audit
+checkpoint
+anom
+
+# --- K. Hosted-only (expect "hosted std build required"/hosted message) ---
+phasenet
+phaselink
+ssh
+ai
+
+# --- Net (no GEM driver in this build; expect no-device/unsupported) ---
+net
+
+# Final identity re-check (arch label must read ARM, not riscv64):
+version

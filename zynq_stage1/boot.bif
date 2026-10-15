@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+  [bootloader] C:\k-mmu\zynq_stage1\target\armv7a-none-eabi\release\zynq_stage1.elf
+  C:\k-mmu\fpga\zynq\release\PZ7020_G1P_PATH1_G64\system.bit
+  C:\k-mmu\zynq_stage1\kairos_zynq.elf
+}

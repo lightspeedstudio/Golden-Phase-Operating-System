@@ -1,0 +1,103 @@
+KairOS terminal demo transcript (hosted)
+========================================
+
+$ cargo run --bin kairos_host
+
+KairOS boot splash
+y^4 - phi*y^2 + alpha = 0
+type help for commands
+kairos> help
+KairOS terminal commands:
+  help         list commands with one-line descriptions
+  version      print KairOS version and build target
+  state        kernel summary, phase, and uptime ticks
+  ps           list processes with pid, name, phase, ticks, status
+  spawn        create a named test process
+  trace        recent kernel trace events
+  isa          instruction set reference table
+  run          paste program (.end) or run named program
+  dump         combined state, ps, regs, and trace
+  ...
+
+kairos> version
+KairOS 0.1.0 (hosted-std)
+phase-kernel research OS
+
+kairos> state
+kernel state
+processes: 1
+running: 1
+memory pages: 4
+active: pid 0 (init) Phi2
+uptime ticks: 0
+
+kairos> ps
+PID	NAME	STATE	TICKS	STATUS
+0	init	Phi2	2	running
+
+kairos> spawn worker
+spawned worker pid 1
+
+kairos> ps
+PID	NAME	STATE	TICKS	STATUS
+0	init	Phi2	2	running
+1	worker	Phi1	1	ready
+
+kairos> regs
+register system not initialized
+
+kairos> isa
+KairOS instruction set:
+NAME         OPC  ARGS              DESCRIPTION
+LOAD           0  reg, phase        load immediate phase into register
+COMPOSE        1  ra, rb, rc        rc = compose(ra, rb)
+...
+
+kairos> run
+paste KairOS program, end with .end
+LOAD A PHI1
+LOAD B PHI1
+COMPOSE C A B
+PRINT C
+HALT
+.end
+[parser] 5 lines loaded
+[0] LOAD A PHI1
+[1] LOAD B PHI1
+[2] COMPOSE C A B
+[3] PRINT C
+[4] HALT
+[runner] execution not implemented yet
+
+kairos> run file hello.k
+file runner not implemented yet
+
+kairos> trace
+kernel trace:
+  spawn pid=0 name=init
+  boot init_pid=0
+  phase pid=0 Phi0 -> Phi1
+  phase pid=0 Phi1 -> Phi2
+  command: spawn worker
+  spawn pid=1 name=worker
+  phase pid=1 Phi0 -> Phi1
+  command: ps
+  command: trace
+
+kairos> kill 1
+killed 1
+
+kairos> dump
+=== dump ===
+kernel state
+processes: 2
+...
+--- processes ---
+PID	NAME	STATE	TICKS	STATUS
+...
+--- registers ---
+register system not initialized
+--- trace ---
+...
+
+kairos> exit

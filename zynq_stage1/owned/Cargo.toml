@@ -1,0 +1,120 @@
+# Copyright LightSpeed Studio LLC
+# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-GPOS-Commercial
+#
+# Systems 1–10A packer: provenance, boot-image, PS7/UART, SD ADMA, parse, DevCfg,
+# software later-partition verify, plaintext PCAP, Utility handoff, size/provenance
+# measurement, unified plaintext/encrypted/authenticated dispatcher. Zero package dependencies.
+
+[package]
+name = "zynq_stage1_owned"
+version = "0.1.0"
+edition = "2021"
+description = "Golden Phase Stage 1 artifact ownership and reference-lock policy"
+license = "AGPL-3.0-only OR LicenseRef-GPOS-Commercial"
+
+[workspace]
+
+[lib]
+name = "zynq_stage1_owned"
+path = "src/lib.rs"
+
+[features]
+default = []
+std = []
+device = []
+sys04 = []
+sys05 = []
+sys06 = []
+sys07 = []
+sys08 = []
+sys09 = []
+sys10a = []
+
+[[bin]]
+name = "sys03_host"
+path = "src/bin/sys03_host.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys03_plat"
+path = "src/bin/sys03_plat.rs"
+required-features = ["device"]
+
+[[bin]]
+name = "sys03_pack"
+path = "src/bin/sys03_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys04_plat"
+path = "src/bin/sys04_plat.rs"
+required-features = ["device", "sys04"]
+
+[[bin]]
+name = "sys04_pack"
+path = "src/bin/sys04_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys05_plat"
+path = "src/bin/sys05_plat.rs"
+required-features = ["device", "sys05"]
+
+[[bin]]
+name = "sys05_pack"
+path = "src/bin/sys05_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys06_plat"
+path = "src/bin/sys06_plat.rs"
+required-features = ["device", "sys06"]
+
+[[bin]]
+name = "sys07_plat"
+path = "src/bin/sys07_plat.rs"
+required-features = ["device", "sys07"]
+
+[[bin]]
+name = "sys08_plat"
+path = "src/bin/sys08_plat.rs"
+required-features = ["device", "sys08"]
+
+[[bin]]
+name = "sys08_pack"
+path = "src/bin/sys08_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys09_plat"
+path = "src/bin/sys09_plat.rs"
+required-features = ["device", "sys09"]
+
+[[bin]]
+name = "sys09_pack"
+path = "src/bin/sys09_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys10a_plat"
+path = "src/bin/sys10a_plat.rs"
+required-features = ["device", "sys10a"]
+
+[[bin]]
+name = "sys10a_pack"
+path = "src/bin/sys10a_pack.rs"
+required-features = ["std"]
+
+[[bin]]
+name = "sys06_pack"
+path = "src/bin/sys06_pack.rs"
+required-features = ["std"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"

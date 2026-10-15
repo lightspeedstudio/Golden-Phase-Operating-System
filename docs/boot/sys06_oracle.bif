@@ -1,0 +1,8 @@
+the_ROM_image:
+{
+  [aeskeyfile] zynq_stage1/owned/build/oracle/sys06_dev.nky
+  [bootloader, encryption=aes] zynq_stage1/owned/build/sys05_plat.elf
+  [encryption=aes, load=0x03000000] zynq_stage1/owned/build/oracle/ddr_kat.bin
+  [encryption=aes] fpga/zynq/release/PZ7020_G1P_PATH1_G64/system.bit
+  [load=0x00100000] fpga/zynq/release/PZ7020_G1P_PATH1_G64/kairos_zynq.elf
+}

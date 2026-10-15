@@ -1,0 +1,13 @@
+[target.riscv64gc-unknown-none-elf]
+rustflags = [
+    "-C", "relocation-model=static",
+]
+
+[target.armv7a-none-eabi]
+# Put arm-none-eabi-gcc on PATH (Vitis or Arm GNU toolchain).
+# Windows example: D:\Xilinx\2026.1\Vitis\gnu\aarch32\nt\gcc-arm-none-eabi\bin
+linker = "arm-none-eabi-gcc"
+rustflags = [
+    "-C", "link-arg=-nostartfiles",
+    "-C", "link-arg=-Wl,--gc-sections",
+]

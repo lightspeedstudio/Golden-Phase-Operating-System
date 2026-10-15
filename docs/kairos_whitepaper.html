@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KairOS Whitepaper</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121933;
+      --panel-2: #192345;
+      --text: #e8ecff;
+      --muted: #b5c0eb;
+      --line: #31406f;
+      --accent: #7bc4ff;
+      --accent-2: #8ef0d1;
+      --warn: #ffd27d;
+      --good: #8df5a6;
+      --shadow: rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #09101e 0%, #101830 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(123, 196, 255, 0.12), rgba(142, 240, 209, 0.1));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 20px 40px var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 860px;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    nav {
+      margin: 24px 0 32px;
+      padding: 16px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 16px;
+      white-space: nowrap;
+    }
+
+    section {
+      margin-top: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 32px var(--shadow);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      color: var(--accent-2);
+      font-size: 1.15rem;
+      margin-top: 24px;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(123, 196, 255, 0.08);
+      color: var(--text);
+    }
+
+    code, pre {
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    pre {
+      background: #0c1328;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      overflow-x: auto;
+      color: #dbe4ff;
+    }
+
+    .note {
+      border-left: 4px solid var(--warn);
+      background: rgba(255, 210, 125, 0.08);
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-top: 14px;
+      color: var(--text);
+    }
+
+    .good {
+      border-left-color: var(--good);
+      background: rgba(141, 245, 166, 0.09);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>KairOS Whitepaper</h1>
+      <p>
+        KairOS is a phase-kernel research operating system that treats verified four-state phase
+        algebra as a first-class systems primitive. It combines a hosted runtime, a baremetal
+        RISC-V boot target, authenticated statechain recording, ANOM privacy controls, PhaseLink
+        communication, and a default Parallel Phase Math Engine designed to scale from single-core
+        baremetal to multicore hosts and future accelerators.
+      </p>
+      <div class="meta">
+        <span class="chip">Phase-kernel architecture</span>
+        <span class="chip">Hosted runtime + RISC-V baremetal</span>
+        <span class="chip">Statechain and Merkle verification</span>
+        <span class="chip">ANOM secure visibility controls</span>
+        <span class="chip">PhaseLink v1 communication layer</span>
+        <span class="chip">Default Parallel Phase Math subsystem</span>
+        <span class="chip">Engineering terminal (90+ commands)</span>
+        <span class="chip">SSH remote operator channel</span>
+        <span class="chip">AI control layer (Phi3 tool gate)</span>
+        <span class="chip">PHI-STABILITY benchmark suite</span>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#features">Features</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#security">Security</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#operations">Operations</a>
+      <a href="#verification">Verification</a>
+      <a href="#limits">Limitations</a>
+    </nav>
+
+    <section id="summary">
+      <h2>Executive Summary</h2>
+      <p>
+        KairOS is designed for environments where runtime behavior, transition legality, and audit
+        visibility matter as much as raw execution. Rather than treating system state as an opaque
+        collection of mutable flags, KairOS models process, memory, storage, communication, and
+        operator actions through a compact verified phase system built on four canonical states:
+        <code>Phi0</code>, <code>Phi1</code>, <code>Phi2</code>, and <code>Phi3</code>.
+      </p>
+      <p>
+        Around that core, KairOS adds a security and integrity framework that includes a
+        statechain ledger, Merkle-root aggregation, boot-session sealing, public-vs-private state
+        visibility policies, ANOM mode, per-object protection, and PhaseLink proof frames. The
+        result is an operating system research platform that is both introspectable and strict
+        about transition validity.
+      </p>
+      <div class="note good">
+        KairOS is intended to run on single-core baremetal, QEMU, normal desktop CPUs, multicore
+        servers, and future accelerator-attached systems without making special hardware a runtime
+        requirement.
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>System Feature Overview</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Canonical Phase Core</h3>
+          <p>
+            Verified four-state compose, reflect, and topology logic lives in a single canonical
+            core and is reused by all higher layers.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Hosted Runtime</h3>
+          <p>
+            Full interactive OS runtime with shell, diagnostics, tests, ANOM flows, PhaseNet,
+            PhaseLink, and statechain support.
+          </p>
+        </div>
+        <div class="card">
+          <h3>RISC-V Baremetal Boot</h3>
+          <p>
+            QEMU bootable baremetal target with truthful capability reporting and no fake hardware
+            claims.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Statechain Ledger</h3>
+          <p>
+            Append-only per-object transition recording with event hashing, checkpointing, and
+            watchdog audit support.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Merkle Root Integrity</h3>
+          <p>
+            Process, memory, filesystem, VM, syscall, driver, and PhaseLink state roll into
+            verifiable Merkle-root commitments.
+          </p>
+        </div>
+        <div class="card">
+          <h3>ANOM Security Model</h3>
+          <p>
+            Global and per-object privacy controls support public commitments without exposing true
+            protected state, passphrases, or object data keys.
+          </p>
+        </div>
+        <div class="card">
+          <h3>PhaseLink v1</h3>
+          <p>
+            Binary-to-phase conversion, deterministic proof frames, quarantine handling, loopback,
+            and two-node hosted simulation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Parallel Phase Math Engine</h3>
+          <p>
+            Always-on scalar reference execution with batch interfaces, bounded queues, worker
+            ownership, and optional accelerator backends.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Engineering Terminal (kairos-tool)</h3>
+          <p>
+            Unified multicall registry with 90+ authority-aware commands across fourteen groups:
+            shell, file, text, build, process, system, debug, device, network, phase, security,
+            benchmark, and script — PhaseFS-backed with shared session state.
+          </p>
+        </div>
+        <div class="card">
+          <h3>SSH Remote Operator Channel</h3>
+          <p>
+            Hosted Ed25519 SSH server (default 127.0.0.1:2222) binding remote sessions to the same
+            policy, audit, and command dispatch as the local <code>kairos&gt;</code> shell.
+          </p>
+        </div>
+        <div class="card">
+          <h3>AI Control Layer</h3>
+          <p>
+            TCP JSON bridge to external inference servers; jobs tracked in the statechain with
+            Phi3-gated tool authorization and management-network-only v1 transport.
+          </p>
+        </div>
+        <div class="card">
+          <h3>PHI-STABILITY Benchmarks</h3>
+          <p>
+            Regression suite for phase-kernel stability under load, topology drift, and long-run
+            transition graphs — operator-visible via <code>phi-stability status</code>.
+          </p>
+        </div>
+        <div class="card">
+          <h3>StateClock</h3>
+          <p>
+            Temporal dilation, skew inspection, and resync controls with topology reflection logging
+            integrated into kernel audit paths.
+          </p>
+        </div>
+      </div>
+
+      <h3>Build Footprint (Release, x86_64)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Artifact</th>
+            <th>Size</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>kairos_host.exe</code></td>
+            <td>~4.15 MB</td>
+            <td>Full hosted runtime and interactive shell.</td>
+          </tr>
+          <tr>
+            <td><code>kairos_ssh.exe</code></td>
+            <td>~4.61 MB</td>
+            <td>Hosted runtime plus SSH operator server (russh, tokio).</td>
+          </tr>
+          <tr>
+            <td>Rust source (<code>src/</code> + <code>tests/</code>)</td>
+            <td>~1.16 MB (278 files)</td>
+            <td>Complete phase-kernel OS tree, not a Linux-scale codebase.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Operator Command Surface</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Examples</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Core terminal</td>
+            <td><code>help</code>, <code>ps</code>, <code>mem</code>, <code>trace</code></td>
+            <td>Day-to-day inspection and control of the runtime.</td>
+          </tr>
+          <tr>
+            <td>System audit</td>
+            <td><code>dashboard</code>, <code>watchdog</code>, <code>root</code>, <code>audit</code>, <code>checkpoint</code></td>
+            <td>Statechain, root, and integrity verification visibility.</td>
+          </tr>
+          <tr>
+            <td>ANOM control</td>
+            <td><code>anom security</code>, <code>anom protect</code>, <code>anom open</code></td>
+            <td>Privacy mode, object protection, and authenticated visibility control.</td>
+          </tr>
+          <tr>
+            <td>PhaseNet / PhaseLink</td>
+            <td><code>phasenet ...</code>, <code>phaselink ...</code></td>
+            <td>Native phase-state networking and proof-framed communication experiments.</td>
+          </tr>
+          <tr>
+            <td>Phase Math</td>
+            <td><code>phaseperf status</code>, <code>phaseperf backend</code>, <code>phaseperf verify</code></td>
+            <td>Backend selection, queue visibility, benchmarking, and scalar-equivalence checks.</td>
+          </tr>
+          <tr>
+            <td>Engineering terminal</td>
+            <td><code>help</code>, <code>ls</code>, <code>build</code>, <code>grep</code>, <code>hexdump</code>, <code>script run</code></td>
+            <td>90+ multicall tools: file, text, build, debug, device, network, phase, security, benchmark.</td>
+          </tr>
+          <tr>
+            <td>SSH remote ops</td>
+            <td><code>ssh status</code>, <code>ssh start</code>, <code>ssh sessions</code>, <code>ssh audit</code></td>
+            <td>Remote operator channel with host-key and authorized-key management.</td>
+          </tr>
+          <tr>
+            <td>AI bridge</td>
+            <td><code>ai connect</code>, <code>ai ask</code>, <code>ai allow</code>, <code>ai trace</code></td>
+            <td>External inference integration with statechain-recorded jobs and Phi3 tool gate.</td>
+          </tr>
+          <tr>
+            <td>PHI-STABILITY</td>
+            <td><code>phi-stability status</code>, <code>phi-stability run</code></td>
+            <td>Long-run phase-kernel stability regression and reporting.</td>
+          </tr>
+          <tr>
+            <td>StateClock</td>
+            <td><code>clock status</code>, <code>clock skew</code>, <code>clock set-dilation</code></td>
+            <td>Temporal controls and topology reflection logging.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="architecture">
+      <h2>Architecture</h2>
+      <h3>1. Canonical Mathematical Authority</h3>
+      <p>
+        The single source of truth for phase behavior remains <code>core/gphase_core.rs</code>.
+        It defines:
+      </p>
+      <ul>
+        <li>the four-state alphabet</li>
+        <li>compose behavior</li>
+        <li>reflection behavior</li>
+        <li>left/right grouping topology behavior</li>
+        <li>threshold and energy projections</li>
+      </ul>
+      <p>
+        No optimized backend is allowed to redefine those semantics.
+      </p>
+
+      <h3>2. Parallel Phase Math Engine</h3>
+      <p>
+        The default Phase Math subsystem sits above the canonical core and below system consumers
+        such as the scheduler, StateClock, proof generation, Merkle batching, and PhaseLink.
+      </p>
+      <pre>Canonical scalar core
+        ↓
+Precomputed runtime tables
+        ↓
+Batch submission interface
+        ↓
+Worker ownership + bounded lanes
+        ↓
+Optional backend selection
+        ↓
+Proof / Merkle / trajectory scheduling</pre>
+
+      <h3>3. Priority Lanes</h3>
+      <ul>
+        <li><strong>Lane 0:</strong> immediate transition decisions</li>
+        <li><strong>Lane 1:</strong> trajectory and StateClock work</li>
+        <li><strong>Lane 2:</strong> proofs, Merkle updates, and analytics</li>
+      </ul>
+      <p>
+        This allows the scheduler to proceed on the minimal decision path while larger reductions
+        are queued for later processing.
+      </p>
+
+      <h3>4. Object-Sharded Work Ownership</h3>
+      <p>
+        KairOS uses stable object sharding through:
+      </p>
+      <pre>worker = object_id % active_worker_count</pre>
+      <p>
+        That preserves per-object ordering while still exposing cross-object parallelism.
+      </p>
+
+      <h3>5. Storage and Integrity Layout</h3>
+      <ul>
+        <li>State transitions enter the statechain as per-object events.</li>
+        <li>Subsystem heads roll into Merkle roots.</li>
+        <li>Kernel root aggregation reflects the active trusted system state.</li>
+        <li>PhaseLink maintains its own verified communication-root path.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>Security and Trust Model</h2>
+      <h3>ANOM and Visibility</h3>
+      <p>
+        KairOS separates true internal state from public visibility. In transparent mode,
+        authorized operators can inspect normal runtime views. In ANOM-protected paths, public
+        output is represented as commitments rather than raw protected phase values.
+      </p>
+
+      <h3>Per-Object Protection</h3>
+      <p>
+        Selected objects can be protected individually. The implementation preserves object
+        history, statechain participation, Merkle participation, and kernel-internal scheduling
+        access while restricting public disclosure.
+      </p>
+
+      <h3>Proof and Root Discipline</h3>
+      <ul>
+        <li>BootSessionRoot binds the current boot life.</li>
+        <li>EquationRoot binds the mathematical authority for proofs and transitions.</li>
+        <li>Statechain events capture transition evidence over time.</li>
+        <li>Merkle roots summarize subsystem integrity.</li>
+        <li>PhaseLink frames quarantine malformed or untrusted external input before acceptance.</li>
+      </ul>
+
+      <div class="note">
+        KairOS does not treat EquationRoot as a secret key, does not expose ANOM passphrases or
+        object data keys, and does not accept externally supplied PhaseLink frames into trusted
+        state before validation completes.
+      </div>
+    </section>
+
+    <section id="use-cases">
+      <h2>Use Cases</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Kernel Research</h3>
+          <p>
+            Explore verified transition systems, compact state models, and audit-oriented operating
+            system design.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Security Prototyping</h3>
+          <p>
+            Evaluate private-vs-public state boundaries, per-object disclosure controls, and
+            quarantine-first network validation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Deterministic Systems Education</h3>
+          <p>
+            Demonstrate how scheduler transitions, topology, proofs, and roots relate through a
+            small but nontrivial operating system.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Phase-Aware Communications</h3>
+          <p>
+            Test reversible byte-to-phase encoding, proof frames, replay detection, and node
+            simulation without claiming unsupported physical hardware.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Accelerator Research</h3>
+          <p>
+            Use the Phase Math subsystem as the contract layer for future SIMD, GPU, and FPGA
+            acceleration while preserving exact scalar equivalence.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Audit-Centric Edge Systems</h3>
+          <p>
+            Run on baremetal or embedded-style environments with truthful reporting and no hidden
+            dependency on advanced hardware.
+          </p>
+        </div>
+      </div>
+
+      <h3>Representative Deployment Profiles</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Expected Mode</th>
+            <th>Why KairOS Fits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Single-core baremetal</td>
+            <td>Scalar reference, bounded queues, truthful stubs</td>
+            <td>Maintains correctness and observability without hardware assumptions.</td>
+          </tr>
+          <tr>
+            <td>QEMU / VM</td>
+            <td>Hosted logic plus baremetal boot verification</td>
+            <td>Supports regression testing and repeatable demos.</td>
+          </tr>
+          <tr>
+            <td>Desktop CPU</td>
+            <td>Hosted runtime, optional SIMD selection</td>
+            <td>Enables rapid iteration, command testing, and simulation.</td>
+          </tr>
+          <tr>
+            <td>Multicore server</td>
+            <td>Higher worker count, queue sharding, batch proofs</td>
+            <td>Supports larger concurrency and future parallel executors.</td>
+          </tr>
+          <tr>
+            <td>Future FPGA phase processor</td>
+            <td>Optional accelerator backend</td>
+            <td>Can plug into the same batch interface once verified.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="operations">
+      <h2>Operational Model</h2>
+      <h3>Interactive Shell</h3>
+      <p>
+        The <code>kairos&gt;</code> shell is the primary operator interface for inspection,
+        orchestration, diagnostics, and demonstrations.
+      </p>
+
+      <h3>State and Audit</h3>
+      <ul>
+        <li><code>dashboard</code> summarizes authority, roots, topology, object locks, and Phase Math status.</li>
+        <li><code>watchdog</code> reports statechain audit integrity.</li>
+        <li><code>root</code> and <code>audit</code> expose root and chain health.</li>
+        <li><code>checkpoint</code> works with signed checkpoint logic in hosted builds.</li>
+      </ul>
+
+      <h3>Communications</h3>
+      <ul>
+        <li><code>phasenet</code> provides a native phase-state networking path.</li>
+        <li><code>phaselink</code> provides proof-framed byte/phase communication with loopback and simulation.</li>
+      </ul>
+
+      <h3>Performance and Acceleration Controls</h3>
+      <ul>
+        <li><code>phaseperf status</code> shows backend, workers, and processed work counts.</li>
+        <li><code>phaseperf backend scalar</code> forces the canonical reference path.</li>
+        <li><code>phaseperf queues</code> exposes bounded queue pressure.</li>
+        <li><code>phaseperf benchmark</code> exercises a representative batch.</li>
+        <li><code>phaseperf verify</code> confirms scalar equivalence.</li>
+        <li><code>phi-stability status</code> reports stability benchmark state.</li>
+      </ul>
+
+      <h3>Remote Operations and AI</h3>
+      <ul>
+        <li><code>kairos_ssh</code> binary serves Ed25519-authenticated remote shells on port 2222 by default.</li>
+        <li><code>ssh status</code>, <code>ssh key list</code>, and <code>ssh audit</code> manage keys and sessions.</li>
+        <li><code>ai connect &lt;host&gt; &lt;port&gt;</code> opens the management-network JSON bridge.</li>
+        <li><code>ai allow &lt;tool&gt;</code> authorizes tool execution at Phi3 under root authority.</li>
+      </ul>
+
+      <h3>Engineering Terminal Groups</h3>
+      <p>
+        The <code>kairos-tool</code> registry dispatches commands before legacy parser fallback.
+        Type <code>help</code> for the full list or <code>help &lt;group&gt;</code> for a group.
+        Authority tiers: Public, Viewer, Operator, Root.
+      </p>
+      <ul>
+        <li><strong>Shell:</strong> help, clear, history, echo, which, version, exit</li>
+        <li><strong>File:</strong> pwd, cd, ls, tree, mkdir, touch, cp, mv, rm, cat, head, tail, stat, find</li>
+        <li><strong>Text:</strong> edit, grep, sort, uniq, wc, diff, patch</li>
+        <li><strong>Build (hosted):</strong> build, test, check, format, lint</li>
+        <li><strong>Process:</strong> ps, run, kill, jobs, wait, sleep</li>
+        <li><strong>System:</strong> status, mem, cpu, uptime, clock, trace, log, watchdog</li>
+        <li><strong>Debug:</strong> hexdump, strings, checksum, size, symbols, objdump</li>
+        <li><strong>Device:</strong> dev, irq, mmio read</li>
+        <li><strong>Network:</strong> net, phaselink, phasenet, ping, connect, listen, send, receive, ssh</li>
+        <li><strong>Phase:</strong> phase status, compose, reflect, transition, topology, chi, table</li>
+        <li><strong>Security:</strong> authority, anom, statechain, audit, quarantine</li>
+        <li><strong>Benchmark:</strong> bench, phi-stability, phaseperf, test-system</li>
+        <li><strong>Script:</strong> script run, script check</li>
+      </ul>
+    </section>
+
+    <section id="verification">
+      <h2>Verification and Test Strategy</h2>
+      <p>
+        KairOS is validated across algebra, memory, process transitions, statechain behavior,
+        StateClock, filesystem operations, ANOM mode, per-object protection, PhaseNet, PhaseLink,
+        shell commands, baremetal boot, and QEMU smoke behavior.
+      </p>
+
+      <h3>System-Wide Verification Commands</h3>
+      <pre>cargo fmt --check
+cargo test
+cargo clippy -- -D warnings
+cargo build --release --bin kairos_host
+cargo build --release --bin kairos_ssh
+cargo build --bin kairos_boot --no-default-features --features baremetal --target riscv64gc-unknown-none-elf
+powershell -ExecutionPolicy Bypass -File "scripts\boot-qemu-smoke.ps1"
+powershell -ExecutionPolicy Bypass -File "scripts\test-kairos-ssh.ps1"
+powershell -ExecutionPolicy Bypass -File "scripts\boot-qemu-engineering-tools-smoke.ps1"
+powershell -ExecutionPolicy Bypass -File "scripts\boot-qemu-phi-stability-smoke.ps1"</pre>
+
+      <h3>Current Verified Areas</h3>
+      <ul>
+        <li>canonical phase algebra correctness</li>
+        <li>legal process transition graph behavior</li>
+        <li>filesystem and memory phase modeling</li>
+        <li>statechain event hashing and checkpoint verification</li>
+        <li>StateClock behavior and command surface</li>
+        <li>global ANOM mode and per-object ANOM protection</li>
+        <li>PhaseLink byte/phase/frame codec, quarantine, loopback, and simulation</li>
+        <li>Parallel Phase Math table equivalence, batch API, queue population, and shell controls</li>
+        <li>baremetal build and QEMU smoke boot path</li>
+        <li>SSH remote operator channel (9/9 ssh_server_tests)</li>
+        <li>engineering terminal registry (9/9 engineering_tools_tests)</li>
+        <li>AI control layer bridge and Phi3 tool authorization</li>
+        <li>PHI-STABILITY benchmark regression suite</li>
+        <li>StateClock dilation, skew, and resync commands</li>
+      </ul>
+    </section>
+
+    <section id="limits">
+      <h2>Current Boundaries and Future Work</h2>
+      <h3>Implemented Today</h3>
+      <ul>
+        <li>phase-kernel runtime and shell</li>
+        <li>statechain + Merkle integrity</li>
+        <li>ANOM and per-object protection</li>
+        <li>PhaseLink v1 proof-framed communications</li>
+        <li>default Phase Math subsystem with scalar authority and backend selection scaffolding</li>
+        <li>engineering terminal with 90+ multicall commands and authority tiers</li>
+        <li>hosted SSH remote operator server with session audit</li>
+        <li>AI control layer with statechain-recorded jobs</li>
+        <li>PHI-STABILITY and StateClock operator surfaces</li>
+        <li>release hosted binaries under ~5 MB (see BUILD_SIZE_REPORT.txt)</li>
+      </ul>
+
+      <h3>Not Yet Claimed as Complete</h3>
+      <ul>
+        <li>full distributed routing or public Internet support</li>
+        <li>real Ethernet / 10GbE / Wi-Fi / Bluetooth / SFP+ hardware support</li>
+        <li>production GPU or FPGA execution backends</li>
+        <li>mandatory hardware acceleration requirements</li>
+      </ul>
+
+      <div class="note">
+        KairOS is intentionally strict about truthful capability reporting. Unsupported hardware or
+        unverified accelerators are reported as absent, hosted-only, or future work rather than
+        implied as operational.
+      </div>
+    </section>
+  </div>
+</body>
+</html>

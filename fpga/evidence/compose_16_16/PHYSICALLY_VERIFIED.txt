@@ -1,0 +1,10 @@
+PHYSICALLY_VERIFIED=YES
+GATE=compose_16_16
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+CAPTURED=2026-07-13
+BITSTREAM_SHA256=b94e81830c15f928d1ae56841f138ead4755a75d8748cd6beea1012bd11fd7a6
+SOURCE_COMMIT=ad89c3a48244bab2e918fdea2f98080cad1a9e9c
+RESULT=COMPOSE 16/16 PASS
+NOTE=Printed compose digits are driven by phase_alu compose_out; expected table is compare-only.
+POWER_CYCLE=bitstream programmed to SPI flash; re-runs after POR / soft reset without iceprog.

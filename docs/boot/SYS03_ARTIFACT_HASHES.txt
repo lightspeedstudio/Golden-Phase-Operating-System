@@ -1,0 +1,31 @@
+# System 3 linked artifacts
+
+source_commit: 8ea707a409b59fddcb2dda7b4ac2097c333baca2
+linker: fpga/zynq/tools/arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+linker_id: Arm GNU Toolchain 13.3.Rel1 (Build arm-13.24) 13.3.1 20240614
+vitis_d_gcc: unavailable (BitLocker)
+elf_e_entry: 0x00000000
+pt_load_paddr: 0x00000000
+pt_load_filesz: 5760 (0x1680)
+elf_machine: ARM ELF32 LE EXEC
+com12: SYS03_COM12_PASS
+uart: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS03_20260819/com12_sys03.uart
+uart_sha256: 8fcdc3257f3449a9114594474d0e34d8e71540348081da82336f819f132f0dee
+uart_bytes: 112
+boot_bound: 46bb693c123df147609cc26f765fa68f7bc935edbea88d5a01f5976c05c713fb
+classifier: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS03_20260819/CLASSIFIER.txt
+
+Columns: path, SHA-256, bytes.
+
+| `zynq_stage1/owned/build/sys03_plat.elf` | `82c9b1e742291d4613fdf14db938b02edcffef62d4a23d8fc427218eed5277f6` | 12496 |
+| `zynq_stage1/owned/build/sys03_plat.bin` | `4a47b2b1a8662535693738ba01d7d4e99af705f53cf293d81d37b3a8178f5adb` | 5760 |
+| `zynq_stage1/owned/build/sys03_plat.map` | `106b9054d1dd5a7ba4354ed2714ef349d0372bb9e956ca09cb1abf76d2f71e85` | 27883 |
+| `zynq_stage1/owned/build/sys03_plat.readelf.txt` | `919dd040c16a36c7f98e5b3623c00079001137c16460348fd8b4a1565083e808` | 3739 |
+| `zynq_stage1/owned/build/BOOT_RECOVERY_PLAINTEXT.BIN` | `46bb693c123df147609cc26f765fa68f7bc935edbea88d5a01f5976c05c713fb` | 5992148 |
+| `zynq_stage1/src/main.rs` | `6637678d0e01b007caf3b5e150ed37e48ed5af6f55cc009a3b16e0d5c4ebd67d` | 9580 |
+| `zynq_stage1/owned/src/bin/sys03_plat.rs` | `28985ab712e26812174f7c9c438b4ac97738b6e03b596c8083431787466d009a` | 662 |
+| `zynq_stage1/owned/src/platform/entry.rs` | `dcef25a878767c48bd70de112b4cab95bb7479d897262d94e0f0cae11c3b0080` | 1669 |
+| `zynq_stage1/owned/src/start.S` | `6a2d04f216384007c180dd9bfdbf3b4d40cb588609d85ab4acfd07b4d73d37a5` | 608 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/system.bit` | `d19f08d20cac85ea0e33c41a8a552166f5a9176e16977f09aa64d17e68135829` | 4045769 |
+| `fpga/zynq/release/PZ7020_G1P_PATH1_G64/kairos_zynq.elf` | `447f9fbdec6bbdb03227c8620baa854f3a141d52ec71452251e2f63e1852eaf8` | 2475164 |
+| `fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS03_20260819/com12_sys03.uart` | `8fcdc3257f3449a9114594474d0e34d8e71540348081da82336f819f132f0dee` | 112 |

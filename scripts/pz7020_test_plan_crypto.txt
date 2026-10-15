@@ -1,0 +1,19 @@
+PZ7020-StarLite — On-board crypto (bare metal) — PROVEN on hardware 2026-08-08
+
+Un-gated the kernel crypto module (aead/keyring/nonce/sealed_event) from std-only to
+bare metal, flipped aes-gcm to no_std (default-features=false, features aes+alloc), and
+added ed25519 signing (src/kernel/crypto/sign.rs via ed25519-dalek no_std) for on-board
+signature capability (roadmap: real checkpoint signing; Avenue-6 flagged the prior
+checkpoint key as forgeable).
+
+--- BOARD SIDE (COM12) ---
+gpos> security crypto selftest
+crypto selftest: aead=ok ed25519_sign=ok reject_tamper=ok => PASS
+
+WHAT THIS PROVES (on bare metal):
+  - AES-256-GCM seal -> open round-trip recovers the plaintext (aead=ok).
+  - ed25519 sign -> verify accepts a valid signature (ed25519_sign=ok).
+  - ed25519 verify REJECTS a tampered message (reject_tamper=ok) — no false accept.
+
+Primitives now available on baremetal builds: SHA-256, HMAC (already), AES-256-GCM AEAD,
+ed25519 sign/verify. These back ANOM sealing, statechain signing, and the SSH engine.

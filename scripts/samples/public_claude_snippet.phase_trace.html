@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Phase Trace — C:\Users\richa\OneDrive\Desktop\FullOS\kairos\scripts\samples\public_claude_snippet.txt</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121933; --text:#e8ecff; --muted:#b5c0eb;
+             --accent:#7bc4ff; --accent2:#8ef0d1; --line:#31406f; }
+    body { margin:0; font-family:Arial,sans-serif; background:var(--bg);
+            color:var(--text); line-height:1.5; }
+    .page { max-width:1100px; margin:0 auto; padding:24px 20px 48px; }
+    h1 { color:var(--accent); margin:0 0 8px; }
+    .sub { color:var(--muted); margin:0 0 24px; }
+    section { background:var(--panel); border:1px solid var(--line);
+               border-radius:14px; padding:20px; margin-bottom:20px; }
+    h2 { color:var(--accent2); margin:0 0 12px; font-size:1.15rem; }
+    svg { width:100%; height:auto; display:block; }
+    table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+    th,td { border:1px solid var(--line); padding:8px; text-align:left; }
+    th { background:rgba(123,196,255,0.1); }
+    .note { color:var(--muted); font-size:0.88rem; margin-top:10px; }
+    code { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>AI Phase Trace Report</h1>
+    <p class="sub">Observable artifact → GPL phase topology · NOT neural decoding</p>
+
+    <section>
+      <h2>Input summary</h2>
+      <table>
+        <tr><th>Source</th><td>C:\Users\richa\OneDrive\Desktop\FullOS\kairos\scripts\samples\public_claude_snippet.txt</td></tr>
+        <tr><th>Bytes</th><td>378</td></tr>
+        <tr><th>Phase states</th><td>1512</td></tr>
+        <tr><th>GPL checksum</th><td>acc=Phi1
+          chi=-192.187726204954</td></tr>
+        <tr><th>Preview</th><td><code># Public artifact: Anthropic Claude system prompt component (published)
+# Source: https://docs.anthropic.com/en/release-</code></td></tr>
+      </table>
+      <p class="note">Observable trace archaeology on UTF-8 bytes. Does NOT read LLM weights, activations, or hidden prompts.</p>
+    </section>
+
+    <section>
+      <h2>Phase histogram</h2>
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="80" y="220" fill="#b5c0eb" text-anchor="middle">Phi0 384</text>
+        <text x="220" y="220" fill="#b5c0eb" text-anchor="middle">Phi1 504</text>
+        <text x="380" y="220" fill="#b5c0eb" text-anchor="middle">Phi2 359</text>
+        <text x="540" y="220" fill="#b5c0eb" text-anchor="middle">Phi3 265</text>
+        <rect x="40" y="40"
+              width="80" height="180" fill="#7bc4ff"/>
+        <rect x="180" y="40"
+              width="80" height="180" fill="#8ef0d1"/>
+        <rect x="340" y="40"
+              width="80" height="180" fill="#ffd27d"/>
+        <rect x="500" y="40"
+              width="80" height="180" fill="#ff9f9f"/>
+        <line x1="20" y1="230" x2="620" y2="230" stroke="#31406f"/>
+      </svg>
+    </section>
+
+    <section>
+      <h2>Topology (sliding triples)</h2>
+      <p>same=1158 · reflection=352 · error=0</p>
+    </section>
+
+    <section>
+      <h2>Proxy FFT — byte values (first 32 bins)</h2>
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="220" x2="640" y2="220" stroke="#31406f"/>
+        <rect x="40.0" y="40.0" width="19.0" height="180.0" fill="#7bc4ff"/>
+<rect x="60.0" y="218.9" width="19.0" height="1.1" fill="#7bc4ff"/>
+<rect x="80.0" y="217.9" width="19.0" height="2.1" fill="#7bc4ff"/>
+<rect x="100.0" y="217.8" width="19.0" height="2.2" fill="#7bc4ff"/>
+<rect x="120.0" y="217.1" width="19.0" height="2.9" fill="#7bc4ff"/>
+<rect x="140.0" y="218.6" width="19.0" height="1.4" fill="#7bc4ff"/>
+<rect x="160.0" y="215.8" width="19.0" height="4.2" fill="#7bc4ff"/>
+<rect x="180.0" y="219.3" width="19.0" height="0.7" fill="#7bc4ff"/>
+<rect x="200.0" y="218.2" width="19.0" height="1.8" fill="#7bc4ff"/>
+<rect x="220.0" y="218.4" width="19.0" height="1.6" fill="#7bc4ff"/>
+<rect x="240.0" y="217.9" width="19.0" height="2.1" fill="#7bc4ff"/>
+<rect x="260.0" y="217.3" width="19.0" height="2.7" fill="#7bc4ff"/>
+<rect x="280.0" y="218.5" width="19.0" height="1.5" fill="#7bc4ff"/>
+<rect x="300.0" y="216.8" width="19.0" height="3.2" fill="#7bc4ff"/>
+<rect x="320.0" y="217.7" width="19.0" height="2.3" fill="#7bc4ff"/>
+<rect x="340.0" y="217.9" width="19.0" height="2.1" fill="#7bc4ff"/>
+<rect x="360.0" y="214.9" width="19.0" height="5.1" fill="#7bc4ff"/>
+<rect x="380.0" y="218.5" width="19.0" height="1.5" fill="#7bc4ff"/>
+<rect x="400.0" y="218.8" width="19.0" height="1.2" fill="#7bc4ff"/>
+<rect x="420.0" y="216.9" width="19.0" height="3.1" fill="#7bc4ff"/>
+<rect x="440.0" y="218.1" width="19.0" height="1.9" fill="#7bc4ff"/>
+<rect x="460.0" y="217.7" width="19.0" height="2.3" fill="#7bc4ff"/>
+<rect x="480.0" y="215.2" width="19.0" height="4.8" fill="#7bc4ff"/>
+<rect x="500.0" y="217.3" width="19.0" height="2.7" fill="#7bc4ff"/>
+<rect x="520.0" y="215.7" width="19.0" height="4.3" fill="#7bc4ff"/>
+<rect x="540.0" y="219.0" width="19.0" height="1.0" fill="#7bc4ff"/>
+<rect x="560.0" y="214.5" width="19.0" height="5.5" fill="#7bc4ff"/>
+<rect x="580.0" y="218.8" width="19.0" height="1.2" fill="#7bc4ff"/>
+<rect x="600.0" y="215.7" width="19.0" height="4.3" fill="#7bc4ff"/>
+<rect x="620.0" y="217.8" width="19.0" height="2.2" fill="#7bc4ff"/>
+<rect x="640.0" y="218.2" width="19.0" height="1.8" fill="#7bc4ff"/>
+<rect x="660.0" y="218.5" width="19.0" height="1.5" fill="#7bc4ff"/>
+      </svg>
+      <p class="note">DFT on byte values and phase-index stream — exploratory rhythm proxy only, not neural-network frequency content.</p>
+    </section>
+
+    <section>
+      <h2>Proxy FFT — phase index stream (first 32 bins)</h2>
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="220" x2="640" y2="220" stroke="#31406f"/>
+        <rect x="40.0" y="40.0" width="19.0" height="180.0" fill="#8ef0d1"/>
+<rect x="60.0" y="214.2" width="19.0" height="5.8" fill="#8ef0d1"/>
+<rect x="80.0" y="213.0" width="19.0" height="7.0" fill="#8ef0d1"/>
+<rect x="100.0" y="217.2" width="19.0" height="2.8" fill="#8ef0d1"/>
+<rect x="120.0" y="218.4" width="19.0" height="1.6" fill="#8ef0d1"/>
+<rect x="140.0" y="217.0" width="19.0" height="3.0" fill="#8ef0d1"/>
+<rect x="160.0" y="216.0" width="19.0" height="4.0" fill="#8ef0d1"/>
+<rect x="180.0" y="219.0" width="19.0" height="1.0" fill="#8ef0d1"/>
+<rect x="200.0" y="219.1" width="19.0" height="0.9" fill="#8ef0d1"/>
+<rect x="220.0" y="217.3" width="19.0" height="2.7" fill="#8ef0d1"/>
+<rect x="240.0" y="219.4" width="19.0" height="0.6" fill="#8ef0d1"/>
+<rect x="260.0" y="217.3" width="19.0" height="2.7" fill="#8ef0d1"/>
+<rect x="280.0" y="218.9" width="19.0" height="1.1" fill="#8ef0d1"/>
+<rect x="300.0" y="219.5" width="19.0" height="0.5" fill="#8ef0d1"/>
+<rect x="320.0" y="218.4" width="19.0" height="1.6" fill="#8ef0d1"/>
+<rect x="340.0" y="217.9" width="19.0" height="2.1" fill="#8ef0d1"/>
+<rect x="360.0" y="217.0" width="19.0" height="3.0" fill="#8ef0d1"/>
+<rect x="380.0" y="219.0" width="19.0" height="1.0" fill="#8ef0d1"/>
+<rect x="400.0" y="217.3" width="19.0" height="2.7" fill="#8ef0d1"/>
+<rect x="420.0" y="217.7" width="19.0" height="2.3" fill="#8ef0d1"/>
+<rect x="440.0" y="217.4" width="19.0" height="2.6" fill="#8ef0d1"/>
+<rect x="460.0" y="218.3" width="19.0" height="1.7" fill="#8ef0d1"/>
+<rect x="480.0" y="218.0" width="19.0" height="2.0" fill="#8ef0d1"/>
+<rect x="500.0" y="213.9" width="19.0" height="6.1" fill="#8ef0d1"/>
+<rect x="520.0" y="217.9" width="19.0" height="2.1" fill="#8ef0d1"/>
+<rect x="540.0" y="218.5" width="19.0" height="1.5" fill="#8ef0d1"/>
+<rect x="560.0" y="215.8" width="19.0" height="4.2" fill="#8ef0d1"/>
+<rect x="580.0" y="215.5" width="19.0" height="4.5" fill="#8ef0d1"/>
+<rect x="600.0" y="215.3" width="19.0" height="4.7" fill="#8ef0d1"/>
+<rect x="620.0" y="217.9" width="19.0" height="2.1" fill="#8ef0d1"/>
+<rect x="640.0" y="216.9" width="19.0" height="3.1" fill="#8ef0d1"/>
+<rect x="660.0" y="217.5" width="19.0" height="2.5" fill="#8ef0d1"/>
+      </svg>
+    </section>
+  </div>
+</body>
+</html>

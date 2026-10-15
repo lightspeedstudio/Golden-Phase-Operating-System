@@ -1,0 +1,8 @@
+config,lc_used,lc_total,fmax_mhz,fits,build_ok
+N16,767,5280,23.92,YES,True
+N32,1122,5280,18.18,YES,True
+N64,1818,5280,14.30,YES,True
+N128,3265,5280,12.01,YES,True
+N256,6429,5280,,NO,False
+2d_M4,935,5280,21.11,YES,True
+2d_M8,2663,5280,13.82,YES,True

@@ -1,0 +1,42 @@
+PZ7020-StarLite — Bare-metal TCP/IP milestone M1 (ARP + IPv4 + ICMP echo)
+Stack: smoltcp 0.12 (no_std + alloc) over GEM0 / RTL8211F (U15), RGMII.
+Board MAC: 02:00:00:47:01:50   Board IP: 192.168.5.50/24   Host: 192.168.5.2/24
+Direct cable PC <-> PS/U15. No OS underneath. Proven on real hardware 2026-08-08.
+
+Command surface:
+  net ip <a.b.c.d> <seconds>   -> kernel::net_ip::serve()  (arm + bm-net)
+    brings up smoltcp Interface (EthernetAddress = BOARD_MAC, static IPv4/24),
+    then polls iface for <seconds>. ARP + ICMP echo answered automatically by
+    smoltcp during the window.
+
+--- BOARD SIDE (COM12, 115200) ---
+gpos> net ip 192.168.5.50 40
+net ip: served 192.168.5.50/24 mac 02:00:00:47:01:50 on GEM0 for 40s (polls=358837)
+
+  (an earlier 12s run: polls=107719 — ~9k polls/s poll-loop, NO_SYS model)
+
+--- HOST SIDE (Windows, physical Intel I225-V "Ethernet", 192.168.5.2/24) ---
+> ping -n 6 192.168.5.50
+Request timed out.                                   <- first pkt lost to ARP resolve
+Reply from 192.168.5.50: bytes=32 time=1ms TTL=64
+Reply from 192.168.5.50: bytes=32 time<1ms TTL=64
+Reply from 192.168.5.50: bytes=32 time<1ms TTL=64
+Reply from 192.168.5.50: bytes=32 time=1ms TTL=64
+Reply from 192.168.5.50: bytes=32 time=2ms TTL=64
+    Packets: Sent = 6, Received = 5, Lost = 1 (16% loss)   TTL=64 (smoltcp default)
+
+> arp -a   (Interface: 192.168.5.2)
+  192.168.5.50          02-00-00-47-01-50     dynamic
+    ^ host "who-has 192.168.5.50" -> board smoltcp replied "is-at 02:00:00:47:01:50".
+      This ARP entry IS the decoded board reply frame (wire evidence, not a label).
+
+RESULT: PASS. Host and board corroborate: host ARPs -> board's smoltcp answers
+is-at BOARD_MAC -> host ICMP echo request -> board ICMP echo reply (TTL=64).
+Bare-metal ARP + IPv4 + ICMP over GEM0 via smoltcp is real and proven.
+
+Wire-capture note: npcap could not write a pcap on the physical NIC because the
+uplink was still bound to the Hyper-V external vSwitch (vms_pp). IP traffic still
+flowed (the vSwitch forwards it); npcap simply can't see a vSwitch-owned uplink.
+The host ARP table + host ICMP replies are the wire-verified proof.
+
+Next: M2 (UDP echo socket), M3 (TCP echo socket -> SSH-enabling).

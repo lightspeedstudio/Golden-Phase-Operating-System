@@ -1,0 +1,6 @@
+PHYSICALLY_VERIFIED=YES
+GATE=phase_lattice_scale_n64
+BOARD=iCEBreaker V1.1a
+UART=COM24 115200 8N1
+BITSTREAM_SHA256=06777ca8cf0c8013e9e20ceb6ce162bddfed72005bbc18ad4b722b2b660218bf
+RESULT=N=64 physical UART matches verify_lattice_scale.py; CLOCK PASS

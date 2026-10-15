@@ -1,0 +1,32 @@
+# System 6 P1 silicon artifacts (no keys, no encrypted BOOT in git)
+
+source_commit: de71e058017150caa81ef3828cc8294ce6e879c5
+status: SYS06_P1_KAT_COM12_PASS
+bbram: programmed -key bbr only
+efuse: NOT_ENFORCED
+cold_power_bbram_retention: not claimed
+encrypted_p2_pcap: not started
+system7_rsa: not started
+
+uart: fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS06_20260820/com12_sys06.uart
+uart_sha256: ad6b0106577972effe75e0b6597a980b55242cedbf2f650c8b4cd1b63814c95c
+uart_bytes: 284
+
+p1_boot_gitignored: zynq_stage1/owned/build/oracle/BOOT_SYS06_P1.BIN
+p1_boot_sha256: 363a44aa6a0ab3b091f2f5b43dd14242cc8643afc05d237f4a4c28d0a10a5bd8
+p1_boot_bytes: 6002388
+
+nky_gitignored: zynq_stage1/owned/build/oracle/sys06_dev.nky
+nky_sha256: dfb4c86e00780e96fc0460b992a2db340cefb8ede143afd798e9f928f4264fe4
+nky_bytes: 237
+
+vivado: v2026.1 SW Build 6511674
+device: xc7z020 (xc7z020_1)
+cable: Digilent JTAG-SMT2 210251076136
+
+Columns: path, SHA-256, bytes.
+
+| `fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS06_20260820/com12_sys06.uart` | `ad6b0106577972effe75e0b6597a980b55242cedbf2f650c8b4cd1b63814c95c` | 284 |
+| `fpga/zynq/evidence/kairos_zynq_boot/BOOT_STAGE1_SYS06_20260820/SD_BOOT_BEFORE.BIN.preserved` | `ccfbbbc5a9c7ab573ccad9251dc933ab44d294ee26b7c7eccfaded0cf0955c5f` | 5999828 |
+| `zynq_stage1/owned/build/sys06_plat.elf` | `c346065ba2516ce91d454c1180816dfc706a8fe3a80db101665ac76f57e50b01` | 27648 |
+| `zynq_stage1/owned/build/sys06_plat.bin` | `8d79e68a6a9f8dbba041bcb2564f4048364fc172ded9a4ada1f99d36c6624046` | 15384 |

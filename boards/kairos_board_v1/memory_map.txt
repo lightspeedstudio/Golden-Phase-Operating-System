@@ -1,0 +1,37 @@
+KairOS Board v1 — Memory Map (draft)
+====================================
+Date: 2026-07-07
+Boot mode: RISC-V M-mode, no OpenSBI (matches current kairos_boot)
+
+DRAM
+----
+  0x8000_0000  Kernel load / .text start (measured link address)
+  0x8000_0000–  +557 KB      kairos_boot.bin (bm-full, flash image)
+  0x8008_C000–  +560 KB      .bss region (full tier, linker map)
+  0x8010_0000+               Heap grows toward stack (see linker script)
+  Top of RAM                 Stack (64 KB reserved below __stack_top in minimum map)
+
+QSPI NOR (example 32 MB)
+------------------------
+  0x0000_0000  Boot ROM / first-stage (64–128 KB)
+  0x0002_0000  Image A — kairos_boot (1 MB slot)
+  0x0012_0000  Image B — update candidate (1 MB slot)
+  0x0022_0000  Recovery image (1 MB, read-only)
+  0x0032_0000  Config — hashes, boot counters, rollback (64 KB)
+  0x0040_0000  Reserved / PhaseFS export (remainder)
+
+MMIO (placeholder — replace with SoC TRM)
+---------------------------------------
+  0x0200_0000  CLINT (mtime / mtimecmp)     [QEMU virt compatible stub]
+  0x0C00_0000  PLIC                         [QEMU virt compatible stub]
+  0x1000_0000  UART0                        [console]
+  0x1001_0000  GPIO / boot straps
+  0x1002_0000  Watchdog + reset reason
+  0x1003_0000  MAC EEPROM / device ID
+  0x4000_0000  Ethernet MAC/PHY (future phaselink_eth)
+
+eMMC / SD (development)
+-----------------------
+  PhaseFS data, logs, benchmark JSON exports, OSF bundles
+
+Note: Numbers are planning targets. Verify against final SoC datasheet before layout.

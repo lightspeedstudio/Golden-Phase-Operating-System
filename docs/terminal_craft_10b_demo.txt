@@ -1,0 +1,194 @@
+Golden Phase OS — Avenue 10B WP-2 terminal demo transcript (hosted-sim)
+========================================================================
+
+Captured by piping commands into the real hosted shell runtime
+(`kairos_host`, `--features craft`) and recording its stdout verbatim.
+Nothing below is hand-edited or fabricated — this is the actual output
+of running the propulsion-stuck FDIR mission over the craft fixture's
+`PhaseTransportCraftAdapter`, which drives the real
+`phase_transport::TransportController` (M=4 diagonal port lattice,
+Φ2 glider packets, send -> tick(arrival) -> verify_trace, auto-ack).
+
+HONESTY NOTE: this is a hosted-simulation scenario. The glider carrier
+here is `phase_transport::TransportController` executing entirely in
+software over the sealed Avenue 2 glider law — the same law that was
+separately verified on iCE40/iCE Max silicon (see fpga/evidence/). This
+transcript is not a claim of live-on-silicon execution; it demonstrates
+the craft FDIR mission and packet-replay cross-check running the compose
+kernel + phase-transport carrier together, hosted.
+
+Capture command:
+  export CARGO_TARGET_DIR="$TEMP/kairos-target-wp2"
+  printf 'craft init\nscenario run prop-stuck-glider\ncraft status\ncraft quarantine status\nexit\n' \
+    | cargo run --bin kairos_host --features craft --quiet
+
+------------------------------------------------------------------------
+
+Golden Phase Operating System boot splash
+╔════════════════════════════════════════════════════════════════════╗
+║                               · φ ·                                ║
+╠════════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║         ██████╗    ██╗   ██╗     ██████╗ ███████╗███╗   ██╗        ║
+║        ██╔════╝  ██████╗ ██║     ██╔══██╗██╔════╝████╗  ██║        ║
+║        ██║  ███╗██║██║██║██║     ██║  ██║█████╗  ██╔██╗ ██║        ║
+║        ██║   ██║██║██║██║██║     ██║  ██║██╔══╝  ██║╚██╗██║        ║
+║        ╚██████╔╝╚██████╔╝███████╗██████╔╝███████╗██║ ╚████║        ║
+║         ╚═════╝    ██╔╝  ╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═══╝        ║
+║                                                                    ║
+║              ██████╗ ██╗  ██╗ █████╗ ███████╗███████╗              ║
+║              ██╔══██╗██║  ██║██╔══██╗██╔════╝██╔════╝              ║
+║              ██████╔╝███████║███████║███████╗█████╗                ║
+║              ██╔═══╝ ██╔══██║██╔══██║╚════██║██╔══╝                ║
+║              ██║     ██║  ██║██║  ██║███████║███████╗              ║
+║              ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝              ║
+║                                                                    ║
+║                  O p e r a t i n g   S y s t e m                   ║
+║                                                                    ║
+║    ▅▅▅▆▆▆▇▇▇▇███████████▇▇▇▇▆▆▆▅▅▅▄▄▃▃▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▃▃▃▄▄    ║
+╚════════════════════════════════════════════════════════════════════╝
+g φ l d e n   p h a s e   φ p e r t a t i n g   s y s t e m   *   v0.1.0 [gpos]
+===============================================================================
+Golden Phase Operating System kernel 0.1.0-eternal (hosted-std) -- awakening
+===============================================================================
+  [ AWAKE ] stateclock: chronos + kairos clocks................ 0.004s
+  [ AWAKE ] gphase_core: compose / reflect algebra............. 0.011s
+  [ AWAKE ] scheduler: Phi0-Phi3 phase graph................... 0.018s
+  [ AWAKE ] memory: 4 tagged pages mapped...................... 0.026s
+  [ AWAKE ] syscall: user/kernel boundary armed................ 0.033s
+  [ AWAKE ] phasefs: /tmp mounted (2 inodes)................... 0.041s
+  [ AWAKE ] vm: RISC-V ISA loader ready........................ 0.049s
+  [ AWAKE ] trace: kernel event ring (4 records)............... 0.056s
+  [ AWAKE ] statechain: merkle ledger online (tick 15)......... 0.068s
+  [ ASCND ] shell: operator console opening....................
+  [ AWAKE ] init: pid 0 scheduled (1 proc)..................... 0.095s
+  [ AWAKE ] timer: preempt + chronos tick...................... 0.103s
+  [ AWAKE ] phasefs.journal: phase records read-only........... 0.118s
+  [ AWAKE ] stateclock.atlas: 10-sector map (sec 5, k=4)....... 0.127s
+  AUTHORITY / ANOM
+  [ MODE  ] authority:           root
+  [ MODE  ] visibility:          transparent
+  [ ANOM  ] security protocol:   standby
+  [ ROOTED] EquationRoot:        ee6fd313
+  [ SEALED] BootSessionRoot:     609262e8
+  [ VERIFY] boot manifest:       OK
+  [ VERIFY] statechain:          OK
+  [ ACCESS] true phase states:   visible to root
+  [ OBJECT] protected objects:      0
+  [ LINK   ] PhaseLink codec:          ready
+  [ LINK   ] binary bridge:            reversible
+  [ LINK   ] transport:                hosted loopback
+  [ LINK   ] gateway:                  disabled
+  [ LINK   ] ANOM decryptor access:    denied
+  [ LINK   ] PhaseLinkRoot:            3566:75A9
+  [ VERIFY ] PhaseLink chain:          OK
+  [ PHASEMATH ] scalar reference:     ready
+  [ PHASEMATH ] worker cores:         32
+  [ PHASEMATH ] SIMD capability:      AVX2
+  [ PHASEMATH ] active backend:       AVX2
+  [ PHASEMATH ] trajectory workers:   ready
+  [ PHASEMATH ] proof workers:        ready
+  [ PHASEMATH ] FPGA accelerator:     not present
+  [ VERIFY    ] scalar equivalence:   OK
+  [ BENCH    ] phase-state benchmark: ready
+  ALIGNING SUBSYSTEMS
+  @@@@@@@@---~~~~~~~   8 of 8 aligned
+  TUNING STATECLOCK
+    #=-=--=#=-=--=#=-=--=#=-=--=#=-=--=#   sector 5/9  x=2*cos(phi/5) ok
+  |> consulting phase records ... 25 entries
+===============================================================================
+|> authority mode ... root
+|> ANOM security protocol ... standby
+|> true phase view ... transparent
+===============================================================================
+T H E   M O M E N T   I S   N O W   -- type help at gpos>          | GPOS
+===============================================================================
+
+gpos> craft init
+CRAFT INIT
+
+gpos> scenario run prop-stuck-glider
+CRAFT GLIDER SCENARIO (hosted-sim over Avenue 2 glider carrier)
+craft init: nav=stale prop=idle power=off fdir=normal
+power: off --operand Φ1--> ready (compose OK) pkt=1
+navigation: stale --operand Φ3--> solving (compose OK) pkt=3
+navigation: solving --operand Φ1--> locked (compose OK) pkt=5
+propulsion: idle --operand Φ1--> armed (compose OK) pkt=7
+power: ready --operand Φ3--> load (compose OK) pkt=9
+propulsion: armed --operand Φ3--> firing (compose OK) pkt=11
+fault inject prop-stuck reason=stuck_firing_behavior (state unchanged)
+FDIR: normal --operand Φ1--> detected
+detect: dwell=6 threshold=5 z=0.000 episode=1
+FDIR: detected --operand Φ3--> isolated
+isolate: quarantine object=2 episode=1
+propulsion: firing --operand Φ1--> fault (compose OK) pkt=13
+power: load --operand Φ1--> protected (compose OK) pkt=15
+REJECT prop_fire while quarantined (audited)
+attempt PROP_FIRE rejected and audited
+propulsion: fault --operand Φ3--> idle (compose OK) pkt=18
+FDIR: isolated --operand Φ1--> recovered_pending_proof
+FDIR: recovered_pending_proof --operand Φ3--> normal
+quarantine cleared after proof
+CRAFT FDIR PASS
+CRAFT STATUS
+  navigation id=1 state=3 (locked) ticks=6 quarantined=false episode=None
+  propulsion id=2 state=0 (idle) ticks=0 quarantined=false episode=None
+  power id=3 state=3 (protected) ticks=0 quarantined=false episode=None
+  FDIR state=0 (normal) tick=6 episodes=1 stuck_injected=true
+CRAFT FDIR PASS
+PACKET REPLAY CROSS-CHECK
+  pkt=3 object=navigation op=nav_solve ack=true assoc_parity=0
+  pkt=5 object=navigation op=nav_lock ack=true assoc_parity=1
+  pkt=7 object=propulsion op=prop_arm ack=true assoc_parity=0
+  pkt=11 object=propulsion op=prop_fire ack=true assoc_parity=0
+  pkt=13 object=propulsion op=prop_mark_fault ack=true assoc_parity=1
+  pkt=17 object=propulsion op=rejected_quarantined_operation ack=false assoc_parity=0
+  pkt=18 object=propulsion op=forced_safe_recovery ack=true assoc_parity=0
+  pkt=1 object=power op=power_ready ack=true assoc_parity=0
+  pkt=9 object=power op=power_load ack=true assoc_parity=0
+  pkt=15 object=power op=power_protect ack=true assoc_parity=1
+packets cross-checked: 10 (opcode+ack+assoc_parity match audited statechain)
+statechain replay: live == replayed (OK)
+sealed checkpoint: sequence=0 tick=18
+CRAFT GLIDER SCENARIO PASS
+
+gpos> craft status
+CRAFT STATUS
+  navigation id=1 state=3 (locked) ticks=6 quarantined=false episode=None
+  propulsion id=2 state=0 (idle) ticks=0 quarantined=false episode=None
+  power id=3 state=3 (protected) ticks=0 quarantined=false episode=None
+  FDIR state=0 (normal) tick=6 episodes=1 stuck_injected=true
+
+gpos> craft quarantine status
+QUARANTINE
+  navigation quarantined=false episode=None
+  propulsion quarantined=false episode=None
+  power quarantined=false episode=None
+
+gpos> exit
+
+------------------------------------------------------------------------
+
+Notes on reading this transcript:
+  - `pkt=N` on each mission line is the packet id returned by
+    `PhaseTransportCraftAdapter::send`, i.e. the id of the Φ2 glider
+    packet that physically carried that command across the M=4 diagonal
+    port lattice (kernel/ground=(1,1), navigation=(2,2),
+    propulsion=(0,0), power=(3,3)).
+  - `pkt=17` (the rejected `prop_fire` attempt while quarantined) shows
+    `ack=false` by design — `execute()` only acknowledges commands that
+    are actually accepted and delivered; a rejected send is audited but
+    never gets a reply packet.
+  - "PACKET REPLAY CROSS-CHECK" is produced by
+    `kernel::craft::verify_packet_replay`: for every transported packet
+    it resolves the matching statechain event by (object, sequence),
+    confirms the transported opcode matches the audited operation name
+    (or, for the reject path, that the wire opcode's payload hash
+    matches the audited "rejected_quarantined_operation" record), checks
+    the packet was acknowledged, and recomputes the associator parity.
+  - "statechain replay: live == replayed (OK)" is an independent
+    confirmation from `CraftController::replay_episode` — state rebuilt
+    purely from the hash-chained ledger matches the live controller.
+  - "sealed checkpoint" reflects `FdirController::prove` calling
+    `StatechainLedger::seal_checkpoint()` after `live == replayed` is
+    confirmed inside `prove` itself.

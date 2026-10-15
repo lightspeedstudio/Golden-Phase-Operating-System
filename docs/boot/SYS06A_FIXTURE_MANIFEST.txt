@@ -1,0 +1,24 @@
+# System 6A gitignored Bootgen mini-oracles (no keys)
+
+bootgen: D:\Xilinx\2026.1\Vitis\bin\bootgen.bat v2026.1 Jun 5 2026-13:21:08
+command: bootgen -arch zynq -image <mini_N.bif> -encrypt bbram -p xc7z020clg400 -w on -o BOOT_KAT_N.BIN
+nky: zynq_stage1/owned/build/oracle/sys06_dev.nky (gitignored, same file as locked oracle)
+bootloader: zynq_stage1/owned/build/sys05_plat.elf f40f7e13a8f141afd404c407803f3de394c4e1ae082ca0ca112a932a53b248a2
+kat_payload: incrementing 00.. unless noted
+locked_oracle: 684d97f4a07826f6ec9a94b2d0fc2dfd710514a1ad96a0a1dac4fcce855e21de 6000404
+
+| fixture | kat_bytes | boot_bytes | sha256 |
+| --- | ---: | ---: | --- |
+| BOOT_KAT_15.BIN | 15 | 20908 | 9ad1abec7085d2b8b71cdc0db0fd7d8cd010a29fc4d7f8bd18064a5606e49f9a |
+| BOOT_KAT_16.BIN | 16 | 20908 | a1ec371b1eefa714ea6e9c6b5873e183d1178c4a66096a170e264e29f4dba9c3 |
+| BOOT_KAT_17.BIN | 17 | 20908 | 08aac86a2da903b04d281644b25624a9c3faf2b19dd2a44018a33f36c82f4c87 |
+| BOOT_KAT_31.BIN | 31 | 20908 | 0224dd68bb573252911956c4e6e8f50d4d1b569f93956cbdfcbbd082d41d6892 |
+| BOOT_KAT_32.BIN | 32 | 20908 | a1b22807d5398ea76111ccc8c129ae78ae3d17ca4f4ba0ad1a51975331f650a9 |
+| BOOT_KAT_33.BIN | 33 | 20908 | bdd5d2bda180b3a7a4317a29de25234b27d2d405ddd6349e259b02c9d43fde1f |
+| BOOT_KAT_255.BIN | 255 | 21164 | 10101722542968f24ccf6859050da225a960d741c50ec67dcf83233f12317cb6 |
+| BOOT_KAT_256.BIN | 256 | 21164 | d772c9a359a663bf9a6e8d50a3fb92d5c2c699c8e7bcbf1fa9c289a4ff0b09ec |
+| BOOT_KAT_257.BIN | 257 | 21164 | 17c542ef62cdd2bdfdb5e006b48b4857313850b0b595170136e6342f6b0d2782 |
+| BOOT_KAT_256_A5.BIN | 256 fill=a5 | 21164 | 301f3df012b38ab8c0b0d62820a89370bc623dac551f86e986b34427dff99df3 |
+
+host_verify: zynq_stage1/owned/host_verify/sys06a_cryptography.py (Cryptography/OpenSSL AES, hashlib HMAC; no owned AES)
+status: SYS06A_FRAMING_UNRESOLVED

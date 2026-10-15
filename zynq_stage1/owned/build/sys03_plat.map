@@ -1,0 +1,238 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+                              C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o (__aeabi_uldivmod)
+C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+                              C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o) (__udivmoddi4)
+C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+                              C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o) (compiler_builtins::int::specialized_div_rem::u64_div_rem)
+C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+                              C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o) (__aeabi_uidiv)
+C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+                              C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o) (__aeabi_idiv0)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .debug_frame   0x00000000       0x68 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .text          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .llvmbc        0x00000000      0xcf0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .llvmcmd       0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .text          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .llvmbc        0x00000000      0xbb8 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .llvmcmd       0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_abbrev  0x00000000       0x5f C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_info    0x00000000       0xa1 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_aranges
+                0x00000000       0x20 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_str     0x00000000      0x19b C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_frame   0x00000000       0x34 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .debug_line    0x00000000      0x131 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .text          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .llvmbc        0x00000000     0x283c C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .llvmcmd       0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .text._ZN17compiler_builtins3int19specialized_div_rem12u128_div_rem17h719105824f16deadE
+                0x00000000      0x698 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .ARM.exidx.text._ZN17compiler_builtins3int19specialized_div_rem12u128_div_rem17h719105824f16deadE
+                0x00000000        0x8 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_abbrev  0x00000000       0xc1 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_info    0x00000000      0x495 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_aranges
+                0x00000000       0x28 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_ranges  0x00000000      0x2d8 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_str     0x00000000      0x5fa C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_frame   0x00000000       0x6c C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .debug_line    0x00000000      0x576 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .data          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .bss           0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .debug_line    0x00000000       0xab C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .debug_info    0x00000000       0x26 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .debug_abbrev  0x00000000       0x14 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .debug_aranges
+                0x00000000       0x20 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .debug_str     0x00000000       0x84 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .text          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .data          0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .bss           0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .text.__aeabi_ldiv0
+                0x00000000        0x4 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_info    0x00000000       0xe2 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_abbrev  0x00000000       0x75 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_aranges
+                0x00000000       0x28 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_ranges  0x00000000       0x18 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_line    0x00000000       0x70 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_str     0x00000000      0x212 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+ .debug_frame   0x00000000       0x30 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ocm              0x00000000         0x00030000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\richa\AppData\Local\Temp\rustcXZHu99\symbols.o
+LOAD C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+LOAD C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib
+
+.text           0x00000000      0x8fc
+ *(.text.boot)
+ .text.boot     0x00000000       0x50 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text._ZN17zynq_stage1_owned8platform7run_ops17hdeb9c8375de7de07E
+                0x00000050      0x14c C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .text._ZN17zynq_stage1_owned8platform4uart9write_str17hc2f52e0d5f1ff74eE
+                0x0000019c       0x84 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .text.rust_main
+                0x00000220      0x1c0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+                0x00000220                rust_main
+ .text.__aeabi_uldivmod
+                0x000003e0       0x24 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+                0x000003e0                __aeabi_uldivmod
+ .text.__udivmoddi4
+                0x00000404       0x4c C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+                0x00000404                __udivmoddi4
+ .text._ZN17compiler_builtins3int19specialized_div_rem11u64_div_rem17haa437197bc6e5095E
+                0x00000450      0x2d8 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+                0x00000450                compiler_builtins::int::specialized_div_rem::u64_div_rem
+ .text          0x00000728      0x1d0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+                0x00000728                __aeabi_uidiv
+                0x00000728                __udivsi3
+ .text.__aeabi_idiv0
+                0x000008f8        0x4 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+                0x000008f8                __aeabi_idiv0
+
+.glue_7         0x000008fc        0x0
+ .glue_7        0x000008fc        0x0 linker stubs
+
+.glue_7t        0x000008fc        0x0
+ .glue_7t       0x000008fc        0x0 linker stubs
+
+.vfp11_veneer   0x000008fc        0x0
+ .vfp11_veneer  0x000008fc        0x0 linker stubs
+
+.v4_bx          0x000008fc        0x0
+ .v4_bx         0x000008fc        0x0 linker stubs
+
+.iplt           0x000008fc        0x0
+ .iplt          0x000008fc        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+
+.rodata         0x000008fc      0xd7c
+ *(.rodata .rodata.*)
+ .rodata._ZN10sys03_plat14KEEP_RUST_MAIN17hfa2bc408888e5fd2E
+                0x000008fc        0x4 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.22
+                0x00000900        0xc C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata.cst16  0x0000090c       0x10 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.24
+                0x0000091c        0xf C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.25
+                0x0000092b        0xa C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.26
+                0x00000935        0x9 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.27
+                0x0000093e        0xe C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.28
+                0x0000094c       0x11 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.29
+                0x0000095d        0xb C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.30
+                0x00000968      0x480 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.31
+                0x00000de8      0x190 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.32
+                0x00000f78       0xc0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.33
+                0x00001038       0x40 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.34
+                0x00001078      0x520 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .rodata..Lanon.ca890a2900ad67f155f76ad194e1695b.35
+                0x00001598       0xe0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+
+.ARM.exidx.text._ZN17zynq_stage1_owned8platform7run_ops17hdeb9c8375de7de07E
+                0x00001678        0x8
+ .ARM.exidx.text._ZN17zynq_stage1_owned8platform7run_ops17hdeb9c8375de7de07E
+                0x00001678        0x8 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+
+.ARM.exidx.text._ZN17zynq_stage1_owned8platform4uart9write_str17hc2f52e0d5f1ff74eE
+                0x00001680        0x0
+ .ARM.exidx.text._ZN17zynq_stage1_owned8platform4uart9write_str17hc2f52e0d5f1ff74eE
+                0x00001680        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+                                  0x8 (size before relaxing)
+
+.ARM.exidx.text.rust_main
+                0x00001680        0x0
+ .ARM.exidx.text.rust_main
+                0x00001680        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+                                  0x8 (size before relaxing)
+
+.ARM.exidx.text.__udivmoddi4
+                0x00001680        0x0
+ .ARM.exidx.text.__udivmoddi4
+                0x00001680        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+                                  0x8 (size before relaxing)
+
+.ARM.exidx.text._ZN17compiler_builtins3int19specialized_div_rem11u64_div_rem17haa437197bc6e5095E
+                0x00001680        0x0
+ .ARM.exidx.text._ZN17compiler_builtins3int19specialized_div_rem11u64_div_rem17haa437197bc6e5095E
+                0x00001680        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+                                  0x8 (size before relaxing)
+
+.rel.dyn        0x00001680        0x0
+ .rel.iplt      0x00001680        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+
+.data
+ *(.data .data.*)
+
+.igot.plt       0x00001680        0x0
+ .igot.plt      0x00001680        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+
+.bss            0x00001680        0x0
+                0x00001680                        . = ALIGN (0x8)
+                0x00001680                        __bss_start = .
+ *(.bss .bss.*)
+ *(COMMON)
+                0x00001680                        . = ALIGN (0x8)
+                0x00001680                        __bss_end = .
+                0x00001680                        . = ALIGN (0x10)
+                0x00003680                        . = (. + 0x2000)
+                0x00003680                        _stack_top = .
+OUTPUT(C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602 elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x00000000       0x5f
+ .comment       0x00000000       0x5f C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+                                 0x85 (size before relaxing)
+ .comment       0x0000005f       0x2d C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .comment       0x0000005f       0x2d C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .comment       0x0000005f       0x2d C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .comment       0x0000005f       0x34 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .note.GNU-stack
+                0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .note.GNU-stack
+                0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .note.GNU-stack
+                0x00000000        0x0 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+
+.ARM.attributes
+                0x00000000       0x39
+ .ARM.attributes
+                0x00000000       0x3d C:\k-mmu-stage1\zynq_stage1\owned\target\armv7a-none-eabi\release\deps\sys03_plat-31a4e546e1fa3602.sys03_plat.ab5a0044979be36a-cgu.0.rcgu.o
+ .ARM.attributes
+                0x0000003d       0x32 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.406.rcgu.o)
+ .ARM.attributes
+                0x0000006f       0x34 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.363.rcgu.o)
+ .ARM.attributes
+                0x000000a3       0x34 C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(compiler_builtins-06afdd4d1b78ab4a.compiler_builtins.ab9e1e2c752dc413-cgu.009.rcgu.o)
+ .ARM.attributes
+                0x000000d7       0x1d C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-udivsi3.o)
+ .ARM.attributes
+                0x000000f4       0x2f C:\Users\richa\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\armv7a-none-eabi\lib\libcompiler_builtins-06afdd4d1b78ab4a.rlib(63f8a0b8a638da8c-aeabi_div0.o)

@@ -1,0 +1,68 @@
+init..
+libusb: info [winusbx_init] WinUSB DLL available (with isoch support)
+libusb: info [winusbx_init] libusbK DLL is not available
+libusb: info [windows_init] UsbDk backend is not available
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_0AB5&LAMPARRAY\6&12A17EA3&0&8_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT01'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT02'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT03'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT04'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT05'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT06'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT01'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT02'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT03'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT04'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT05'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT06'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: warning [set_composite_interface] failure to read interface number for HID\HID_DEVICE_SYSTEM_VHF\7&A560317&0&0000, using default value
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_0AB5&LAMPARRAY\6&12A17EA3&0&8_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT01'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT02'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT03'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT04'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT05'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&195A0AA&0&2_SLOT06'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT00'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT01'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT02'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT03'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT04'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT05'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: info [winusb_get_device_list] The following device has no driver: 'USB\VID_046D&PID_C547&LAMPARRAY\7&38E0509C&0&3_SLOT06'
+libusb: info [winusb_get_device_list] libusb will not be able to access it
+libusb: warning [set_composite_interface] failure to read interface number for HID\HID_DEVICE_SYSTEM_VHF\7&A560317&0&0000, using default value
+Can't find iCE FTDI USB device (vendor_id 0x0403, device_id 0x6010 or 0x6014).
+ABORT.

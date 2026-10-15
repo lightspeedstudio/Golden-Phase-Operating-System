@@ -1,0 +1,43 @@
+# PZ7020 feature-completion physical test plan
+# Confirmed commands only. One command per line. Harness sends over COM12 @ 115200.
+# Destructive commands intentionally absent (no kill/rm/exit/clear/write-of-system).
+# PhaseFS write to /tmp is included (RAM only; not SD persistence).
+
+# --- identity / console ---
+help
+version
+state
+
+# --- G1P polled path ---
+g1p info
+g1p exec 0 1
+g1p exec 1 2
+g1p exec 2 3
+g1p exec 3 0
+g1p reflect 0
+g1p reflect 1
+g1p reflect 2
+g1p reflect 3
+g1p selftest
+
+# --- G1P IRQ 61 (software reports PASS/FAIL; PHYSICALLY VERIFIED only after capture) ---
+g1p irq-test 4
+
+# --- VM named program (paste-assembly is PARTIAL on one-line UART) ---
+isa
+run hello
+regs
+
+# --- PhaseFS RAM ---
+ls /tmp
+write /tmp/pz7020_ram.txt golden-phase-ram-bytes
+cat /tmp/pz7020_ram.txt
+stat /tmp/pz7020_ram.txt
+ls /tmp
+
+# --- phi-stability confirmed syntax ---
+phi-stability
+phi-stability status
+
+# --- final state ---
+state

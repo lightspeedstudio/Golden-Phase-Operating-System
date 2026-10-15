@@ -1,0 +1,40 @@
+PZ7020-StarLite — Bare-metal TCP/IP milestones M2 (UDP echo) + M3 (TCP echo)
+Stack: smoltcp 0.12 (no_std + alloc) over GEM0 / RTL8211F (U15), RGMII.
+Board MAC: 02:00:00:47:01:50   Board IP: 192.168.5.50/24   Host: 192.168.5.2/24
+Direct cable PC <-> PS/U15. No OS underneath. Proven on real hardware 2026-08-08.
+
+`net ip <addr> <secs>` now also opens, alongside ARP+ICMP (M1):
+  M2: a UDP echo socket on port 7  (bounces each datagram back to its sender)
+  M3: a TCP echo listener on port 7 (accepts, echoes bytes, re-listens on close)
+
+--- HOST SIDE (Windows, physical Intel I225-V "Ethernet", 192.168.5.2/24) ---
+M2 UDP:
+  sent    : M2-UDP-ECHO-1976053839
+  received: M2-UDP-ECHO-1976053839   (from 192.168.5.50:7)
+  UDP match: True   -> PASS
+
+M3 TCP:
+  connected: True                    (SYN / SYN-ACK / ACK handshake completed)
+  sent    : M3-TCP-ECHO-1885940254
+  received: M3-TCP-ECHO-1885940254   (22 bytes)
+  TCP match: True   -> PASS
+
+--- BOARD SIDE (COM12, 115200) ---
+gpos> net ip 192.168.5.50 50
+net ip: served 192.168.5.50/24 mac 02:00:00:47:01:50 on GEM0 for 50s
+(polls=608625 icmp=auto udp_echoes=1 tcp_conns=1 tcp_bytes=22)
+ARP+ICMP, UDP echo :7, TCP echo :7 active during the window
+
+CORROBORATION (both ends agree):
+  udp_echoes=1  == 1 datagram sent by host
+  tcp_conns=1   == 1 TCP connection opened by host
+  tcp_bytes=22  == len("M3-TCP-ECHO-1885940254") == bytes host received back
+
+RESULT: PASS. Bare-metal UDP echo (M2) and full TCP echo over a real
+handshake (M3) work over GEM0 via smoltcp. M3 is the SSH-enabling milestone:
+real TCP on bare metal, no OS. Next (separate effort): SSH transport/auth on
+top of this TCP.
+
+Image: BOOT_PZ7020_BASE_BMFULL/BOOT.BIN sha256
+  A9DB3B051E77499212FF2BAFE666592BC5C1FD2A658088849C82740B10AF94E9
+  (kairos_zynq.elf 1,087,132 bytes; bin kairos_zynq, features zynq-a9,bm-full)

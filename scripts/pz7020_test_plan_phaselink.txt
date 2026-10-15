@@ -1,0 +1,14 @@
+# PZ7020 PhaseLink-over-GEM0 physical test plan (bm-net / bm-full image).
+# Verifies PhaseLink riding the proven 0x88B5 GEM0 wire path. One-board:
+# send/replay/status are provable here; recv honestly reports no-peer.
+# PHY link must be UP for `phaselink init` (GEM wire_init).
+
+version
+net link
+phaselink status
+phaselink init node-a node-b
+phaselink status
+phaselink send node-b hello-golden-phase
+phaselink replay
+phaselink recv
+phaselink status

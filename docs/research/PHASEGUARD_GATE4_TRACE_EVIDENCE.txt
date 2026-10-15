@@ -1,0 +1,15 @@
+PHASEGUARD Gate-4 QEMU/host evidence trace
+logical_tick = kairos_tick; phase_index = tick % 10; theta = index * 36 deg
+observation = record_kairos_on_kernel hook (authoritative advance)
+[PhaseGuard] epoch=0 tick=1 phase_idx=1 theta_deg=36.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=2 phase_idx=2 theta_deg=72.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=3 phase_idx=3 theta_deg=108.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=4 phase_idx=4 theta_deg=144.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=5 phase_idx=5 theta_deg=180.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=6 phase_idx=6 theta_deg=216.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=7 phase_idx=7 theta_deg=252.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=-0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=8 phase_idx=8 theta_deg=288.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=9 phase_idx=9 theta_deg=324.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=10 phase_idx=0 theta_deg=0.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.469267293 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=11 phase_idx=1 theta_deg=36.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=1.188662210 diff=NaN verdict=Pass fault=None
+[PhaseGuard] epoch=0 tick=12 phase_idx=2 theta_deg=72.0 prev=Phi0 proposed=Phi0 observed=NaN predicted=0.454028563 diff=NaN verdict=Pass fault=None

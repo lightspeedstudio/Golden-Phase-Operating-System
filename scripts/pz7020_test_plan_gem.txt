@@ -1,0 +1,14 @@
+# PZ7020 GEM Ethernet ladder — confirmed shell commands only.
+# Classifications after COM12:
+#   probe/phy/MAC loopback PASS -> eligible PHYSICALLY VERIFIED
+#   link DOWN without cable -> PARTIAL
+#   tx-test/rx-test -> expect UNSUPPORTED (not wire Ethernet)
+
+net probe
+net phy
+net link
+net loopback
+net init
+net status
+net tx-test
+net rx-test

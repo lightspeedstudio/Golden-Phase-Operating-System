@@ -1,0 +1,57 @@
+KairOS Build Size Report
+========================
+Date: 2026-07-07
+Profile: release (optimized)
+Platform: x86_64-pc-windows-msvc (hosted binaries)
+Toolchain: Rust 2021 edition, kairos v0.1.0
+
+Executive Summary
+-----------------
+KairOS ships as a compact research operating system: roughly 1.0 MB of Rust source,
+32 integration test crates, and release hosted binaries under 5 MB each on Windows.
+The library artifact (libkairos.rlib) is ~10.5 MB because it embeds the full kernel,
+userland, networking, security, and optional SSH stack for linking into multiple binaries.
+
+Release Binaries (Windows x86_64)
+---------------------------------
+  kairos_host.exe     4,356,096 bytes  (4.15 MB)  — interactive hosted runtime + shell
+  kairos_ssh.exe      4,830,208 bytes  (4.61 MB)  — hosted runtime + SSH operator server
+
+Library Artifact
+----------------
+  libkairos.rlib     10,951,028 bytes (10.45 MB)  — static library (all features linked)
+
+Source Tree
+-----------
+  src/ (Rust)           246 files    1,046,405 bytes  (1.00 MB)
+  tests/ (Rust)          32 files      167,917 bytes  (0.16 MB)
+  Total tracked Rust    278 files    1,214,322 bytes  (1.16 MB)
+
+Baremetal Target (RISC-V)
+-------------------------
+  Target: riscv64gc-unknown-none-elf
+  Binary: kairos_boot (no_std, baremetal feature)
+  Status: Build currently blocked by pre-existing phaselink_eth compile errors (69 errors).
+          QEMU boot image path exists in scripts; size not measured in this report.
+  Note:   Baremetal images are expected to be significantly smaller than hosted binaries
+          because they exclude std, tokio, russh, and hosted-only subsystems.
+
+Engineering Tool Surface
+------------------------
+  Registered engineering commands: 90+ (14 groups via kairos-tool registry)
+  Legacy operator commands: dashboard, anom, phaselink, phasenet, ai, ssh, phaseperf, etc.
+
+Build Commands Used
+-------------------
+  cargo build --release --bin kairos_host
+  cargo build --release --bin kairos_ssh
+  cargo test --no-run
+
+Interpretation
+--------------
+- Hosted operator console fits in ~4–5 MB per binary — suitable for lab, QEMU-sidecar,
+  and edge prototyping without container overhead.
+- SSH server adds ~474 KB over kairos_host (Ed25519 host keys, russh, tokio runtime).
+- The 1 MB source footprint reflects a deliberately minimal but complete phase-kernel OS
+  with audit, networking, AI bridge, and full engineering terminal — not a Linux-scale tree.
+- For publication: cite "sub-5 MB hosted operator binaries" and "~1.2 MB Rust source (src+tests)".
